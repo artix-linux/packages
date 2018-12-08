@@ -1,0 +1,36 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=dbus-openrc
+pkgver=20180429
+pkgrel=1
+pkgdesc="OpenRC dbus init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+provides=('init-dbus')
+depends=('dbus')
+conflicts=('init-dbus')
+source=("dbus.initd::${_url}/sys-apps/dbus/files/dbus.initd-r1")
+sha256sums=('00a1a8f254d4f40b6f98a2777809b9c45ad81c4aeb4c0592793dd839777990bd')
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|dbus.pid|dbus/pid|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_initd 'dbus'
+
+    install -d "${pkgdir}/etc/runlevels/default"
+    ln -sf "/etc/init.d/dbus" "${pkgdir}/etc/runlevels/default/dbus"
+}
