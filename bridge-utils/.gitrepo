@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesB/bridge-utils.git
+	branch = master
+	commit = efaf4279d4d1894f3f9fc836c1f61f79600977df
+	parent = eaf598409ae40b90536d76e69d622105b841fc77
+	method = merge
+	update = auto
+	cmdver = 0.4.1
