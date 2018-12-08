@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesA/argon2.git
+	branch = master
+	commit = 8b4c0b8223168dee6dbceb02cbc146ea6ce6f8ef
+	parent = 2f8289d350f971aa1d14830e2a90cdfd8273b08e
+	method = merge
+	update = auto
+	cmdver = 0.4.1
