@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesD/dmraid.git
+	branch = master
+	commit = 4bafc962e0f5df9d970760702cfd2ba726560621
+	parent = 36e57b856b0c0c9a679cb3f93334d7b124aa7c77
+	method = merge
+	update = auto
+	cmdver = 0.4.1
