@@ -1,0 +1,34 @@
+# Maintainer: Muhammad Herdiansyah <herdiansyah@netc.eu>
+
+_url="https://github.com/voidlinux/void-packages/raw/master/srcpkgs"
+
+_sed_args=(-e 's|/var/run|/run|g' -e 's|\(/usr\)\?/sbin|/usr/bin|g')
+
+pkgname=cronie-runit
+pkgver=20180429
+pkgrel=1
+pkgdesc="runit service scripts for cronie"
+arch=('any')
+url="https://github.com/artix-linux"
+license=('BSD3')
+groups=('runit-system')
+depends=('cronie' 'runit')
+provides=('runit-cron' 'cronie-runscripts' 'init-cron')
+replaces=('cronie-runscripts')
+conflicts=('fcron' 'fcron-runit' 'init-cron')
+source=("cronie.run::${_url}/cronie/files/cronie/run")
+sha256sums=('3ea09bc7b3753cf8ef764dd2ff8cec5cdd781deac441965e8a7238ce0c4c55d9')
+
+_inst_sv(){
+    for file in run finish check; do
+        if test -f "$srcdir/$1.$file"; then
+            install -Dm755 "$srcdir/$1.$file" "$pkgdir/etc/runit/sv/$1/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/$file"
+        fi
+    done
+}
+
+package() {
+    sed -e 's|cronie-crond|crond|g' -i "$srcdir/cronie.run"
+    _inst_sv 'cronie'
+}
