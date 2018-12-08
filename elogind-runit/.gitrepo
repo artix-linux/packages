@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesE/elogind-runit.git
+	branch = master
+	commit = b14f76e3e22cfda44f53559b74384307b0e3cb77
+	parent = 44fce2767225ba59a25b397870fe5bdef87f1bb9
+	method = merge
+	update = auto
+	cmdver = 0.4.1
