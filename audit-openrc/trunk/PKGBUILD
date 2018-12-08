@@ -1,0 +1,51 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=audit-openrc
+pkgver=20180922
+pkgrel=2
+pkgdesc="OpenRC audit init script"
+arch=('any')
+url="https://gitea.artixlinux.org/artix/packages"
+license=('GPL2')
+groups=('openrc-system')
+depends=('openrc' 'audit')
+conflicts=('systemd-sysvcompat')
+source=("auditd.initd::${_url}/sys-process/audit/files/auditd-init.d-2.4.3"
+        "auditd.confd::${_url}/sys-process/audit/files/auditd-conf.d-2.1.3"
+        "${_url}/sys-process/audit/files/audit.rules.stop.pre"
+        "${_url}/sys-process/audit/files/audit.rules.stop.post"
+        "audit.rules::${_url}/sys-process/audit/files/audit.rules-2.1.3")
+sha256sums=('4415dfa7d156cf3d3ffbbd612b655aeac25de6b88bc641743ff7fbc303ea2680'
+            '73d1a0190d1f70c36591891e2453eeda28f7d799dc011d31cd89dff84a3064b4'
+            '664b686eaf383deecdefdad2d96173cfe4208de0eb3508a0e2b0ce0067e43b50'
+            '656caab7de03b7e23afcbcc1efe3fbde001ceb61616af9da1d030361fa383215'
+            '94f4f6c1dad194ad7a4caa719023f783eba6743fa735e9f61d75ab0ccc1c35ad')
+
+pkgver() {
+    date +%Y%m%d
+}
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|' \
+        -e 's|/var/run|/run|' \
+        -e 's|/sbin/auditd|/usr/bin/auditd|' \
+        -e 's|/sbin/auditctl|/usr/bin/auditctl|' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd auditd
+    _inst_initd auditd
+
+    for f in audit.rules audit.rules.stop.pre audit.rules.stop.post;do
+        install -Dm755 ${srcdir}/$f ${pkgdir}/etc/audit/$f
+    done
+}
