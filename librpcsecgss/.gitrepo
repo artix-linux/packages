@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/librpcsecgss.git
+	branch = master
+	commit = 75a7e6680233d209878ce6f774d18cae12310d66
+	parent = ea4a6f2b4f37174f7c11ad3f6d85458ac0c11ed6
+	method = merge
+	update = auto
+	cmdver = 0.4.1
