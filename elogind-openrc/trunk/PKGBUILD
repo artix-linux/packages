@@ -1,0 +1,40 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=elogind-openrc
+pkgver=20180429
+pkgrel=1
+pkgdesc="OpenRC elogind init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+provides=('init-elogind')
+depends=('elogind' 'dbus-openrc')
+conflicts=('init-elogind')
+source=("elogind.confd::${_url}/sys-auth/elogind/files/elogind.conf.in"
+        "elogind.initd::${_url}/sys-auth/elogind/files/elogind.init")
+sha256sums=('ed2b6b9c659d7661cba043fefe38aa5c7d7c910fc50060c6a4be0ef5b75b7376'
+            '982423a88eea889c194123ecffbdea03d8f94ca497b7b32bd86fdf20a81680c7')
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+    sed -e 's|@libdir@|/usr/lib|' \
+        -i ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd "elogind"
+    _inst_initd "elogind"
+
+    install -d "${pkgdir}/etc/runlevels/boot"
+    ln -sf "/etc/init.d/elogind" "${pkgdir}/etc/runlevels/boot/elogind"
+}
