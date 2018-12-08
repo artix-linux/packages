@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesD/device-mapper-openrc.git
 	branch = master
-	commit = d65a66db3fa4476f5133878fc8e1699a55ef25cc
-	parent = c10d1cca835313db87d762ed4e4847ee1733c2ab
+	commit = 719af756e0821730d86d6754953b02a58bad994e
+	parent = 560ce69a289e1b39f908cc02116e4566095793d0
 	method = merge
 	update = auto
 	cmdver = 0.4.1
