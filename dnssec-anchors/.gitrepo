@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesD/dnssec-anchors.git
 	branch = master
-	commit = a221565bcb31ac30699799227b014ae6827cb57c
-	parent = 354bfa7822c63bacee8f6ed585c1d062efef183f
+	commit = 31e4722bc677512188f48357645407d8a5f7cf86
+	parent = 751ed7d13d269c65bea3c4af705b50b2b622a6bd
 	method = merge
 	update = auto
 	cmdver = 0.4.1
