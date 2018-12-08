@@ -1,0 +1,39 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=cronie-openrc
+pkgver=20180429
+pkgrel=1
+pkgdesc="OpenRC cronie init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-system')
+depends=('openrc' 'cronie')
+provides=('openrc-cron' 'init-cron')
+conflicts=('fcron' 'fcron-openrc' 'init-cron')
+backup=('etc/init.d/cronie')
+source=("cronie.initd::${_url}/sys-process/cronie/files/cronie-1.3-initd")
+sha256sums=('8646ff964892eeb5f6c5da444a5ef5d898fb1f3a395c5b9fc85d32d8d56fc785')
+
+pkgver() {
+    date +%Y%m%d
+}
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|/var/run|/run|g' \
+        -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_initd 'cronie'
+}
