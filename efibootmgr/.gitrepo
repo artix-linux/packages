@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesE/efibootmgr.git
+	branch = master
+	commit = 81badde6b9408682ecd207e57fe948467d7efaf1
+	parent = 8ccbc9abda832464510f79dce09f0e406a8d7479
+	method = merge
+	update = auto
+	cmdver = 0.4.1
