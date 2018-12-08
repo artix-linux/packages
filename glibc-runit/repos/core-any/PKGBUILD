@@ -1,0 +1,33 @@
+# Maintainer: Muhammad Herdiansyah <herdiansyah@netc.eu>
+
+_url="https://github.com/voidlinux/void-packages/raw/master/srcpkgs"
+
+_sed_args=(-e 's|/var/run|/run|g' -e 's|\(/usr\)\?/sbin|/usr/bin|g')
+
+pkgname=glibc-runit
+pkgver=20180226
+pkgrel=1
+pkgdesc="runit service scripts for glibc"
+arch=('any')
+url="https://github.com/artix-linux"
+license=('BSD3')
+groups=('runit-system')
+depends=('glibc')
+provides=('glibc-runscripts')
+replaces=('glibc-runscripts')
+conflicts=('systemd-sysvcompat')
+source=("nscd.run::${_url}/glibc/files/nscd/run")
+sha256sums=('fe98591dda8daca6dca70a3222153178453e903f0cda4bf6075830fd68a5d23e')
+
+_inst_sv(){
+    for file in run finish check; do
+        if test -f "$srcdir/$1.$file"; then
+            install -Dm755 "$srcdir/$1.$file" "$pkgdir/etc/runit/sv/$1/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/$file"
+        fi
+    done
+}
+
+package() {
+    _inst_sv 'nscd'
+}
