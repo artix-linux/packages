@@ -1,0 +1,22 @@
+#!/bin/bash
+
+. /usr/lib/rc/functions
+
+case "$1" in
+    start)
+        stat_busy "Starting monitoring of LVM2 groups"
+        vgchange --monitor y >/dev/null || stat_die
+        add_daemon lvm2-monitoring
+        stat_done
+        ;;
+    stop)
+        stat_busy "Stopping monitoring of LVM2 groups"
+        vgchange --monitor n || stat_die
+        rm_daemon lvm2-monitoring
+        stat_done
+        ;;
+    *)
+        echo "usage: $0 {start|stop}"
+        exit 1
+        ;;
+esac
