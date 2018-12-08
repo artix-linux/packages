@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesI/iptables-openrc.git
+	branch = master
+	commit = 7dcb1e357d07d33c194e399ff82a2e36abb6a5a8
+	parent = e1b390a6665c30826263764a65e0c5c1e9659487
+	method = merge
+	update = auto
+	cmdver = 0.4.1
