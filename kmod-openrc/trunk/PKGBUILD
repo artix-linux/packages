@@ -1,0 +1,35 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=kmod-openrc
+pkgver=20180502
+pkgrel=1
+pkgdesc="OpenRC kmod init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+depends=('kmod')
+provides=('init-kmod')
+conflicts=('init-kmod')
+source=('kmod-static-nodes.initd')
+sha256sums=('3ecbe7761b92a123a5a3d395ec3d9e090b0dfba7910a5987b4a2298c20a7e571')
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_initd 'kmod-static-nodes'
+
+    install -d "${pkgdir}/etc/runlevels/sysinit"
+    ln -sf "/etc/init.d/kmod-static-nodes" "${pkgdir}/etc/runlevels/sysinit/kmod-static-nodes"
+}
