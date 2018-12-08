@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesE/elfutils.git
+	branch = master
+	commit = 9d44729b37aaa3d81dc0185fae4087170fcbcce1
+	parent = fa77e1643bf29ac2772f029888aaaeda70e52ff0
+	method = merge
+	update = auto
+	cmdver = 0.4.1
