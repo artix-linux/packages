@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libnghttp2.git
+	branch = master
+	commit = fc3e26fdaf063f0b18abeeed003057529460532d
+	parent = 95574d53136cba4e1a57c65c16d87885a6f059fe
+	method = merge
+	update = auto
+	cmdver = 0.4.1
