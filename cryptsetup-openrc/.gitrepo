@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesC/cryptsetup-openrc.git
 	branch = master
-	commit = 1a9804f05d6204246b30f46aac6cd17190174f09
-	parent = a61560a2a5fd2bbb7759cb60d0143aeb4f278f02
+	commit = 4dcaa49c5be3a5465c4b47a70912e408c6ab949c
+	parent = 9aba438fef8d7266f24cf303a4451d2abbbdbbef
 	method = merge
 	update = auto
 	cmdver = 0.4.1
