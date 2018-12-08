@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/gpm-openrc.git
 	branch = master
-	commit = 145ae93f6cbcb8a5db537af4944cbe4c2efa930d
-	parent = 3470b23ab303533ceb044fa30a21bc219c53c3f3
+	commit = b9529a95851b2d5b418e92638fe50f73ee724337
+	parent = de4c98c804cb49b18e1512991203c589e3bb0fe4
 	method = merge
 	update = auto
 	cmdver = 0.4.1
