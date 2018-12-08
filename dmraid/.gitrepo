@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesD/dmraid.git
 	branch = master
-	commit = 4bafc962e0f5df9d970760702cfd2ba726560621
-	parent = 36e57b856b0c0c9a679cb3f93334d7b124aa7c77
+	commit = 6dc6b8dca4f434adb7ab71cc28311ebbed7175d8
+	parent = 7b1a4c5e2166ffccc7bafe0f70c2b66d3c06516c
 	method = merge
 	update = auto
 	cmdver = 0.4.1
