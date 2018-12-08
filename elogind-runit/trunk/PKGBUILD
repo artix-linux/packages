@@ -1,0 +1,35 @@
+# Maintainer: Muhammad Herdiansyah <herdiansyah@netc.eu>
+
+_url="https://github.com/voidlinux/void-packages/raw/master/srcpkgs"
+
+_sed_args=(-e 's|/var/run|/run|g' -e 's|\(/usr\)\?/sbin|/usr/bin|g')
+
+pkgname=elogind-runit
+pkgver=20180621
+pkgrel=1.1
+pkgdesc="runit service scripts for elogind"
+arch=('any')
+url="https://github.com/artix-linux"
+license=('BSD')
+depends=('dbus-runit')
+provides=('elogind-runscripts' 'init-elogind')
+replaces=('elogind-runscripts')
+conflicts=('init-elogind')
+source=("elogind.run")
+sha256sums=('f1375235c4543f3081ddfa7c71bb4f5343b3048c7fd4d9dc312ce6163055f396')
+
+_inst_sv(){
+    for file in run finish check; do
+        if test -f "$srcdir/$1.$file"; then
+            install -Dm755 "$srcdir/$1.$file" "$pkgdir/etc/runit/sv/$1/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/$file"
+        fi
+    done
+}
+
+package() {
+    _inst_sv 'elogind'
+
+    install -d "${pkgdir}/etc/runit/runsvdir/default"
+    ln -sf "/etc/runit/sv/elogind" "${pkgdir}/etc/runit/runsvdir/default/elogind"
+}
