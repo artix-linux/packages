@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesA/automake.git
 	branch = master
-	commit = 28bf9038bd4e5a733eb2ce031dc75be0e1d4c5c9
-	parent = a6c387c545a28fdeb3096bae3bdbea0ae8891458
+	commit = acc9be2d3864224f774f49969903e9ada08ecf83
+	parent = e60315221f9458d4888168e9c43b55cd0cd425a6
 	method = merge
 	update = auto
 	cmdver = 0.4.1
