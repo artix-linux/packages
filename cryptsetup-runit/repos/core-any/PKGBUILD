@@ -1,0 +1,25 @@
+# Maintainer: Muhammad Herdiansyah <herdiansyah@netc.eu>
+
+pkgname=cryptsetup-runit
+pkgver=20180514
+pkgrel=8
+pkgdesc="runit stage1 script for cryptsetup"
+arch=('any')
+url="https://github.com/artix-linux"
+license=('BSD3')
+groups=('runit-system')
+provides=('init-cryptsetup')
+depends=('cryptsetup' 'runit')
+conflicts=('init-cryptsetup')
+source=('cryptsetup')
+optdepends=('lvm2-runit: LVM support for encrypted filesystems')
+sha256sums=('a3a1868f8fc9ce36f7590af66b305a0f84a89f07ccda6b01584f9a3632c3a606')
+
+package() {
+    install -Dm755 "${srcdir}/cryptsetup" "${pkgdir}/usr/lib/rc/sv.d/cryptsetup"
+
+    # create default symlinks?
+     install -d ${pkgdir}/etc/rc/{sysinit,shutdown}
+     ln -sf /usr/lib/rc/sv.d/cryptsetup ${pkgdir}/etc/rc/sysinit/35-cryptsetup
+     ln -sf /usr/lib/rc/sv.d/cryptsetup ${pkgdir}/etc/rc/shutdown/65-cryptsetup
+}

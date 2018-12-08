@@ -1,0 +1,142 @@
+#!/bin/bash
+
+. /usr/lib/rc/functions
+
+do_unlock_device() {
+	# $1 = requested name
+	# $2 = source device
+	# $3 = password
+	# $4 = options
+	local open=create a=$1 b=$2 failed=0 opts
+	# Ordering of options is different if you are using LUKS vs. not.
+	# Use ugly swizzling to deal with it.
+	# isLuks only gives an exit code but no output to stdout or stderr.
+	if cryptsetup isLuks "$2" 2>/dev/null; then
+		open=luksOpen
+		a=$2
+		b=$1
+	else
+		printhl "Non-LUKS partitions are not supported at the moment."
+		return 1
+	fi
+	if [[ $4 ]]; then
+		for i in ${4//,/ }; do
+			case $i in
+				"discard") opts+="--allow-discard" ;;
+				"readonly"|"read-only") opts+="--readonly" ;;
+				"tries"*) opts+="-T ${i##*=}" ;;
+				"keyfile-size"*) opts+="-l ${i##*=}" ;;
+				"keyfile-offset"*) opts+="--keyfile-offset ${i##*=}" ;;
+				"key-slot"*) opts+="-S ${i##*=}" ;;
+				*)
+					printhl "The option '${i%%=*}' is not currently supported at the moment."
+					printhl "Partition '$2' cannot be unlocked."
+					printhl "Please add an issue to https://github.com/artix-linux/runit-rc"
+					return 1
+				;;
+			esac
+		done
+	fi
+	case $3 in
+		/dev*)
+			local ckdev=${3%%:*}
+			local cka=${3#*:}
+			local ckb=${cka#*:}
+			local cka=${cka%:*}
+			local ckfile=/dev/ckfile
+			local ckdir=/dev/ckdir
+			case ${cka} in
+				*[!0-9]*)
+					# Use a file on the device
+					# cka is not numeric: cka=filesystem, ckb=path
+					mkdir ${ckdir}
+					mount -r -t ${cka} ${ckdev} ${ckdir}
+					dd if=${ckdir}/${ckb} of=${ckfile} >/dev/null 2>&1
+					umount ${ckdir}
+					rmdir ${ckdir};;
+				*)
+					# Read raw data from the block device
+					# cka is numeric: cka=offset, ckb=length
+					dd if=${ckdev} of=${ckfile} bs=1 skip=${cka} count=${ckb} >/dev/null 2>&1;;
+			esac
+			cryptsetup -d ${ckfile} $opts $open "$a" "$b" >/dev/null
+			dd if=/dev/urandom of=${ckfile} bs=1 count=$(stat -c %s ${ckfile}) conv=notrunc >/dev/null 2>&1
+			rm ${ckfile};;
+		/*)
+			cryptsetup -d "$3" $opts $open "$a" "$b" >/dev/null;;
+		"none" | "")
+			cryptsetup $opts $open "$a" "$b" >/dev/null;;
+	esac
+	return $?
+}
+
+do_unlock() {
+	local name=$1 device=$2 password=$3 options=$4
+
+	printf "${C_MAIN}Unlocking $1${C_CLEAR}\n"
+
+	if [[ ${options:0:2} =~ -. ]]; then
+		do_unlock_device "$name" "$device" "$password" "$options"
+		return $?
+	fi
+
+	do_unlock_device "$name" "$device" "$password" "$options"
+	failed=$?
+	if (( $failed )); then
+		printf "${C_FAIL}Unlocking of $1 failed.${C_CLEAR}\n"
+	fi
+	return $?
+}
+
+do_lock() {
+	#status "Detaching encrypted device ${1}"
+	cryptsetup luksClose "$1" >/dev/null
+}
+
+read_crypttab() {
+	# $1 = function to call with the split out line from the crypttab
+	local line nspo failed=0
+	while read line <&3; do
+		[[ $line && $line != '#'* ]] || continue
+		eval nspo=("${line%#*}")
+		if $1 "${nspo[0]}" "${nspo[1]}" "${nspo[2]}" "${nspo[*]:3}"; then
+			crypto_unlocked=1
+		else
+			failed=1
+		fi
+	done 3< /etc/crypttab
+	return $failed
+}
+
+case "$1" in
+    start)
+        stat_busy "Starting encrypted devices"
+        read_crypttab do_unlock
+        rc=$?
+        # [[ -f /run/sv.d/started/lvm2 ]] && vgchange --sysinit -a y >/dev/null
+        # Using the above, $? will return >0, which results in stat_die.
+        if [[ -f /run/sv.d/started/lvm2 ]]; then
+            vgchange --sysinit -a y >/dev/null
+        fi
+        (( rc || $? )) && stat_die
+        add_daemon cryptsetup
+        stat_done
+        ;;
+    stop)
+        stat_busy "Stopping encrypted devices"
+        #[[ -f /run/sv.d/started/lvm2 ]] && vgchange --sysinit -a n &>/dev/null
+        # Using the above, $? will return >0, which results in stat_die.
+        if [[ -f /run/sv.d/started/lvm2 ]]; then
+            vgchange --sysinit -a y >/dev/null
+        fi
+        rc=$?
+        read_crypttab do_lock
+        (( rc || $? )) && stat_die
+        rm_daemon cryptsetup
+        stat_done
+        ;;
+    *)
+        echo "usage: $0 {start|stop}"
+        exit 1
+        ;;
+esac
