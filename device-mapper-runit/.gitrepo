@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesD/device-mapper-runit.git
 	branch = master
-	commit = e5b575494798829bb7d321ef783a0227d139db31
-	parent = 953280fa5d8ca7c21dcaf1bf4978729f994541af
+	commit = bd1286645467d512c1ccec0cc588bc8cd67c0cbb
+	parent = 9249d24056095e31534af88414ef0a1d6d58b485
 	method = merge
 	update = auto
 	cmdver = 0.4.1
