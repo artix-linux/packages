@@ -1,0 +1,2 @@
+#!/bin/sh
+exec dbus-send --system / org.desktop.DBus.Peer.Ping >/dev/null 2>&1

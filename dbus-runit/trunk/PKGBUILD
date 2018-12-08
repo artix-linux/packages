@@ -1,0 +1,38 @@
+# Maintainer: Muhammad Herdiansyah <herdiansyah@netc.eu>
+
+_url="https://github.com/voidlinux/void-packages/raw/master/srcpkgs"
+
+_sed_args=(-e 's|/var/run|/run|g' -e 's|\(/usr\)\?/sbin|/usr/bin|g')
+
+pkgname=dbus-runit
+pkgver=20180621
+pkgrel=2
+pkgdesc="runit service scripts for dbus"
+arch=('any')
+url="https://github.com/artix-linux"
+license=('BSD3')
+depends=('dbus' 'runit')
+provides=('dbus-runscripts' 'init-dbus')
+conflicts=('init-dbus')
+replaces=('dbus-runscripts')
+source=("dbus.run"
+        "dbus.check")
+sha256sums=('68b377243a3fcf3639ad7f2df1d97f1ef6f21bdf99567c6d34254f5e90428675'
+            'd23ab19daba686c161eba19126971c6d6c960c812b4074e23c8f65bb1bf55b8a')
+
+_inst_sv(){
+    for file in run finish check; do
+        if test -f "$srcdir/$1.$file"; then
+            install -Dm755 "$srcdir/$1.$file" "$pkgdir/etc/runit/sv/$1/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/$file"
+        fi
+    done
+}
+
+package() {
+    _inst_sv 'dbus'
+    sed -e 's|dbus.pid|dbus/pid|g' -i "${pkgdir}/etc/runit/sv/dbus"/*
+
+    install -d "${pkgdir}/etc/runit/runsvdir/default"
+    ln -sf "/etc/runit/sv/dbus" "${pkgdir}/etc/runit/runsvdir/default/dbus"
+}
