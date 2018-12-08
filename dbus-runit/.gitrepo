@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesD/dbus-runit.git
 	branch = master
-	commit = 93b351a1243ed5260d5a86b54d986d778f7a24c1
-	parent = 5e16111d5c9409e5701cb658ad4274886cdae8f2
+	commit = 4ff06ad2aea4af26f3a0a2a7ad985fe107a0dae4
+	parent = 3e889daac1a73305183658b94865eb4e39a134d0
 	method = merge
 	update = auto
 	cmdver = 0.4.1
