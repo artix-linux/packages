@@ -1,0 +1,22 @@
+# Maintainer: Chris Cromer <cromer@artixlinux.org>
+
+pkgname=artix-keyring
+pkgver=20181001
+pkgrel=1
+pkgdesc='Artix PGP keyring'
+arch=('any')
+url='https://gitea.artixlinux.org/artix/artix-keyring'
+license=('GPL')
+install="${pkgname}.install"
+_srctarball='89b2f05d-71ad-4242-baac-64a42f1a4f83'
+_srctarballsig='4a6a9036-3b72-416f-9a1e-0466b214fa01'
+source=("${pkgname}-${pkgver}.tar.gz::https://gitea.artixlinux.org/attachments/${_srctarball}"
+"${pkgname}-${pkgver}.tar.gz.sig::https://gitea.artixlinux.org/attachments/${_srctarballsig}")
+sha512sums=('91a519f658af936926419767e71e62a4a7875780d50fadce5e4f3f7b3ac5c0a54ba14d67519e314b5e1df9992aeb8dd1947f24be70b9e461979200a68a74913e'
+            'SKIP')
+validpgpkeys=('A55C3F1BA61CAA63036D82BAFA91071797BEEEC2') # cromer
+
+package() {
+    cd "${pkgname}-${pkgver}"
+    make PREFIX=/usr DESTDIR=${pkgdir} install
+}
