@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/lvm2-openrc.git
 	branch = master
-	commit = 10772337b01e2fd05f7bb4032a64d0bb058bee96
-	parent = ec7dac3ce67b55a5cd6619e0cb174e3e8f0a5878
+	commit = d25b72919ac6cf0daea5b72a12e9f31004e49f35
+	parent = 9b6628b357e90e1510d5929dd21dc4d9a52baf50
 	method = merge
 	update = auto
 	cmdver = 0.4.1
