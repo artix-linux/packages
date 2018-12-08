@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesC/ca-certificates.git
+	branch = master
+	commit = d514764cf532e181454541374ef0c8f170f14fc2
+	parent = bf0c981d0f4d491346c1d4c78a197a5a971bfa37
+	method = merge
+	update = auto
+	cmdver = 0.4.1
