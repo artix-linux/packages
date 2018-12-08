@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesD/device-mapper-runit.git
+	branch = master
+	commit = e5b575494798829bb7d321ef783a0227d139db31
+	parent = 953280fa5d8ca7c21dcaf1bf4978729f994541af
+	method = merge
+	update = auto
+	cmdver = 0.4.1
