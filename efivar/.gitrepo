@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesE/efivar.git
+	branch = master
+	commit = fd9fb5f3037339560038f612cdd1badaab855540
+	parent = c53168bfff3c90e6a46317fb6e392456cadf4619
+	method = merge
+	update = auto
+	cmdver = 0.4.1
