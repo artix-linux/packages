@@ -1,0 +1,41 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=hdparm-openrc
+pkgver=20180216
+pkgrel=1
+pkgdesc="OpenRC hdparm init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-system')
+depends=('openrc' 'hdparm')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/hdparm')
+source=("hdparm.confd::${_url}/sys-apps/hdparm/files/hdparm-conf.d.3"
+        "hdparm.initd::${_url}/sys-apps/hdparm/files/hdparm-init-8")
+sha256sums=('37c95ff723fa578e9039613d09dbf790d99113a318c065422986c744519214e9'
+            '05b264cadc84984f773cd555af322b41fdb13da7cb2ca60d8a7d590ddf4d5e5f')
+
+pkgver() {
+    date +%Y%m%d
+}
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'hdparm'
+    _inst_initd 'hdparm'
+}
+
