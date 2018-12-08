@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesB/bootlogd.git
+	branch = master
+	commit = babe959db0da752400d288b13032739efd0da816
+	parent = 0406e3374c72e8d3278731d75a9679a01ee3f4d4
+	method = merge
+	update = auto
+	cmdver = 0.4.1
