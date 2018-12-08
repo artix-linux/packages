@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libunistring.git
+	branch = master
+	commit = a743b71be594e0c170794e36f5564de9a6a6c377
+	parent = 4acec78f3b44fd8e23a1e69a3dd58669cdfad705
+	method = merge
+	update = auto
+	cmdver = 0.4.1
