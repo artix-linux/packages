@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesF/flex.git
 	branch = master
-	commit = ae61ff9021d3c05d4100f74f4331d315b510559b
-	parent = c6c976219133041c42173dda32dc49244145f1c8
+	commit = 8b227fb2b5e129e1c05fcdccde600abd4eb6aee6
+	parent = 74c997c9e01bacf77cc39e1dd2ecff4aed7fb913
 	method = merge
 	update = auto
 	cmdver = 0.4.1
