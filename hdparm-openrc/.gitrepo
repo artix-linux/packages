@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesH/hdparm-openrc.git
 	branch = master
-	commit = 2ead6938bd226eb24f3a98419752c391d80abb9e
-	parent = 2a3f9ebe86d39438b10875e6f64548ee2eb81d44
+	commit = fa5cff953cb291a50878d6fae2ef6cb52545c9fa
+	parent = c8de48fedf97829d0e4d27bfef7891e64caa3889
 	method = merge
 	update = auto
 	cmdver = 0.4.1
