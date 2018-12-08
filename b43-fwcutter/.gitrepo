@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesB/b43-fwcutter.git
+	branch = master
+	commit = ee7027d966aa7c92c372f9cb0d1cf9f2b6e52a2e
+	parent = 2d5433a64de3eda8bb7033b73e7522343d3d75f7
+	method = merge
+	update = auto
+	cmdver = 0.4.1
