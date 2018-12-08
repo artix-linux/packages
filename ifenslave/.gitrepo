@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesI/ifenslave.git
 	branch = master
-	commit = 3bd0b5d327080ad4c1e9f2dff9012327fed6c6ad
-	parent = 4ae431250e9291006beb5b996761ecf17b830ed9
+	commit = 11abb36f283868cf8e5bd9007a74b30d3794c23a
+	parent = 5a03d74bbed43ce3f3cdddfa22fe926e5ece7a4f
 	method = merge
 	update = auto
 	cmdver = 0.4.1
