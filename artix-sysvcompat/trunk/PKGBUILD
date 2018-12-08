@@ -1,0 +1,44 @@
+# Maintainer: Muhammad Herdiansyah <koni@artixlinux.org>
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_pkgname=halt
+
+pkgname=artix-sysvcompat
+pkgver=0.3.7
+pkgrel=9
+pkgdesc="Artix Linux's wrapper program for OpenRC and runit's init & shutdown scheme"
+arch=('x86_64')
+groups=('base')
+url="https://github.com/artix-linux/halt"
+depends=('svc-manager')
+conflicts=('sysvinit' 'systemd-sysvcompat')
+replaces=('sysvinit')
+license=('BSD')
+source=("$url/archive/${pkgver}/${_pkgname}-${pkgver}.tar.gz"
+        'initswitch-hook'
+        '55-initswitch.hook'
+        '50-sysvcompat.hook')
+sha256sums=('0b8ac1cfd75e76151ddbe2c0395ee8463c34b6e3c464922355cfb58818c98748'
+            '467c2319336685f0ed5f3ae994a84c709f3d81fa9fa47d7edf61a09f65ae0928'
+            'd96bc4b6723e1597281557a42936162c158ced63574d60856bfb387056a00f87'
+            '20d1e1170e6b2bfdb5b895cabc792e87f87abfdcaccc9f73a2dd6429aa0e3591')
+
+build() {
+	cd "${_pkgname}-${pkgver}"
+	make
+}
+
+package() {
+	cd "${_pkgname}-${pkgver}"
+	make DESTDIR="${pkgdir}" install
+
+	install -Dm644 "COPYING" "${pkgdir}/usr/share/licenses/halt/COPYING"
+
+	# pacman hooks
+    install -Dm755 ${srcdir}/initswitch-hook "${pkgdir}"/usr/share/libalpm/scripts/initswitch-hook
+    install -Dm644 -t "${pkgdir}"/usr/share/libalpm/hooks ${srcdir}/*.hook
+
+    # provide default symlink for PM file tracking
+    install -d "${pkgdir}"/usr/bin
+    ln -sf openrc-init "${pkgdir}"/usr/bin/init
+}

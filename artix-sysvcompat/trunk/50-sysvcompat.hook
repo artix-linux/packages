@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = artix-sysvcompat
+
+[Action]
+Description = Detecting init ...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/initswitch-hook detect
+NeedsTargets
