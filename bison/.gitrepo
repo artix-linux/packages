@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesB/bison.git
+	branch = master
+	commit = 78510b8a3f5fdbb616846b3abd028864d37f8fbf
+	parent = 48647b3b544666006d40a3d88b4c04d93ac21053
+	method = merge
+	update = auto
+	cmdver = 0.4.1
