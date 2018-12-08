@@ -1,0 +1,2 @@
+# cryptsetup-openrc
+
