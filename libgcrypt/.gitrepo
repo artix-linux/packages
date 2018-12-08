@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libgcrypt.git
+	branch = master
+	commit = e23e028e30d01b4df525eac6aaf5f1b2df06b671
+	parent = 4113f5dad63dd66929ec24bab5674ae175d0e79f
+	method = merge
+	update = auto
+	cmdver = 0.4.1
