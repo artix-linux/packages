@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesK/krb5-openrc.git
+	branch = master
+	commit = 881da87f1f62a84d317d3b101de4d8e0a3301869
+	parent = 1f70874fa5be258704aeb3f230f3b62303c8f13c
+	method = merge
+	update = auto
+	cmdver = 0.4.1
