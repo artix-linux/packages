@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesC/cronie.git
+	branch = master
+	commit = 217cf8afff6af92d1212e67062e3d81dfdd60d68
+	parent = 767e73834183c986a9fa1599c2c656feebf13b63
+	method = merge
+	update = auto
+	cmdver = 0.4.1
