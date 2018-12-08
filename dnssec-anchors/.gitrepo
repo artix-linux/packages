@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesD/dnssec-anchors.git
+	branch = master
+	commit = a221565bcb31ac30699799227b014ae6827cb57c
+	parent = 354bfa7822c63bacee8f6ed585c1d062efef183f
+	method = merge
+	update = auto
+	cmdver = 0.4.1
