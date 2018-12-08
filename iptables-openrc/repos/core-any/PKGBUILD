@@ -1,0 +1,62 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=iptables-openrc
+pkgver=20180912
+pkgrel=1
+pkgdesc="OpenRC iptables init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-system')
+depends=('openrc' 'iptables')
+provides=('init-iptables' 'ebtables-openrc')
+conflicts=('init-iptables' 'ebtables-openrc')
+backup=('etc/conf.d/iptables'
+        'etc/conf.d/ip6tables')
+source=("iptables.confd::${_url}/net-firewall/iptables/files/iptables-1.4.13.confd"
+        "ip6tables.confd::${_url}/net-firewall/iptables/files/ip6tables-1.4.13.confd"
+        "iptables.initd::${_url}/net-firewall/iptables/files/iptables.init"
+        "ebtables.confd::${_url}/net-firewall/ebtables/files/ebtables.confd-r1"
+        "ebtables.initd::${_url}/net-firewall/ebtables/files/ebtables.initd-r1")
+sha256sums=('7e2341211ca14997b7a8a1f930f94db855291af597c568f680f80031c20d45b6'
+            '2938fe4206514d9868047bd8f888a699fa2097ca69edab176453436d4259abaa'
+            '5b644ff18c49f81983e75be40f52bd15606b5ec668f1c478406c18c6c4c9a528'
+            'c05a6c1ba6add3881068584074681b04bfb2ad43284d7bdd67f47f3da842de58'
+            '15772b575abdcf683b3ee9815a11b0f7f27602d7fe52673124710e310dc95ec6')
+
+pkgver() {
+    date +%Y%m%d
+}
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    local _sed_args=()
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'iptables'
+    _inst_initd 'iptables'
+
+    _inst_confd 'ebtables'
+    _inst_initd 'ebtables'
+
+    _inst_confd 'ip6tables'
+
+    install -Dm755 "${srcdir}/iptables.initd" "${pkgdir}/etc/init.d/ip6tables"
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/ip6tables
+}
