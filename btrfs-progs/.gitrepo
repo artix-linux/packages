@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesB/btrfs-progs.git
+	branch = master
+	commit = 31a45f1f6940da34d254edc660ca374f74aed398
+	parent = 3dd1a61ad746017852c4abaf417cbb21fac26429
+	method = merge
+	update = auto
+	cmdver = 0.4.1
