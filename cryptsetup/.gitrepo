@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesC/cryptsetup.git
 	branch = master
-	commit = 16951cdf23ea4e8e3394be75d5a25b846a92a28b
-	parent = 2348fa932c9a99dc31942a22befc33223f118e4c
+	commit = 574570bee95bbbf35a32773884252fd1ca0f6b3a
+	parent = fe27429f345f96651e746a7e9593c144aa6e3996
 	method = merge
 	update = auto
 	cmdver = 0.4.1
