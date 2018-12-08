@@ -1,0 +1,89 @@
+# Maintainer: artoo <artoo@manjaro.org>
+# Contributor: Alexey D. <lq07829icatm@rambler.ru>
+# Contributor: Ivailo Monev <xakepa10@gmail.com>
+
+_udev_ver=220
+
+pkgbase=eudev
+pkgname=('eudev' 'libeudev')
+pkgver=3.2.7
+pkgrel=1
+pkgdesc="The userspace dev tools (udev) forked by Gentoo"
+arch=('x86_64')
+url="http://www.gentoo.org/proj/en/eudev/"
+license=('GPL')
+makedepends=('gobject-introspection' 'gperf' 'gtk-doc' 'intltool' 'kmod' 'util-linux' 'libelf')
+options=('!libtool')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/gentoo/eudev/archive/v${pkgver}.tar.gz"
+        'initcpio_hooks'
+        'initcpio_install'
+        'udev-hwdb.hook'
+        'udev-reload.hook'
+        'udev-hook'
+        'udev-hwdb-path.patch')
+sha256sums=('ce2fda4dea129bbcf824c947aab23504bcd26911481b47dbaf10646f723083a4'
+            '892ce43218e0a458981bbce451252c8987dc398e60b8de288e7542b8f2409c13'
+            '77dd1fd318b4456409aceb077f060b87944defb07cf39d29ad1968dc6f361875'
+            '2782bd3a7686596e98bd2d3fdef9d59d7d439682b87bbcc43b1fd1f5fabb3505'
+            '13596caef6ed85b58de674ebe7c47d9c7dd676240de5cc28ef3ccee2ce1d8a90'
+            '80c8f87549374d3bc7c2831b9e069b0005cc5ef90122c2d02e78e27c9bc1dbed'
+            'e05e468d15d09fb49343f33bc8d21c08f54db3ecff412dc35d4acb0630f869a3')
+
+prepare(){
+    cd "${srcdir}/${pkgbase}-${pkgver}"
+    patch -Np 1 -i ${srcdir}/udev-hwdb-path.patch
+    sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
+        -e 's/GROUP="cdrom"/GROUP="optical"/' \
+        -e 's/GROUP="tape"/GROUP="storage"/' \
+        -i rules/*.rules
+    ./autogen.sh
+}
+
+build() {
+    cd "${srcdir}/${pkgbase}-${pkgver}"
+
+    ./configure \
+        --prefix=/usr \
+        --with-rootprefix=/usr \
+        --sysconfdir=/etc \
+        --libdir=/usr/lib \
+        --sbindir=/usr/bin \
+        --enable-introspection \
+        --enable-kmod \
+        --enable-manpages \
+        --enable-split-usr
+
+    make
+}
+
+package_eudev() {
+    provides=("udev=${_udev_ver}")
+    depends=("libeudev" 'kbd' 'kmod' 'hwids' 'util-linux')
+    optdepends=('eudev-openrc: udev starup scripts for openrc')
+    backup=('etc/udev/udev.conf')
+
+
+    cd "${srcdir}/${pkgbase}-${pkgver}"
+
+    make DESTDIR="${pkgdir}" install
+
+    rm -rv "$pkgdir"/usr/lib/pkgconfig
+    rm -v "$pkgdir"/usr/include/libudev.h
+    rm -v "$pkgdir"/usr/lib/libudev*.{so*,a}
+
+    install -Dm644 "${srcdir}/initcpio_hooks" "${pkgdir}/usr/lib/initcpio/hooks/udev"
+    install -Dm644 "${srcdir}/initcpio_install" "${pkgdir}/usr/lib/initcpio/install/udev"
+
+    # pacman hooks
+    install -Dm755 ${srcdir}/udev-hook "$pkgdir"/usr/share/libalpm/scripts/udev-hook
+    install -Dm644 -t "$pkgdir"/usr/share/libalpm/hooks ${srcdir}/*.hook
+}
+
+package_libeudev() {
+    pkgdesc="eudev client libraries"
+    depends=('glibc' 'libelf')
+    provides=("libudev=${_udev_ver}" 'libudev.so')
+
+    cd "${srcdir}/${pkgbase}-${pkgver}"
+    make -C src/libudev DESTDIR="$pkgdir" install
+}

@@ -1,0 +1,16 @@
+#!/bin/sh -e
+
+udevd_live() {
+  if [ ! -d /run/udev ]; then
+    echo >&2 "  Skipped: Device manager is not running."
+    exit 0
+  fi
+}
+
+case $1 in
+  hwdb)     /usr/bin/udevadm hwdb --update ;;
+  udev-reload)   udevd_live;   /usr/bin/udevadm control --reload ;;
+  *) echo >&2 "  Invalid operation '$1'"; exit 1 ;;
+esac
+
+exit 0
