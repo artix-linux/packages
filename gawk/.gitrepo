@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesG/gawk.git
+	branch = master
+	commit = ae51566807659c2356d0b857aea89d1593f98c04
+	parent = 5b005aad18a085d16952235a48e6ae334ce03269
+	method = merge
+	update = auto
+	cmdver = 0.4.1
