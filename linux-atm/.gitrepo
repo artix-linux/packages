@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/linux-atm.git
+	branch = master
+	commit = c218e88c54d7922f9efb418ba69697607beb40f6
+	parent = 6d87015b8445b9186aa7240a883ee53bfcb497d0
+	method = merge
+	update = auto
+	cmdver = 0.4.1
