@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libnsl.git
+	branch = master
+	commit = eb068da520718351a7f6c9d638ee0f36e1824130
+	parent = 57b32b835e85cba5f280339bc5428231caf00640
+	method = merge
+	update = auto
+	cmdver = 0.4.1
