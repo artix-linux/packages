@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesH/hdparm-openrc.git
+	branch = master
+	commit = 2ead6938bd226eb24f3a98419752c391d80abb9e
+	parent = 2a3f9ebe86d39438b10875e6f64548ee2eb81d44
+	method = merge
+	update = auto
+	cmdver = 0.4.1
