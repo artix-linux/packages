@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libnftnl.git
 	branch = master
-	commit = 2daab26abc87347a463cbb2af67ff61c9bb1dbc3
-	parent = 33f636af6cca0b8d29add4a6a78bb89fb5b49798
+	commit = 9baee979cc9f60298cfc52af40a160e8fcf9f8ba
+	parent = be9ad04707939200b5f86e9eb933dcc1fcbab3d7
 	method = merge
 	update = auto
 	cmdver = 0.4.1
