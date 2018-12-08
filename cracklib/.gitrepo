@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesC/cracklib.git
+	branch = master
+	commit = 80d1b34967d3032f600c26b8d819e4bab00bfc34
+	parent = 467a90deb81d9ab24eb91e5b06b576093963f16f
+	method = merge
+	update = auto
+	cmdver = 0.4.1
