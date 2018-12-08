@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesD/dosfstools.git
 	branch = master
-	commit = e0e40868bd85778d0b7e886063f67e65e70a0d8e
-	parent = 9c115186d1801429bd57598f545c52369078ee54
+	commit = 36e49d104fae71031711bae367c5e070a20d098b
+	parent = fa664ba5a9d549b83ed305b9293683a92e17e3d4
 	method = merge
 	update = auto
 	cmdver = 0.4.1
