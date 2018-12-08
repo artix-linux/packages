@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesD/ding-libs.git
+	branch = master
+	commit = 30cb27a8f240e3182add5a7222217205e720a7c1
+	parent = 6ca7bb117096e43ffda7752b0be6181e579fd9bf
+	method = merge
+	update = auto
+	cmdver = 0.4.1
