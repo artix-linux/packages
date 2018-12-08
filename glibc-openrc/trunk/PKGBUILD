@@ -1,0 +1,32 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=glibc-openrc
+pkgver=20180216
+pkgrel=1
+pkgdesc="OpenRC nscd init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-system')
+depends=('openrc' 'glibc')
+conflicts=('systemd-sysvcompat')
+source=("nscd.initd")
+sha256sums=('b1c24e88a369c43b3bb361c6fc983e5d3f162535a119a91a0add5ca30c509c06')
+
+pkgver() {
+    date +%Y%m%d
+}
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_initd 'nscd'
+}
