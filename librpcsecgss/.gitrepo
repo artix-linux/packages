@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/librpcsecgss.git
 	branch = master
-	commit = 75a7e6680233d209878ce6f774d18cae12310d66
-	parent = ea4a6f2b4f37174f7c11ad3f6d85458ac0c11ed6
+	commit = 83912f18d5c63ababcb5e2be8b44e6940808226b
+	parent = ef098f95722ee06805e421b3be78003421700e10
 	method = merge
 	update = auto
 	cmdver = 0.4.1
