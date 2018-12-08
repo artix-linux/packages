@@ -1,0 +1,71 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+pkgbase=elogind
+pkgname=('elogind' 'libelogind')
+pkgver=239.3
+pkgrel=1
+pkgdesc="The systemd project's logind, extracted to a standalone package"
+arch=('x86_64')
+url="https://github.com/elogind/elogind"
+license=('GPL' 'LGPL2.1')
+makedepends=('intltool' 'libtool' 'gperf' 'gtk-doc' 'polkit' 'dbus' 'eudev'
+            'libseccomp' 'meson' 'kexec-tools' 'artix-sysvcompat')
+options=('!libtool')
+source=("${pkgbase}-${pkgver}.tar.gz::https://github.com/elogind/elogind/archive/v${pkgver}.tar.gz")
+# source=("git+https://github.com/elogind/elogind.git#branch=v238-stable")
+sha256sums=('fde2791134ec14f17f7a5f0257c7337e4976826ce6ce86da7eedae54bccf2945')
+
+prepare() {
+    cd ${pkgbase}-${pkgver}
+}
+
+build() {
+    local meson_options=(
+        -Drootlibdir=/usr/lib
+        -Drootlibexecdir=/usr/lib/elogind
+        -Ddbuspolicydir=/usr/share/dbus-1/system.d
+        -Ddocdir=/usr/share/doc/elogind
+        -Ddefault-hierarchy=hybrid
+        -Dcgroup-controller=openrc
+#         -Ddefault-kill-user-processes=false
+    )
+
+    arch-meson "$pkgbase-${pkgver}" build "${meson_options[@]}"
+
+    ninja -C build
+}
+
+check(){
+    cd build
+    meson test
+}
+
+package_elogind() {
+    pkgdesc="The systemd project's logind, extracted to a standalone package"
+    groups=('base')
+    provides=("elogind=${pkgver}")
+    depends=('acl' 'pam' 'dbus' 'eudev' 'libseccomp' 'libelogind' 'kexec-tools' 'artix-sysvcompat')
+    optdepends=('polkit: polkit support')
+    backup=('etc/elogind/logind.conf')
+
+    DESTDIR="$pkgdir" ninja -C build install
+
+    mkdir ${srcdir}/_libelogind
+    mv -v ${pkgdir}/usr/lib/pkgconfig ${srcdir}/_libelogind
+    mv -v ${pkgdir}/usr/include/ ${srcdir}/_libelogind
+    mv -v ${pkgdir}/usr/lib/libelogind*.so* ${srcdir}/_libelogind
+}
+
+package_libelogind(){
+    pkgdesc="elogind client libraries"
+    groups=('base-devel')
+    provides=('libelogind.so' "libelogind=${pkgver}")
+    depends=('libcap' 'libeudev')
+
+    cd ${pkgbase}-${pkgver}
+
+    install -dm755 ${pkgdir}/usr/lib
+    mv ${srcdir}/_libelogind/include ${pkgdir}/usr
+    mv ${srcdir}/_libelogind/pkgconfig ${pkgdir}/usr/lib
+    mv ${srcdir}/_libelogind/libelogind*.so* ${pkgdir}/usr/lib
+}
