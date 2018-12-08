@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/lvm2-runit.git
 	branch = master
-	commit = 264423690d46fa1b6633c9941fb04733155742ab
-	parent = b6afb1a4c381b37dced048e8f6654723ad24a6b8
+	commit = a41e55374f3ed778ff4c3318b1f68a00e54b635d
+	parent = cbe7582ed66cd994a9e532ef5a2ae4808194f2f9
 	method = merge
 	update = auto
 	cmdver = 0.4.1
