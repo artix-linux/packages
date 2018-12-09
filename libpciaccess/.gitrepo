@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libpciaccess.git
+	branch = master
+	commit = f3eeaec2dd2f96d7dd95b4b36297d2fd0e1a582c
+	parent = c5b348bba6a0d560222aa4b195279545a208b717
+	method = merge
+	update = auto
+	cmdver = 0.4.1
