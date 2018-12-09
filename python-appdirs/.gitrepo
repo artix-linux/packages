@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-appdirs.git
 	branch = master
-	commit = f3027aee5818ddc09d3670456f7a9b86f392171a
-	parent = 82ffd70ba54378903ff9f900e3dd5fbcd1c8fee5
+	commit = 92c6e090a77529326a498d1d2574d2147434df1e
+	parent = c74331a57822473c2290781f8d269981ca86710e
 	method = merge
 	update = auto
 	cmdver = 0.4.1
