@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxfixes.git
 	branch = master
-	commit = 5be17e5a09a61f13253067a063807cf8ad757172
-	parent = efb7f252ffaff720bb24e2c9b51201c8b8222a9b
+	commit = 53d6e6b091435e13b7caba9e174531f285def6e3
+	parent = de1412872ada4c25cf06a07c29ba28e2db619fef
 	method = merge
 	update = auto
 	cmdver = 0.4.1
