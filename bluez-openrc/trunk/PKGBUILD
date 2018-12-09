@@ -1,0 +1,41 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=bluez-openrc
+pkgver=20180428
+pkgrel=1
+pkgdesc="OpenRC bluez init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('bluez' 'openrc')
+conflicts=('systemd-sysvcompat')
+source=("rfcomm.initd::${_url}/net-wireless/bluez/files/rfcomm-init.d-r2"
+        "bluetooth.initd::${_url}/net-wireless/bluez/files/bluetooth-init.d-r4")
+sha256sums=('0bd7f4a3e05c781f4cd24ef7d6702fbd7e621100bcd1e281f0ee15bb134f96b5'
+            '7fef67f1f0965aa08fd65408d2cd8c3fcefaec0ef627a2a0e1f1372c15e011b2')
+
+# pkgver() {
+#     date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|/usr/libexec|/usr/lib|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_initd 'rfcomm'
+    _inst_initd 'bluetooth'
+}
