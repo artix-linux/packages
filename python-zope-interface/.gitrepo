@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-zope-interface.git
 	branch = master
-	commit = 0e3f116c2de385ba23105664aa809ceef198bf69
-	parent = 9a01339f168356caa186ff0a49cebc6a94bdf24e
+	commit = 70a5c86c9fd1d472912eb02bdd3d74dd3e3aacdc
+	parent = 5757fea61ef1aac57fe2b8a97c96eb42d344109a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
