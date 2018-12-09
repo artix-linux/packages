@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesW/wireless_tools.git
+	branch = master
+	commit = c429b4cb6259f5891e68de4fb642202c890c6635
+	parent = 1b55e46dfffc986094d2c272ca935cd9946a64fb
+	method = merge
+	update = auto
+	cmdver = 0.4.1
