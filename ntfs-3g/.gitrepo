@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesN/ntfs-3g.git
 	branch = master
-	commit = 0f686b8359f1c0432e2e8c1e530f2870657d5afe
-	parent = aded2e6b5b033b8aca16d88556a1426c8fe4fe1a
+	commit = cf707a66df988e5c1082c6d805b7a137ab538f74
+	parent = aa01a9ba47f40d4e96412745837261a58cd61410
 	method = merge
 	update = auto
 	cmdver = 0.4.1
