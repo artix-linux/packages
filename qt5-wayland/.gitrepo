@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-wayland.git
+	branch = master
+	commit = e174ac16919f1402da9b6206c73abe893a0fd3ce
+	parent = 9d7ed5ebe25e6e9374b19a490c17b7d2e8b739a3
+	method = merge
+	update = auto
+	cmdver = 0.4.1
