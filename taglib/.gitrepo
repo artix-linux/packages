@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesT/taglib.git
+	branch = master
+	commit = bdf900c627e879d1ef301df0ff0df4605896d3f2
+	parent = 6a76fee1eb9cda4f123ce41fc9518add5cf7f7de
+	method = merge
+	update = auto
+	cmdver = 0.4.1
