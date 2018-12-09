@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesJ/jasper.git
+	branch = master
+	commit = abbfe2d439c074db4b3a8f6b94e6c44464190afb
+	parent = 78910e9f53d3dfdbc18b6cd25992168e195f5612
+	method = merge
+	update = auto
+	cmdver = 0.4.1
