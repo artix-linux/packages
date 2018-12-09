@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/orca.git
+	branch = master
+	commit = c9916f4e1bb2112ee22e49348190c03ddc9ec9b8
+	parent = 20ebc9fd41d8ace2408dbbced6d97aef6bd84c14
+	method = merge
+	update = auto
+	cmdver = 0.4.1
