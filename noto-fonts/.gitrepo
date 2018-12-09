@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesN/noto-fonts.git
 	branch = master
-	commit = fb76003eb0022753f25cd0267e56acc04104701e
-	parent = c93402162e5bb9266d3539ff83c7ef0b92ae4eef
+	commit = c92903e300004eb6b124cd83039fe6300c4a8b6f
+	parent = 5ee0e1fd102bae22a87ce59192545b4cad7016db
 	method = merge
 	update = auto
 	cmdver = 0.4.1
