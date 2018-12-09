@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesB/bluez-utils-compat.git
 	branch = master
-	commit = 637094faa822cf14b9cb6c05476f882f38984a2d
-	parent = 98f27aac8cccbfb00cb3ca6ff21873933142cb9b
+	commit = 29c406a9aa994b149ed338a355ba7ab611c91d5e
+	parent = 31bb54437db01254d3f07c758092132a3c80b1e6
 	method = merge
 	update = auto
 	cmdver = 0.4.1
