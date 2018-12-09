@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/l-smash.git
 	branch = master
-	commit = 13affab8c8e85868b12f01ad4565c58258fdcab8
-	parent = b640f246c80a853eefd75fdf085eadfd078d9d1f
+	commit = 392a9c6e1d8a10bfdd8713369963d746329afde2
+	parent = 2069b7a0be0b374088d7131a62b36f03dcf45d40
 	method = merge
 	update = auto
 	cmdver = 0.4.1
