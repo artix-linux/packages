@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-astroid.git
+	branch = master
+	commit = 199092303583be963f043c391321a88645e177f9
+	parent = 35af046bd8d14f71351310ab742b40f18094cb9b
+	method = merge
+	update = auto
+	cmdver = 0.4.1
