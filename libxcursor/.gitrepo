@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libxcursor.git
+	branch = master
+	commit = ba0b617618cf14150d3dd7375ab625b5d1dfba7f
+	parent = e4cd4cf33476fbccefa993afc5d3f9e0d54d9bfa
+	method = merge
+	update = auto
+	cmdver = 0.4.1
