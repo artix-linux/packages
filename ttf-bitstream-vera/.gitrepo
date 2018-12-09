@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesT/ttf-bitstream-vera.git
+	branch = master
+	commit = 495886809195fb609da4f224e190893fa86429b4
+	parent = 865c9382aa1e45ee3a72ec31e9038d48d2d4b7ed
+	method = merge
+	update = auto
+	cmdver = 0.4.1
