@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libcroco.git
 	branch = master
-	commit = 309f78465e509709850157151cd8ad38dd052663
-	parent = fc2245ba2b440caad5bbab6420799054c5b8bcfc
+	commit = 67c82f39c608a33ca08303166bc467a98f65d7b6
+	parent = 2c4436ca02596425e4c32af757eeac3b8a294e00
 	method = merge
 	update = auto
 	cmdver = 0.4.1
