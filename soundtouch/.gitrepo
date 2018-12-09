@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesS/soundtouch.git
 	branch = master
-	commit = 765811679383b5801ddfbda27871402e1005e9ef
-	parent = 7a3b918e4a3d031c8f3320943710ed1540189caf
+	commit = 556131677d2de984a5db35149b4540824b70fef9
+	parent = 7a313d9ab35e29768ae923ffe362f91bd13fb9f2
 	method = merge
 	update = auto
 	cmdver = 0.4.1
