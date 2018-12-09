@@ -1,0 +1,132 @@
+#!/usr/bin/openrc-run
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2
+
+depend() {
+    need localmount xdm-setup
+
+    # this should start as early as possible
+    after bootmisc consolefont modules netmount
+    after readahead-list ypbind autofs openvpn gpm lircmd
+    after quota keymaps
+    before alsasound
+
+    # Start before X
+    use elogind dbus xfs
+}
+
+setup_dm() {
+    local MY_XDM
+
+    MY_XDM=$(echo "${DISPLAYMANAGER}" | tr '[:upper:]' '[:lower:]')
+
+    NAME=
+    case "${MY_XDM}" in
+        entrance*)
+            EXE=/usr/bin/entrance
+            PIDFILE=/run/entrance.pid
+            ;;
+        gdm|gnome)
+            EXE=/usr/bin/gdm
+            PIDFILE=/run/gdm/gdm.pid
+            START_STOP_ARGS="--background"
+            AUTOCLEAN_CGROUP="yes"
+            ;;
+        wdm)
+            EXE=/usr/bin/wdm
+            PIDFILE=
+            ;;
+        gpe)
+            EXE=/usr/bin/gpe-dm
+            PIDFILE=/run/gpe-dm.pid
+            ;;
+        lxdm)
+            EXE=/usr/bin/lxdm-binary
+            PIDFILE=/run/lxdm.pid
+            START_STOP_ARGS="--background"
+            ;;
+        lightdm)
+            EXE=/usr/bin/lightdm
+            PIDFILE=/run/lightdm.pid
+            START_STOP_ARGS="--background"
+            ;;
+        sddm)
+            EXE="/usr/bin/sddm"
+            START_STOP_ARGS="-m --background"
+            PIDFILE=/run/sddm.pid
+            ;;
+        *)
+            # first find out if there is such executable
+            EXE="$(command -v ${MY_XDM} 2>/dev/null)"
+            PIDFILE="/run/${MY_XDM}.pid"
+
+            # warn user that he is doing sick things if the exe was not found
+            if [ -z "${EXE}" ]; then
+                echo "ERROR: Your XDM value is invalid."
+                echo "  No ${MY_XDM} executable could be found on your system."
+            fi
+            ;;
+    esac
+
+    if ! [ -x "${EXE}" ]; then
+        EXE=/usr/bin/xdm
+        PIDFILE=/run/xdm.pid
+        if ! [ -x "/usr/bin/xdm" ]; then
+            echo "ERROR: Please set your DISPLAYMANAGER variable in /etc/conf.d/xdm,"
+            echo "	or install x11-apps/xdm package"
+            eend 255
+        fi
+    fi
+}
+
+start() {
+    local EXE NAME PIDFILE AUTOCLEAN_CGROUP
+    setup_dm
+
+    if [ -f /etc/.noxdm ]; then
+        einfo "Skipping ${EXE##*/}, /etc/.noxdm found or \"nox\" bootparam passed."
+        rm /etc/.noxdm
+        return 0
+    fi
+
+    ebegin "Setting up ${EXE##*/}"
+
+    # save the prefered DM
+    save_options "service" "${EXE}"
+    save_options "name"    "${NAME}"
+    save_options "pidfile" "${PIDFILE}"
+    save_options "start_stop_args" "${START_STOP_ARGS}"
+    save_options "autoclean_cgroup" "${AUTOCLEAN_CGROUP:-no}"
+
+    /etc/X11/startDM.sh
+    eend 0
+}
+
+stop() {
+    local retval
+
+    retval=0
+
+    local myexe myname mypidfile myservice
+    myexe=$(get_options "service")
+    myname=$(get_options "name")
+    mypidfile=$(get_options "pidfile")
+    myservice=${myexe##*/}
+    yesno "${rc_cgroup_cleanup:-no}" || rc_cgroup_cleanup=$(get_options "autoclean_cgroup")
+
+    [ -z "${myexe}" ] && return 0
+
+    ebegin "Stopping ${myservice}"
+
+    if start-stop-daemon --quiet --test --stop --exec "${myexe}"; then
+        start-stop-daemon --stop --exec "${myexe}" --retry TERM/5/TERM/5 \
+            ${mypidfile:+--pidfile} ${mypidfile} \
+            ${myname:+--name} ${myname}
+        retval=${?}
+    fi
+
+    eend ${retval} "Error stopping ${myservice}"
+    return ${retval}
+}
+
+# vim: set ts=4 :

@@ -1,0 +1,42 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+# _url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=displaymanager-openrc
+pkgver=20180429
+pkgrel=1
+pkgdesc="OpenRC display manager init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+provides=('init-displaymanager')
+depends=('xorg-server' 'xorg-xinit' 'openrc')
+conflicts=('init-displaymanager')
+backup=('etc/conf.d/xdm')
+install=displaymanager.install
+source=("xdm.confd"
+        "xdm.initd"
+        "xdm-setup.initd"
+        'startDM.sh')
+sha256sums=('24dc07139087bd2261eb2de268ae5228a37a4db4fc695a7d9e647d95c36044df'
+            'a65d8c3a0210e4ec336f6b19900122d3a27c097893773aaf5c7de91d96399b36'
+            'cb49240e32b5bb22d7764890e765c94276ec66b597caeacd5121618f614c3bec'
+            '28dbefc67b332712273047ff0a5776b379217368f9a572665b43c2f486591058')
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+
+package() {
+    _inst_confd 'xdm'
+    _inst_initd 'xdm'
+    _inst_initd 'xdm-setup'
+
+    install -Dm755 "${srcdir}/startDM.sh" "${pkgdir}/etc/X11/startDM.sh"
+}
