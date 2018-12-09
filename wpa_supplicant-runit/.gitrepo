@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesW/wpa_supplicant-runit.git
+	branch = master
+	commit = 38432c5d307993614a8c647e9a274b65fc9744f6
+	parent = 282a019d024260923621546106281153259517f9
+	method = merge
+	update = auto
+	cmdver = 0.4.1
