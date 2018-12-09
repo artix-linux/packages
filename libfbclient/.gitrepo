@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libfbclient.git
 	branch = master
-	commit = a5a3186a044b0feaae1c55bdbd8f02bc7a6a97a8
-	parent = 621240698075998fd17c2ca2989d9f36722486c2
+	commit = 1c6e5cd3edf281e2d2631afd1520cc5980a6d394
+	parent = dc3746ef5dac2bfa6b09cf089717bd0ddb6fc856
 	method = merge
 	update = auto
 	cmdver = 0.4.1
