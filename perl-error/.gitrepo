@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPerl/perl-error.git
 	branch = master
-	commit = 4b295f675db11357b621bf50c4afcac8eafd332d
-	parent = 0722c106ef92f2f11906bd70372e7991ab1846c4
+	commit = 0974fd54a2802418c437fd99cab365d6e6f71677
+	parent = 486694b134f4b28eb6f50041d36e89a7a5dc8005
 	method = merge
 	update = auto
 	cmdver = 0.4.1
