@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xkeyboard-config.git
 	branch = master
-	commit = 713cd1185d83ad4aa3d15e541656c12182c6b7b3
-	parent = ce93f7b7c534a899c3747ee1ea441131b76a44cc
+	commit = ddc2eacbefab59ded5446e91cbf3b4a9adae29da
+	parent = f409e87a38b2148fd158caef5636f434f9d136dc
 	method = merge
 	update = auto
 	cmdver = 0.4.1
