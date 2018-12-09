@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libgphoto2.git
+	branch = master
+	commit = dc12f0c5e62326e7be6ac38c2df576108d8d6c34
+	parent = 7789fe2a1638ddab1a74af715e33c55c6002f679
+	method = merge
+	update = auto
+	cmdver = 0.4.1
