@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesG/graphene.git
+	branch = master
+	commit = aa4f1ce301a0c756b72e34e5cbb7a69a40cb0cdb
+	parent = 9f501dcd6a285efce533be35eaff1723c3a5b70b
+	method = merge
+	update = auto
+	cmdver = 0.4.1
