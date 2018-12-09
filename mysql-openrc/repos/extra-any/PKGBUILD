@@ -1,0 +1,50 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=mysql-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC mysql init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('mysql' 'openrc')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/mysql')
+source=("mysql.confd::${_url}/dev-db/mysql-init-scripts/files/conf.d-2.0"
+        "mysql.initd::${_url}/dev-db/mysql-init-scripts/files/init.d-2.2"
+        "mysql.initd.supervise::${_url}/dev-db/mysql-init-scripts/files/init.d-supervise")
+sha256sums=('b94756f2a5fe43893dea90fadbe47308e50fb4dbe2cbaa2676f34fa88181d8e7'
+            'd54a9d06be8204be30567591417ed6885f392b8eff4cc8840c989ac826839af0'
+            '1d3472f50efe242938a3d5f8b5870355a72ec86125b91173543db768fdbe8af5')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|/sbin/mysqld|/bin/mysqld|g' \
+        -i ${pkgdir}/etc/init.d/$1
+
+    install -Dm755 ${srcdir}/$1.initd.supervise ${pkgdir}/etc/init.d/$1-supervise
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1-supervise
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'mysql'
+    _inst_initd 'mysql'
+}
