@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/opencore-amr.git
+	branch = master
+	commit = 6469db9b2eb030c4a88701274558fca2d9962bc9
+	parent = e451f776ab1888bfce9969ac39056f2fd845cc90
+	method = merge
+	update = auto
+	cmdver = 0.4.1
