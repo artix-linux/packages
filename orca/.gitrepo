@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesO/orca.git
 	branch = master
-	commit = c9916f4e1bb2112ee22e49348190c03ddc9ec9b8
-	parent = 20ebc9fd41d8ace2408dbbced6d97aef6bd84c14
+	commit = 521e6b4e69c0bcff60a48f31b77ab7ee4e3d271a
+	parent = f459b6c64f3c1834b2eb44612a36f5b6f49286d5
 	method = merge
 	update = auto
 	cmdver = 0.4.1
