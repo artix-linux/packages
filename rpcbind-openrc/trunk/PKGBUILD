@@ -1,0 +1,42 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=rpcbind-openrc
+pkgver=20180429
+pkgrel=1
+pkgdesc="OpenRC rpcbind init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-system')
+provides=('init-rpcbind')
+depends=('openrc' 'rpcbind')
+conflicts=('init-rpcbind')
+backup=('etc/conf.d/rpcbind')
+source=("rpcbind.confd::${_url}/net-nds/rpcbind/files/rpcbind.confd"
+        "rpcbind.initd::${_url}/net-nds/rpcbind/files/rpcbind.initd")
+sha256sums=('38bb95aefc38d843d0890d9c15affd28f19f2133c17f463396c62970e7e2dffc'
+            'da992f87b5043e22dfd340b4a5440b76dce29cc14d3ef7b0ce586726fe4b220b')
+
+pkgver() {
+    date +%Y%m%d
+}
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'rpcbind'
+    _inst_initd 'rpcbind'
+}
