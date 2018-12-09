@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesA/at-spi2-atk.git
 	branch = master
-	commit = 8f9262e9499808b14702774f14030ad97e46d59a
-	parent = a1bbf393b6a6a25c9ca09d044d18a3a3cd90297d
+	commit = fca4feb75436906208d8857464e79c1c821b02a8
+	parent = f02d30b1c8e2c434aa6b0d575acbc3b4c19ae429
 	method = merge
 	update = auto
 	cmdver = 0.4.1
