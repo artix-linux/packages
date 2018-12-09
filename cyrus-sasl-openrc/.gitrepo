@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesC/cyrus-sasl-openrc.git
+	branch = master
+	commit = a2dd8473a3199544e72a0ce663a4759b7d334d40
+	parent = 3a8a51783f4f627da7474a1af3508e3017c6d153
+	method = merge
+	update = auto
+	cmdver = 0.4.1
