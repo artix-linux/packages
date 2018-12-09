@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesC/cppunit.git
 	branch = master
-	commit = d8565f75a26af57793a408254d3ab78751e3c31f
-	parent = 7f0420cbb782449e9eba5c57de2d6ba8d3a6ae34
+	commit = 72587c20f467db3e5cf6ea5d9c187b1a6e539e35
+	parent = f6ed7dd70cc7bbfa36a989725469ce6a1740fadd
 	method = merge
 	update = auto
 	cmdver = 0.4.1
