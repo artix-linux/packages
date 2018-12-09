@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/lynx.git
 	branch = master
-	commit = b0ab3092f4c824e4a16e902e501f5559952fcda0
-	parent = 3f285305f9c1f146f33f712acded15e45d42513d
+	commit = c56d0d2bcdaed22ca86e88efd32af8aa93345b09
+	parent = e91339c500bb9ec37ec2fb9318e4ca93430d6650
 	method = merge
 	update = auto
 	cmdver = 0.4.1
