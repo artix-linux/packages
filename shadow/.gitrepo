@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesS/shadow.git
 	branch = master
-	commit = a034129263502a8f5a6a241ebb79aa5329229633
-	parent = 3190d94c8199d5532312b0400bbd9918558fc8d0
+	commit = fd579de13a45345750397a95b46c9b7061fe0e63
+	parent = 5648d85fd71e084d97d589dbfdc6db57d47b0f9b
 	method = merge
 	update = auto
 	cmdver = 0.4.1
