@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxcursor.git
 	branch = master
-	commit = ba0b617618cf14150d3dd7375ab625b5d1dfba7f
-	parent = e4cd4cf33476fbccefa993afc5d3f9e0d54d9bfa
+	commit = cc4500c770e19ed8b9ee236679da449422909da4
+	parent = fcc2887d416e5e32481befac58e3d1ebfdc811cc
 	method = merge
 	update = auto
 	cmdver = 0.4.1
