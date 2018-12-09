@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesH/haveged-runit.git
 	branch = master
-	commit = 27c10844c8ab39e7cc141a360f794d68220223e8
-	parent = 64a5c375f8903e3ecbbfbbfa9d8dd1806245d29b
+	commit = 2b790da9bbfcb1956a0486e7eb2cbcf9031b8691
+	parent = a9f1580a7520e868d28df61a72c330b3c2d8d2d5
 	method = merge
 	update = auto
 	cmdver = 0.4.1
