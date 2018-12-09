@@ -1,0 +1,51 @@
+# Maintainer: Muhammad Herdiansyah <koni@artixlinux.org>
+
+_url="https://github.com/voidlinux/void-packages/raw/master/srcpkgs"
+
+_sed_args=(-e 's|/var/service|/run/runit/service|g' -e 's|/var/run|/run|g' -e 's|/usr/sbin|/usr/bin|g' -e 's|/opt/bin|/usr/bin|g' -e 's|/usr/libexec|/usr/lib|g')
+
+pkgname=postgresql-runit
+pkgver=20180605
+pkgrel=1
+pkgdesc="runit service scripts for postgresql"
+arch=('any')
+url="https://github.com/artix-linux"
+license=('BSD')
+# Note: While this PKGBUILD is licensed under BSD-3 terms, all of the
+#       included runscript should follow it's main package's licenses.
+groups=('runit-world')
+depends=('postgresql')
+conflicts=('systemd-sysvcompat')
+source=("postgresql.run"
+        "logpostgresql.run"
+        "postgresql.conf")
+sha256sums=('40851056deed2d27f36f892d774f7fb64d01f58c17269a17eb2a96fef2a0794c'
+            '007cd1227fa789ef5616275ed079f9cc8a4ac95fc2d8f2fa71ca30bb2defc33f'
+            'e75f6bb86488cbf2e2efcf91f753cae1d7f9879d5687bfe954ffed52338dd580')
+
+_inst_logsv() {
+    for file in run finish check; do
+        if test -f "$srcdir/log$1.$file"; then
+            install -Dm755 "$srcdir/log$1.$file" "$pkgdir/etc/runit/sv/$1/log/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/log/$file"
+        fi
+    done
+}
+
+_inst_sv() {
+    if test -f "$srcdir/$1.conf"; then
+        install -Dm644 "$srcdir/$1.conf" "$pkgdir/etc/runit/sv/$1/conf"
+    fi
+
+    for file in run finish check; do
+        if test -f "$srcdir/$1.$file"; then
+            install -Dm755 "$srcdir/$1.$file" "$pkgdir/etc/runit/sv/$1/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/$file"
+        fi
+    done
+}
+
+package() {
+    _inst_sv 'postgresql'
+    _inst_logsv 'postgresql'
+}
