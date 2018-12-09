@@ -1,0 +1,37 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=cups-openrc
+pkgver=20180428
+pkgrel=1
+pkgdesc="OpenRC cups init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('cups' 'openrc')
+optdepends=('avahi-openrc: avahi initscript')
+conflicts=('systemd-sysvcompat')
+source=("cupsd.initd::${_url}/net-print/cups/files/cupsd.init.d-r3")
+sha256sums=('06ccf2b8166cbe0046da899e4800ceb879d97d10544c40788d1117d0c1e2591a')
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|root:lp|root:cups|' \
+        -e 's|lp:lpadmin|daemon:sys|' \
+        -e 's|@neededservices@|need dbus avahi-daemon|' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_initd 'cupsd'
+}
