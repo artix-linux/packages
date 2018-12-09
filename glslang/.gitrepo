@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesG/glslang.git
+	branch = master
+	commit = c177099f231ef9067fc339233dd36881dba31207
+	parent = dd5ca9760a4af14c71d1cfd988cd2b2165d7a466
+	method = merge
+	update = auto
+	cmdver = 0.4.1
