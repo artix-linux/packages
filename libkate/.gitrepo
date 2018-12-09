@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libkate.git
+	branch = master
+	commit = de9bfbe6b92ced9d839ed2a85c62cef96e0e56f3
+	parent = 450ca3745cf5a41ed2867bcd839200df3217b27e
+	method = merge
+	update = auto
+	cmdver = 0.4.1
