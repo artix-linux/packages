@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-idna.git
+	branch = master
+	commit = 60d1592ee5acfd86728b93225d5321506a50e34a
+	parent = 68a67d110cf4f0257f98ebe2b3e83f9b970a740a
+	method = merge
+	update = auto
+	cmdver = 0.4.1
