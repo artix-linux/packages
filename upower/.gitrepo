@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesU/upower.git
+	branch = master
+	commit = fdefe25dcd8402e0d1884ccb800950560913ef76
+	parent = 90e303efba0b965243db081fd1955535e0621d02
+	method = merge
+	update = auto
+	cmdver = 0.4.1
