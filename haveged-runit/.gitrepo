@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesH/haveged-runit.git
+	branch = master
+	commit = 27c10844c8ab39e7cc141a360f794d68220223e8
+	parent = 64a5c375f8903e3ecbbfbbfa9d8dd1806245d29b
+	method = merge
+	update = auto
+	cmdver = 0.4.1
