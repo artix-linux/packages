@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesA/accountsservice.git
 	branch = master
-	commit = e9a2cf7129daff1ac4a540cd9a0e3acf15d8513b
-	parent = 088522e6af6502576a17be7f617c5cbb83b48ef5
+	commit = abb58b3960ee41b3c4a124ea91e27999530cee4e
+	parent = 06d613ec892d2b8344b89a9ceec392bfc911adf3
 	method = merge
 	update = auto
 	cmdver = 0.4.1
