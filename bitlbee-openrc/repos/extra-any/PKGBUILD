@@ -1,0 +1,42 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=bitlbee-openrc
+pkgver=20180316
+pkgrel=1
+pkgdesc="OpenRC bitlbee init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'bitlbee')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/bitlbee')
+source=("bitlbee.confd::${_url}/net-im/bitlbee/files/bitlbee.confd-r1"
+        "bitlbee.initd::${_url}/net-im/bitlbee/files/bitlbee.initd-r1")
+sha256sums=('cab8b8cb8709f27a5fa9f1cfce4b58db24f5cd38b8e6badb91dac0809e6ca8de'
+            '4b8654dffd57243079223a1cc236edf5e47309515270fde2d18123e41cd3c29f')
+
+# pkgver() {
+#     date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|need logger net|need net\n	use logger|' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'bitlbee'
+    _inst_initd 'bitlbee'
+}
