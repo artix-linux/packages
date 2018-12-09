@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/mkinitcpio-nfs-utils.git
+	branch = master
+	commit = 3912a56d4fb88572b673fd79086d58fe0bbf3c44
+	parent = 640aed6381b5921737a55ac63920460b7b70626d
+	method = merge
+	update = auto
+	cmdver = 0.4.1
