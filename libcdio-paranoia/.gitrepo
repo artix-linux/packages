@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libcdio-paranoia.git
 	branch = master
-	commit = b9f8d183b9af2473074528705ad55b844d16bfbd
-	parent = d3286e15939ece313ba908976d9943004bc32759
+	commit = 2bb59f443a5a5e377fd64491b9ceb37351530ba1
+	parent = d24cf9aaa09648e4090cb395dbecbe5e1b6bb89b
 	method = merge
 	update = auto
 	cmdver = 0.4.1
