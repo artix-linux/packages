@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxrender.git
 	branch = master
-	commit = 3a20e28fede9100b92e3f3c5df931fe150d81381
-	parent = 52849d1d59e6426bf4ba2c6235de96865dcb8155
+	commit = 7fcc15fe114d51235d870411ea3043e97590c8fc
+	parent = 44308de18b375fe6529dc72755cb440d642561ce
 	method = merge
 	update = auto
 	cmdver = 0.4.1
