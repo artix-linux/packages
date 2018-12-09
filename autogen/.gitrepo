@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesA/autogen.git
 	branch = master
-	commit = e9cb59ce17826fa5484330ce02c6975f7e8f6bca
-	parent = 80a7d47cd8f13fd49f7b5ab828bf1a4ea793d957
+	commit = c87f43e1d35fc9f886f03b712aadd0c27ff7a956
+	parent = f12f2b3218bb70e257f67e20ef03793dcb1d74b0
 	method = merge
 	update = auto
 	cmdver = 0.4.1
