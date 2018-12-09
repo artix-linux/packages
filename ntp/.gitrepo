@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesN/ntp.git
 	branch = master
-	commit = 397ab6cda37811de14832c7b0f6b1136e4e3771f
-	parent = 42ca202bbed764e1a16667c9056de8e41c527088
+	commit = 6e0d5194e2f0785e94d4e243837702da4fbba828
+	parent = 93b3c7f21db7f591d238240307a0ba73f21469fe
 	method = merge
 	update = auto
 	cmdver = 0.4.1
