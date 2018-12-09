@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesN/noto-fonts.git
+	branch = master
+	commit = fb76003eb0022753f25cd0267e56acc04104701e
+	parent = c93402162e5bb9266d3539ff83c7ef0b92ae4eef
+	method = merge
+	update = auto
+	cmdver = 0.4.1
