@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPerl/perl-xml-parser.git
 	branch = master
-	commit = 8bad35456854c871296480f1f44b4445a7fa7c71
-	parent = fe6ac0e5329f4d8e55c90d07b88967e2245c92a3
+	commit = 8b089b591f87d17a18d82c871fdcc65b02ef5bea
+	parent = cf5344ef4cecee130ae806408dae6a595aa5f231
 	method = merge
 	update = auto
 	cmdver = 0.4.1
