@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/modemmanager.git
+	branch = master
+	commit = 0c02c9ab4297ba92d7fb1c5b6447fa7c5fd4ec55
+	parent = e730ce4090828b98b09b467fd6bc99866306392e
+	method = merge
+	update = auto
+	cmdver = 0.4.1
