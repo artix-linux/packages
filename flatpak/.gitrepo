@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesF/flatpak.git
+	branch = master
+	commit = fafb4c8fd1723f270760bd0603cf1531ab3a66ad
+	parent = 5465256f06e72dfab797669f925e9a846393e31c
+	method = merge
+	update = auto
+	cmdver = 0.4.1
