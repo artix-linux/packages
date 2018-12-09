@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-networkauth.git
+	branch = master
+	commit = 6719ffac6cb9ed5f876ccdcd75aee0dc7065ab82
+	parent = d5f349e7ff25d8d80252ff14c9e3dc4aa79230e8
+	method = merge
+	update = auto
+	cmdver = 0.4.1
