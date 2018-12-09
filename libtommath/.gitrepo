@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libtommath.git
 	branch = master
-	commit = c7b091c2f7cad62b90c07a47d541312ee9636a1c
-	parent = 7d363504837570f944ee3005052991dbc644e64b
+	commit = 1feedcf8f79397da9b274c372be9e8553a60454b
+	parent = d5a55f0ca4092d429c3db72708cb2297a5d58097
 	method = merge
 	update = auto
 	cmdver = 0.4.1
