@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesN/nss-mdns.git
 	branch = master
-	commit = 6d5250b51f799f7dad12f5552baf98e1e0ba5536
-	parent = 75c3c87f5f2e320de65463e433d7a552a24abd55
+	commit = 5234c0aea919f9d995e1658fc29627e5aa52a50c
+	parent = 5d9eaf2251723f6433244296b9b678a547a85fab
 	method = merge
 	update = auto
 	cmdver = 0.4.1
