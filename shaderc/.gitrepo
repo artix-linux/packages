@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/shaderc.git
+	branch = master
+	commit = a97d77653e651d7c70e13d589f3529d576bf5c7d
+	parent = e566ff7bfffc13ce33d8caccec13461aa259813a
+	method = merge
+	update = auto
+	cmdver = 0.4.1
