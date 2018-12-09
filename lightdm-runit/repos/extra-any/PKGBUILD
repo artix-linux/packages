@@ -1,0 +1,48 @@
+# Maintainer: Muhammad Herdiansyah <herdiansyah@netc.eu>
+
+_url="https://github.com/voidlinux/void-packages/raw/master/srcpkgs"
+
+_sed_args=(-e 's|/var/service|/run/runit/service|g' -e 's|/var/run|/run|g' -e 's|/usr/sbin|/usr/bin|g' -e 's|/opt/bin|/usr/bin|g' -e 's|/usr/libexec|/usr/lib|g')
+
+pkgname=lightdm-runit
+pkgver=20180226
+pkgrel=1
+pkgdesc="runit service scripts for lightdm"
+arch=('any')
+url="https://github.com/artix-linux"
+license=('BSD3')
+# Note: While this PKGBUILD is licensed under BSD-3 terms, all of the
+#       included runscript should follow it's main package's licenses.
+groups=('runit-world')
+depends=('lightdm' 'dbus-runit')
+provides=('lightdm-runscripts')
+replaces=('lightdm-runscripts')
+conflicts=('systemd-sysvcompat')
+source=("lightdm.run::${_url}/lightdm/files/lightdm/run")
+sha256sums=('092cf2c0eeba2f503d3b894aff978916a973a64f9a76f645ed78f60c8f2d790f')
+
+_inst_logsv() {
+    for file in run finish check; do
+        if test -f "$srcdir/log$1.$file"; then
+            install -Dm755 "$srcdir/log$1.$file" "$pkgdir/etc/runit/sv/$1/log/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/log/$file"
+        fi
+    done
+}
+
+_inst_sv() {
+    if test -f "$srcdir/$1.conf"; then
+        install -Dm644 "$srcdir/$1.conf" "$pkgdir/etc/runit/sv/$1/conf"
+    fi
+
+    for file in run finish check; do
+        if test -f "$srcdir/$1.$file"; then
+            install -Dm755 "$srcdir/$1.$file" "$pkgdir/etc/runit/sv/$1/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/$file"
+        fi
+    done
+}
+
+package() {
+    _inst_sv 'lightdm'
+}
