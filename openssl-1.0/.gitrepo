@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/openssl-1.0.git
+	branch = master
+	commit = e88a77a7e6d2c7791a60505f67efbf213d824500
+	parent = a4e319d83c86ff6db180653f04bdd3c31dfc06c7
+	method = merge
+	update = auto
+	cmdver = 0.4.1
