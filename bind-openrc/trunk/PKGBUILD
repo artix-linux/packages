@@ -1,0 +1,42 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=bind-openrc
+pkgver=20180316
+pkgrel=1
+pkgdesc="OpenRC bind init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'bind')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/named')
+source=("named.confd::${_url}/net-dns/bind/files/named.confd-r7"
+        "named.initd::${_url}/net-dns/bind/files/named.init-r13")
+sha256sums=('3cf1ab72446cb9417de916e4cd732f2056fb74d2c6f03da6741b7bae8c415448'
+            'a1a25bd66fa2edac593e77c5469e110466b7d8dc1bfa3f72a49c7117196986a4')
+
+# pkgver() {
+#     date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|/etc/bind/named.conf|/etc/named.conf|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'named'
+    _inst_initd 'named'
+}
