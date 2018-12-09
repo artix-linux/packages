@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-isort.git
 	branch = master
-	commit = f7619a7c5e89700f7afc1a25af78133ad405ca0f
-	parent = 074fc6f6d56850668274dfe64bf7f994ab98e30a
+	commit = 9a2846eb7e2bb310374f61b2ef9bbfcb4e7fbeef
+	parent = 6954ec9eed5365d343576d9a235919cec3a111bf
 	method = merge
 	update = auto
 	cmdver = 0.4.1
