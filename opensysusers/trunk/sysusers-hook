@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+each_conf() {
+  while read -r f; do
+    "$@" "$(basename "$f")"
+  done
+}
+
+case $1 in
+  sysusers) each_conf /usr/bin/systemd-sysusers ;;
+  *) echo >&2 "  Invalid operation '$1'"; exit 1 ;;
+esac
+
+exit 0

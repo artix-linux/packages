@@ -1,0 +1,66 @@
+# Maintainer: Chris Cromer <cromer@artixlinux.org>
+# Maintainer: artoo <artoo@artixlinux.org>
+
+pkgbase=opensysusers
+pkgname=(opensysusers opensysusers-openrc opensysusers-docs)
+pkgver=0.4.9
+pkgrel=1
+pkgdesc="A standalone utility for handling systemd-style sysusers.d users and groups"
+arch=('any')
+url="https://gitea.artixlinux.org/artix/opensysusers"
+license=('BSD2')
+makedepends=('docbook-xsl')
+source=("${pkgbase}-${pkgver}.tar.gz::https://gitea.artixlinux.org/artix/opensysusers/archive/${pkgver}.tar.gz"
+		'opensysusers.hook'
+		'sysusers-hook'
+		'sysusers')
+sha256sums=('a42140a87ed27f8b129cee56e9eeee51273a2d347ca28f11d51aacad4c46cf47'
+            'cefc133d78851cc3838eec273aeb127814c955be21c6e3fc0f9ba4391e534ec2'
+            '4222b2496d8bb1ac9c07707e4ef1b334b8b59eb15451ea8ba0fd6e4c93e50c56'
+            'fa1ae017dc94d36cfa48234f65743d8610efc5e579f401a32fdde0461b2f3115')
+
+build(){
+    cd "${pkgbase}"
+    make PREFIX=/usr HAVEOPENRC=yes
+}
+
+package_opensysusers() {
+    depends=('pacman')
+    optdepends=('opensysusers-openrc: Opensysusers init script')
+
+    cd "${pkgbase}"
+    make PREFIX=/usr DESTDIR="${pkgdir}" install-shared install-default-bin
+
+    # pacman hooks
+    install -Dm755 ${srcdir}/sysusers-hook "$pkgdir"/usr/share/libalpm/scripts/sysusers-hook
+    install -Dm644 -t "$pkgdir"/usr/share/libalpm/hooks ${srcdir}/*.hook
+
+    ln -snf "/usr/bin/sysusers" "${pkgdir}/usr/bin/systemd-sysusers"
+
+    # setup opensysusers
+    install -D -m644 "$srcdir"/sysusers "$pkgdir"/usr/lib/sysusers.d/defaults.conf
+}
+
+package_opensysusers-openrc(){
+    pkgdesc="OpenRC opensysusers init script"
+    provides=('init-opensysusers')
+    depends=('opensysusers')
+    conflicts=('init-opensysusers')
+
+    cd "${pkgbase}"
+    make PREFIX=/usr DESTDIR="${pkgdir}" install-openrc
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+            -i ${pkgdir}/etc/init.d/opensysusers
+
+    install -dm755 ${pkgdir}/etc/runlevels/boot
+    ln -snf "/etc/init.d/opensysusers" "${pkgdir}/etc/runlevels/boot/opensysusers"
+}
+
+package_opensysusers-docs(){
+    pkgdesc="Opensysusers man"
+    depends=('opensysusers')
+
+    cd "${pkgbase}"
+    make PREFIX=/usr DESTDIR="${pkgdir}" install-man
+}
