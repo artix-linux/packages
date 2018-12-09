@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libical.git
 	branch = master
-	commit = 335999fe5ca8874441f2b4d5f809382fbaeeb016
-	parent = f37f6cf145ea32f7ff6555276bc2e7ff2309cb1a
+	commit = cbfc2c04bb11bc055a95da5b4fd58be2e008ea27
+	parent = f969465a7f2dfbd0db521dbb718093b66702bfc2
 	method = merge
 	update = auto
 	cmdver = 0.4.1
