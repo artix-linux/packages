@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libtheora.git
 	branch = master
-	commit = 3e8d255f137b3e7783315866afcc8efdc466023e
-	parent = 3917e5c6f6070e53f2b17711878eb5d6ebf09cd4
+	commit = a0e54dd5c717c7bd8b292b6d690f43b73d7bd7ec
+	parent = ddb82a4bf5e13f6e5abcbb16b499b67c3d428c1a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
