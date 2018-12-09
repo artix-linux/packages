@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesW/wicd-runit.git
 	branch = master
-	commit = 09fbaf14c0defe81d826d5b83a4bc82f30277fdc
-	parent = 515a80fdcf3066036daa079d17989d77de23470a
+	commit = 3c5f91cfe08bd01c9f3ed86ea2d87181850fe8d7
+	parent = 41569e0292a7d7d06193351ca07d7d2c292eee00
 	method = merge
 	update = auto
 	cmdver = 0.4.1
