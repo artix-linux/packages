@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xf86-video-fbdev.git
 	branch = master
-	commit = b555f0c76fd63afdf2d512a9e5de5b456de3c1e1
-	parent = 8d022762210387b8491f91e1384ad664dee27288
+	commit = 9eee18e4d597678d533bf3c816f7c0a95cf31d94
+	parent = 634643cccc54eaa3bc0ccdf71dba94e346a55aa2
 	method = merge
 	update = auto
 	cmdver = 0.4.1
