@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesD/docbook-utils.git
 	branch = master
-	commit = f76f5b143c5afa89e130fdcd633a6ef7427f092f
-	parent = ec06762347e013596486ab46a7b0efcc673b5142
+	commit = cfb3a21c922e0ff6b9ba3c386b56f4e64c18527f
+	parent = 02417b8feea800601ae8c00be9fe2297076c7602
 	method = merge
 	update = auto
 	cmdver = 0.4.1
