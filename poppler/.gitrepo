@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/poppler.git
+	branch = master
+	commit = ff4c1fd60299e9ca3d6e8161d7b6053ea9ab7800
+	parent = 900755c6266dbc15b32cba7030cc4830b3a89ffe
+	method = merge
+	update = auto
+	cmdver = 0.4.1
