@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libid3tag.git
+	branch = master
+	commit = 6e7b71af4daac1437d4d351ae64d808897e067c4
+	parent = 8797cae2b5cbde5700da664f8b24536d4233a5fa
+	method = merge
+	update = auto
+	cmdver = 0.4.1
