@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libunwind.git
+	branch = master
+	commit = 8a8498f694d4c3a4a05c34b7c515b70cbf640d20
+	parent = f5b92d5623d3a917cc6be7e92cca450ebdecb622
+	method = merge
+	update = auto
+	cmdver = 0.4.1
