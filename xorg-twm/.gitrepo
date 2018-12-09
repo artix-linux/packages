@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xorg-twm.git
 	branch = master
-	commit = 5c4fdb105d9c85debd86b252476a4efc6ddc28d6
-	parent = 22f2d8720dca216ecf95b6efe8df5b450f83f272
+	commit = 1d94c7c934499636c51a3711b262c6b6a04bd8a7
+	parent = 19f0c47f6affa516fc82f0ca2716ac7b4c8d5ef7
 	method = merge
 	update = auto
 	cmdver = 0.4.1
