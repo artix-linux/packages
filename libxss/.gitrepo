@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxss.git
 	branch = master
-	commit = 84afbbe8f7bd24271398122bc0b98ce563fbc428
-	parent = 9a34cdbd6087f2514b998fd622b98b26b38581a6
+	commit = bf9fb69abb7991c3d18a3bbb5221a4809a0bcb9b
+	parent = 67ad76ff6bc1602268981a7a013d0cf326d08632
 	method = merge
 	update = auto
 	cmdver = 0.4.1
