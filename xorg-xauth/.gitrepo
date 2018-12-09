@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xorg-xauth.git
 	branch = master
-	commit = 583dd3f9df49e3fea0f40a305621214a13140ff9
-	parent = 282191ab6b291cc56711e6c49ca3cf1074bcdd40
+	commit = d24dae63d86abd944525b1f965eebb5e6f58af0d
+	parent = e614f698ac164b1b4419ee377fd8cc0fca33fcc3
 	method = merge
 	update = auto
 	cmdver = 0.4.1
