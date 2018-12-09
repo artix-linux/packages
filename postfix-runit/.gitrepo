@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/postfix-runit.git
+	branch = master
+	commit = 3e295aba443b6e2d18e624bc7f67964ae96c22f1
+	parent = 6f701643bf13034c9c232eaf9f6cc354f08203f4
+	method = merge
+	update = auto
+	cmdver = 0.4.1
