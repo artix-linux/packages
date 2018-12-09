@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxkbfile.git
 	branch = master
-	commit = 0fe28544429c920d32f5bd4b0a2f89ff829b8e94
-	parent = 2ffee6c8061abefdb0a8a245b96e3bd43a57bef0
+	commit = 8beb54cb1ed9e0986fb42e2f0fde4e75efc32138
+	parent = 33f732bb42cea9b1ca829eca4190bcb37998f9d4
 	method = merge
 	update = auto
 	cmdver = 0.4.1
