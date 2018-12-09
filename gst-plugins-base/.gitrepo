@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/gst-plugins-base.git
 	branch = master
-	commit = 82c76210312d227123b64fd2dd27f092f89c1b39
-	parent = 1c453a911035c569587a3288fedc67719eb2a443
+	commit = 016b59f3d0cc7d340d1f594e9fa0b87c2fa1639b
+	parent = bdb4ad4c1471483c5d22ce329a3bd88bcadc45f7
 	method = merge
 	update = auto
 	cmdver = 0.4.1
