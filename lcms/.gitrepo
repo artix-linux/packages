@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/lcms.git
 	branch = master
-	commit = 84cd37c793eaf67d1079e27d6e72635c32ce1cb1
-	parent = 10178eaf95426cce8d0674792a5cce756d73877c
+	commit = 213ba9dedac4f8786454b22a903202be66919511
+	parent = c526494ab4f2825bf5b09049bd3391efd5868de3
 	method = merge
 	update = auto
 	cmdver = 0.4.1
