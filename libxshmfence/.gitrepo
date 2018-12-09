@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libxshmfence.git
+	branch = master
+	commit = db55c7dd5c1350bf0f65cfbf093c6ab57799d1d3
+	parent = 1e60e3ec1c888aab3a0fd0c1331f3189f8af2a22
+	method = merge
+	update = auto
+	cmdver = 0.4.1
