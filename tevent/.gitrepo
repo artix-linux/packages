@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesT/tevent.git
+	branch = master
+	commit = 5fca981cb60efd1d5bdfcffebe867b50492038d9
+	parent = 8a6bb5bfdf8bd51b3d608afa21db6d55b5b5578f
+	method = merge
+	update = auto
+	cmdver = 0.4.1
