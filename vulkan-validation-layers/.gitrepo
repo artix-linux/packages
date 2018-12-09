@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesV/vulkan-validation-layers.git
 	branch = master
-	commit = ca8c7b0abcfc451c00b0f8d24c7fa7e38329533b
-	parent = ad51920a1ce12e259d9b56959c065730d6d8ceff
+	commit = 983d69bb39f8d1842d3748dc5f37434723be623a
+	parent = b41a998d9f2ecf75e195afaf09db344310cf2d5b
 	method = merge
 	update = auto
 	cmdver = 0.4.1
