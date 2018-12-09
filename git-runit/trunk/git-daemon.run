@@ -1,0 +1,8 @@
+#!/bin/sh
+# This file is based on Debian's runit script file
+# (C) 2005-2012 Gerrit Pape
+# Licensed under GPL-2
+exec 2>&1
+[ -r conf ] && . ./conf
+exec chpst -ugit "$(git --exec-path)"/git-daemon $OPTS \
+     --base-path=/srv/git

@@ -1,0 +1,10 @@
+#!/bin/sh
+# This file is based on Debian's runit script file
+# (C) 2005-2012 Gerrit Pape
+# Licensed under GPL-2
+set -e
+
+LOG=/var/log/git-daemon
+
+test -d "$LOG" || mkdir -p -m2644 "$LOG" && chown git "$LOG"
+exec chpst -ugit svlogd -tt "$LOG"
