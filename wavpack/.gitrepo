@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesW/wavpack.git
+	branch = master
+	commit = 4c0db699159005b0884e42e6373b2095ead1d72b
+	parent = 1b3b392b35dca7969b9c8f44d1856bd2842bfd54
+	method = merge
+	update = auto
+	cmdver = 0.4.1
