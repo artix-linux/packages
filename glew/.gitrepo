@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/glew.git
 	branch = master
-	commit = fb2f9e58da6b4fa5a27b4e6ba6c912bf972c0b98
-	parent = e6d0539cfde704e0eb2fea80d768d65e5faa11a6
+	commit = 7ff86aab6391885a4a193c00afb19fae282c1766
+	parent = 6bf12152799431eff016eaf04d09019ebcd82cdd
 	method = merge
 	update = auto
 	cmdver = 0.4.1
