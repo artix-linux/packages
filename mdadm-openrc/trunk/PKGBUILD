@@ -1,0 +1,50 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+
+pkgname=mdadm-openrc
+pkgver=20180429
+pkgrel=1
+pkgdesc="OpenRC mdadm init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-system')
+provides=('init-mdadm')
+depends=('openrc' 'mdadm')
+conflicts=('init-mdadm')
+backup=('etc/conf.d/mdadm')
+source=("mdadm.confd::${_url}/sys-fs/mdadm/files/mdadm.confd"
+        "mdadm.initd::${_url}/sys-fs/mdadm/files/mdadm.rc"
+        "mdraid.confd::${_url}/sys-fs/mdadm/files/mdraid.confd"
+        "mdraid.initd::${_url}/sys-fs/mdadm/files/mdraid.rc")
+sha256sums=('ec55674955af7a31da51b8b72b599e8519809287dad796a9b16155bcba471b79'
+            '5b859ba14b7a4a350c0a8afe6edb352e0db9920bdf1e05315ffbbfb92f201584'
+            'b489ced10391d4295bb8ca29e128b0d4217c290f1b4e37b05f5a9275048d289d'
+            '31e7ba4174f38c05e939aa56fab8a43a3e371ba9e503e029887c99fed7a28331')
+
+pkgver() {
+    date +%Y%m%d
+}
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    for f in mdadm mdraid;do
+        _inst_confd $f
+        _inst_initd $f
+    done
+}
+
+
