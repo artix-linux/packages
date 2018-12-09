@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/liboauth.git
+	branch = master
+	commit = 749ed44e2c180fd0a86fb2ca2d0c5bdee2a1d0ee
+	parent = 783e862e5b90c8cdf83cb35a9ee916d3a48d0b40
+	method = merge
+	update = auto
+	cmdver = 0.4.1
