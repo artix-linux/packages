@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libmicrodns.git
 	branch = master
-	commit = 735d6e55d18c39f5787ba325fd9fa74496dbf2bd
-	parent = e0bb87ccc3653aa5df4cca6ee2252c7c18ec8c13
+	commit = 57fd60c392ac12311aaa19af15e9759f71b6776d
+	parent = e34a46404530d31e81dc22c7ee264a2419902046
 	method = merge
 	update = auto
 	cmdver = 0.4.1
