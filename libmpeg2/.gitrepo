@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libmpeg2.git
+	branch = master
+	commit = 5c71b78f009a635c2ee464ba0dfa2ca90c873bb0
+	parent = 6368177925aba85c6d57a4266647e1360b1a8910
+	method = merge
+	update = auto
+	cmdver = 0.4.1
