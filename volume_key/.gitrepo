@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesV/volume_key.git
 	branch = master
-	commit = a08621844da01b5062fe5b500ff976ceee118bed
-	parent = 4d3036f42c3b38dc5c4698ca674376ed53448fb1
+	commit = f9871617aa5ad8bc49c9e59ec1d7233fcf4b8967
+	parent = 8d73c9f57c7879f98bf389e6ac84191195652c49
 	method = merge
 	update = auto
 	cmdver = 0.4.1
