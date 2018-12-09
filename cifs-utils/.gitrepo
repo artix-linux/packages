@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesC/cifs-utils.git
+	branch = master
+	commit = f7d27f73e39451636a15c9afaca7db76b64d8a03
+	parent = 19fda2c2fa4d8bc2fab63a024fa8c3b93532c4bc
+	method = merge
+	update = auto
+	cmdver = 0.4.1
