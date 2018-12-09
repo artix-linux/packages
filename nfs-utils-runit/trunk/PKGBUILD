@@ -1,0 +1,38 @@
+# Maintainer: Muhammad Herdiansyah <herdiansyah@netc.eu>
+
+_url="https://github.com/voidlinux/void-packages/raw/master/srcpkgs"
+
+_sed_args=(-e 's|/var/run|/run|g' -e 's|\(/usr\)\?/sbin|/usr/bin|g')
+
+pkgname=nfs-utils-runit
+pkgver=20180429
+pkgrel=1
+pkgdesc="runit service scripts for nfs-utils"
+arch=('any')
+url="https://github.com/artix-linux"
+license=('BSD3')
+groups=('runit-system')
+depends=('nfs-utils' 'rpcbind-runit' 'device-mapper-runit')
+provides=('nfs-utils-runscripts' 'init-nfs-utils')
+conflicts=('init-nfs-utils')
+replaces=('nfs-utils-runscripts')
+source=("nfs-server.run::${_url}/nfs-utils/files/nfs-server/run"
+        "nfs-server.finish::${_url}/nfs-utils/files/nfs-server/finish"
+        "statd.run::${_url}/nfs-utils/files/statd/run")
+sha256sums=('75a2d1228115f5bb6ff26530dbb60cc37a0ea82d03c1f19d37b5460a295afff1'
+            '6cae89df8cd52c196b25457a9603423353013f85daf99f33465129437d470ac2'
+            'f28e0b3e65534dd0776f243a596dc5300d59ee3f58f1181c1564eadd0b7fb1fd')
+
+_inst_sv(){
+    for file in run finish check; do
+        if test -f "$srcdir/$1.$file"; then
+            install -Dm755 "$srcdir/$1.$file" "$pkgdir/etc/runit/sv/$1/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/$file"
+        fi
+    done
+}
+
+package() {
+    _inst_sv 'nfs-server'
+    _inst_sv 'statd'
+}
