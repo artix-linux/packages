@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesG/gst-plugins-base.git
+	branch = master
+	commit = 82c76210312d227123b64fd2dd27f092f89c1b39
+	parent = 1c453a911035c569587a3288fedc67719eb2a443
+	method = merge
+	update = auto
+	cmdver = 0.4.1
