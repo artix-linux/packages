@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/metalog-openrc.git
 	branch = master
-	commit = 484b43fd1c9cb0a5ba91f887af078e11d701dfab
-	parent = 3aae6aa422dbec678a9926d4deaf0869cea91d48
+	commit = 786b50256d97ebd595003787ead7976af863129b
+	parent = c615652a90a232a819f461d814a0bba3cb4f3167
 	method = merge
 	update = auto
 	cmdver = 0.4.1
