@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesN/nginx.git
 	branch = master
-	commit = 678fce6b57b5189d0f84076c47f8ab8c147bbf77
-	parent = 2840626c3dff7ce5b6e8c229cfc4c6074208df92
+	commit = 65e899c45c06804558f2ae170ba529592e844e63
+	parent = 415e1bff8d1a6dfd305006c50cd0c9c3c90ce4e4
 	method = merge
 	update = auto
 	cmdver = 0.4.1
