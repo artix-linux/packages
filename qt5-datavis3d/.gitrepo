@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-datavis3d.git
 	branch = master
-	commit = 18ad02757a2d5f5890df70c31698aa007c010d79
-	parent = 2de011d311159f8d39da3fe67e3ec7809a9f7547
+	commit = e2fba6f66938948804f0e4c36e5d5a9298e7d70c
+	parent = 1c0b9d93f6fa47f056e4130f01a1fdaeeba4cc96
 	method = merge
 	update = auto
 	cmdver = 0.4.1
