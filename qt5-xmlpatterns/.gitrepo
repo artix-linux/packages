@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-xmlpatterns.git
 	branch = master
-	commit = 0b88efde99a45b3a039a1f91d515bcc73cc66a12
-	parent = 669ba7ca663879212cdbd39d56ed62bcdce71e93
+	commit = af5e724d7ccb6b719a5a6cfe07f20e048b3ddb5d
+	parent = 9e297c4ee83628d6af5bfb7ce8872ce8d04e45cb
 	method = merge
 	update = auto
 	cmdver = 0.4.1
