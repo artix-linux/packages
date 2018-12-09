@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libsamplerate.git
 	branch = master
-	commit = a940b4cf65e8d039d264bf22da80c1c9ae9f2e1d
-	parent = 1e7a27fa974dbec4744aff6ae33a1d1f3879c66a
+	commit = 6e3f86a98832e0ef04e4921a152ff851b2aeb10c
+	parent = 8266df55fea20089a00d3c5434b30acf9f6a32ed
 	method = merge
 	update = auto
 	cmdver = 0.4.1
