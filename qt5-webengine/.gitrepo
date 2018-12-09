@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-webengine.git
 	branch = master
-	commit = 0ecaecf34944452a429d10e3615a60c66b66f838
-	parent = 67a9d8b92544c3a0553bf5228f3b9166455378fe
+	commit = 241ac1c76798cdc33abb12041aebc74c10eb75cf
+	parent = 0efc8eccdc6ca79c97ef3a846401c50823695c94
 	method = merge
 	update = auto
 	cmdver = 0.4.1
