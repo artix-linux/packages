@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libutempter.git
 	branch = master
-	commit = 0fa8851f17b4fbf8df097129554fb0902638410e
-	parent = 4604e839cf98cc8999bbfb47b3504f88f38bc966
+	commit = d8ee0318c15d2b751a76ff0b41c11aa081410c89
+	parent = 167854430cfff4b6583288fcd508953a719c2850
 	method = merge
 	update = auto
 	cmdver = 0.4.1
