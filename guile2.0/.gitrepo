@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/guile2.0.git
 	branch = master
-	commit = 5e100608224dface9977cd12be80c6ae0feac1d6
-	parent = 6b66d7529e859db1a1694718ad138ccc271516ab
+	commit = 7c617b57ffe814ecc97b70c8d920daed5451d874
+	parent = cc63c654117c3b09778ef83f6c1497c9a1d0a278
 	method = merge
 	update = auto
 	cmdver = 0.4.1
