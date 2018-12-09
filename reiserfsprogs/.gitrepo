@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesR/reiserfsprogs.git
 	branch = master
-	commit = 379716f9adcef708693f419c832045ab77b9b511
-	parent = 8a987247065ea84a5a2304dfd85090234a4e93b0
+	commit = e38df60b5ffb23b2e6479bb8924a7973d9ea284c
+	parent = 90e4a7a8fa9ac8b404916003b6a2ed45bc772908
 	method = merge
 	update = auto
 	cmdver = 0.4.1
