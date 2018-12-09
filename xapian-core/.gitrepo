@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesX/xapian-core.git
+	branch = master
+	commit = 0398aa2330471992e2a1f5ec009aecc8524e8806
+	parent = eb73cd54bc2584d4f5e8e66b1c069d60be5e5ce3
+	method = merge
+	update = auto
+	cmdver = 0.4.1
