@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-mccabe.git
+	branch = master
+	commit = 849405c95c83d0da283d6ed4bb5b213b60817c76
+	parent = 1ffe7c7d9364b6e42d1244f44b48d9691b5f4061
+	method = merge
+	update = auto
+	cmdver = 0.4.1
