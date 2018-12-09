@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesA/audiofile.git
 	branch = master
-	commit = 6c252c729c0d4c102385039cc01ac59acc2f4f9e
-	parent = 2c539dc5e3820effd1d463ddb11b726308b3abc4
+	commit = f79013228cf4080a9a37878353e0e683533f007f
+	parent = 6b247ad231d92cfad467607a7224eef9ff0b4be4
 	method = merge
 	update = auto
 	cmdver = 0.4.1
