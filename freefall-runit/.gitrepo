@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesF/freefall-runit.git
 	branch = master
-	commit = 63e858180f946677aed042284474049e0b7c79c4
-	parent = e2a2fad861c7f10e2085de93a38ba3806b99d815
+	commit = b8d74f26996ff2d0274f9967816fa1664ff00569
+	parent = 029de90f3fb296a2301c15550fa57d3010b255c2
 	method = merge
 	update = auto
 	cmdver = 0.4.1
