@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesR/rpcbind.git
 	branch = master
-	commit = c23ef2c1f5f24de4bf1827d21519060417888f9b
-	parent = e6e3a7d4d6d4d25ece03b5240e34165b230cbff7
+	commit = 5dc476b7a25c0d9d9c4310818376e4ed2743e0af
+	parent = e15645e8c06a18fa522a794a759e1a1a848581d4
 	method = merge
 	update = auto
 	cmdver = 0.4.1
