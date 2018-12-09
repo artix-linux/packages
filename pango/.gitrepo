@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/pango.git
+	branch = master
+	commit = e2c75f0eba6f99a12481d47fd68cf6897b721089
+	parent = ee47335149d5c5a2603c1ec000912f6245c245a9
+	method = merge
+	update = auto
+	cmdver = 0.4.1
