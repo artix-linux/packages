@@ -1,0 +1,41 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=nginx-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC nginx init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'nginx')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/nginx')
+source=("nginx.confd::${_url}/www-servers/nginx/files/nginx.confd"
+        "nginx.initd::${_url}/www-servers/nginx/files/nginx.initd-r4")
+sha256sums=('29677faab40d1fff740d743614788fd73c8c2d4167c3bd64d3e8bd4b0eb90d2b'
+            'a28354a71c1d9d9f681835a1afe73ca538aca81c4a28d0166b66344854cca235')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'nginx'
+    _inst_initd 'nginx'
+}
