@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesG/glade.git
+	branch = master
+	commit = 744c2cfea8e95e7bc8d617178f914449c6daa6ce
+	parent = c5c0ca3416dbbb2333f7c109dbdd6c1f8adc9ccb
+	method = merge
+	update = auto
+	cmdver = 0.4.1
