@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/lame.git
+	branch = master
+	commit = 12c2df412dc4561f00d3610a94a4abab999c2e98
+	parent = 74c39d8dcb0f1b2dfbb5f202939c32298f3e9dec
+	method = merge
+	update = auto
+	cmdver = 0.4.1
