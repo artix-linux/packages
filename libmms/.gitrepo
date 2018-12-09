@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libmms.git
 	branch = master
-	commit = 542d24aa23f27240fa659fb8958760b03ecb0423
-	parent = daf28d99ded155da7a0d4df2273b92ca05b4ec7c
+	commit = d59b285f954a086d4c0828b0a2778cf99b21c9c4
+	parent = 860abfcd18773066f88a3221423f42671050197f
 	method = merge
 	update = auto
 	cmdver = 0.4.1
