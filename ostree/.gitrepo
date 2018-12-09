@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/ostree.git
+	branch = master
+	commit = f4e04a4daeb86946011de008067e049f8591d202
+	parent = f192fbe1c2fdf47e3d326470ece3dec2b8c629c2
+	method = merge
+	update = auto
+	cmdver = 0.4.1
