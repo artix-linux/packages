@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libevdev.git
 	branch = master
-	commit = 9763879041f79722e36aae5c99ae613c30299f8f
-	parent = c3a0b05abf29a0595ed7bda3e7af2982c0aac1e2
+	commit = c09fcf5f34d0146b27e0850ad473a0c76d0ca0c4
+	parent = 9c0bb96747fe6cca3368565dcd7dc0c6a056ec04
 	method = merge
 	update = auto
 	cmdver = 0.4.1
