@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libdaemon.git
 	branch = master
-	commit = 260c4deed74110a10cb97e8f878a0107ecdeb7e4
-	parent = 213d93e0346d3626b57149cd5c2514f8597c113b
+	commit = 11c3366afaa4011e9e7e9f2ffaabdebac2f75eb0
+	parent = 24998072e892a7e715810bea70270bd84ded2a3c
 	method = merge
 	update = auto
 	cmdver = 0.4.1
