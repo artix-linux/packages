@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesN/networkmanager-openrc.git
+	branch = master
+	commit = 12521796fe2cfd48e1b7355266ea353a4408b9c3
+	parent = d5cc927a8ae6cc8e474289922f9d325a908f1e2c
+	method = merge
+	update = auto
+	cmdver = 0.4.1
