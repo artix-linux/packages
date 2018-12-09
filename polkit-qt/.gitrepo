@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesP/polkit-qt.git
 	branch = master
-	commit = 93a0dd82dfb8f721100cff184d5c16ee6060a55d
-	parent = f670ba7e2e60c68d28599bca81c9bfe9eb6443c2
+	commit = b6d8313651b2280343ce0ce2c15097e7b2f814d4
+	parent = 85a07bb3d1684870a845d63ac58e200cdb525835
 	method = merge
 	update = auto
 	cmdver = 0.4.1
