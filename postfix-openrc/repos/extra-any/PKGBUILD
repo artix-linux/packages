@@ -1,0 +1,37 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=postfix-openrc
+pkgver=20180315
+pkgrel=1
+pkgdesc="OpenRC postfix init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'postfix')
+conflicts=('systemd-sysvcompat')
+source=("postfix.initd::${_url}/mail-mta/postfix/files/postfix.rc6.2.7")
+sha256sums=('34cb4ef8067b9001005931c30ab87be41f47c20ef1185a3afbc86d3d6f01996e')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_initd 'postfix'
+}
