@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-quickcontrols.git
+	branch = master
+	commit = 4f495c2ed2b40d8d94cfd721d63389d9f9f75bf8
+	parent = 6760b116c9bdbd188641aa26c9925c4b1eea031f
+	method = merge
+	update = auto
+	cmdver = 0.4.1
