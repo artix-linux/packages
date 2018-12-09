@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libotr.git
 	branch = master
-	commit = b568c59c2da0cc25b9bdb3ebb9d138b35f76cbb4
-	parent = 8a8ffa4bdb56febceebb23fda7b3e3decb219baf
+	commit = f46969d9e83437bd612b68a7ec9ab0e9c91f2e2c
+	parent = 3482838d74aea5bb9e1713711bf31f265c676ce4
 	method = merge
 	update = auto
 	cmdver = 0.4.1
