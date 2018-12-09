@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/gnome-common.git
 	branch = master
-	commit = 488230a70e2d5ab2e8ce259df12a69c6fc439a35
-	parent = 3b4d857d468762252d6e5749740dcecdc0935c2a
+	commit = 01d1ce931b3d9d311d2dd2b8cbb5bb90182fcc82
+	parent = 356fcc8967c426b6809f9e2f1791a8741254d074
 	method = merge
 	update = auto
 	cmdver = 0.4.1
