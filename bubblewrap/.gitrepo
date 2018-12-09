@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesB/bubblewrap.git
+	branch = master
+	commit = c78da5fb5adaf7780f2268792e293f66f2b2ee64
+	parent = e1d1195359ac6136a1178bd7c9e2340b5848278f
+	method = merge
+	update = auto
+	cmdver = 0.4.1
