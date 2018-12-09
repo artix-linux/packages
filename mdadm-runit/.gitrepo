@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/mdadm-runit.git
+	branch = master
+	commit = 60f5898931bdc3a42e038ec0fdbb24a0bfe81b17
+	parent = 293a3eb9a016b9a8dee761d34110835359bf8fd9
+	method = merge
+	update = auto
+	cmdver = 0.4.1
