@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xf86-video-amdgpu.git
 	branch = master
-	commit = 94fe9e2a1ba996b567bc7d4a4ca67f4b3a8c5f2c
-	parent = eab1390d5d297d36ae44821bc6cbf9a37ee8a451
+	commit = 3661cf1807e4344fc26915bfbca15f463fe87a37
+	parent = f6720ba77d21d08dd5e150f3bfb71e3c663efe49
 	method = merge
 	update = auto
 	cmdver = 0.4.1
