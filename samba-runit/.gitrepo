@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesS/samba-runit.git
 	branch = master
-	commit = e8b4558c71a53f94fe219d6084a4703c0dd0aa07
-	parent = 7626233806e67b0ccc4b8c404ebfed6a4d02bdb6
+	commit = 4d45637ddaede22572a690909a1f47e3a70e68f2
+	parent = 1feb63a7c3e65fc09a86722c44ba696759eb2c76
 	method = merge
 	update = auto
 	cmdver = 0.4.1
