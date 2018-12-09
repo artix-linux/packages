@@ -1,0 +1,38 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=brltty-openrc
+pkgver=20180316
+pkgrel=1
+pkgdesc="OpenRC brltty init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'brltty')
+conflicts=('systemd-sysvcompat')
+source=("brltty.initd::${_url}/app-accessibility/brltty/files/brltty.rc")
+sha256sums=('4dd0338d2f9943165d5922c8964ca3456e8e8b67b37cf5f2652435bc1f644c41')
+
+# pkgver() {
+#     date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|/bin/brltty|/usr/bin/brltty|' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_initd 'brltty'
+}
