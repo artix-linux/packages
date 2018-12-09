@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/pyatspi.git
+	branch = master
+	commit = b1c60d9f49f8b8c1928bceefe6cc381e45474604
+	parent = baaa7f3a7235c22906aa340ba1b984f64918e84b
+	method = merge
+	update = auto
+	cmdver = 0.4.1
