@@ -1,0 +1,55 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=lm_sensors-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC lm_sensors init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'lm_sensors')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/sensord'
+        'etc/conf.d/fancontrol'
+        'etc/conf.d/lm_sensors')
+source=("sensord.confd::${_url}/sys-apps/lm_sensors/files/sensord.confd"
+        "sensord.initd::${_url}/sys-apps/lm_sensors/files/sensord.initd"
+        "fancontrol.confd::${_url}/sys-apps/lm_sensors/files/fancontrol.confd"
+        "fancontrol.initd::${_url}/sys-apps/lm_sensors/files/fancontrol.initd"
+        "lm_sensors.confd::${_url}/sys-apps/lm_sensors/files/lm_sensors.confd"
+        "lm_sensors.initd::${_url}/sys-apps/lm_sensors/files/lm_sensors.initd")
+sha256sums=('0ce54c9c9055165ed87a348fa6a967a62ee228a0e1a42193bb577cd47d6cb0b0'
+            '410e2a312619e7c23cd5c72c38875dc19cd35eec8229db2ec35f240e9418a31c'
+            'edffd2c89102a02e576dfa20d9c49a3e10f1f3b747e843fca63a8fe49c0a60ed'
+            'c4e63538e437abd1fd624dcff1e61d513254d0607088c0538d08b3b7c639a72f'
+            '148c840ba5e701f6983bba2ebae6a087e8bf3e2b8276f09bc03ae3eadc011220'
+            '3dadb7445091d5a3ad0cef2b6c10e32b6372820e5558d49195ce68771a9e1272')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'sensord'
+    _inst_initd 'sensord'
+    _inst_confd 'fancontrol'
+    _inst_initd 'fancontrol'
+    _inst_confd 'lm_sensors'
+    _inst_initd 'lm_sensors'
+}
