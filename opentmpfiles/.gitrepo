@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/opentmpfiles.git
+	branch = master
+	commit = 79c9eb39e51e713ccdd2c0f219e6e4830ad2e3a5
+	parent = 85b15e9d519e815c304538ea133c025d332409f1
+	method = merge
+	update = auto
+	cmdver = 0.4.1
