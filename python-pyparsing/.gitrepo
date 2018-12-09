@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-pyparsing.git
+	branch = master
+	commit = 1b1f38655731b34b44333d01cbf391441471e27d
+	parent = f3bd77a7e4c42e78d7c84adc4a58e4b373699945
+	method = merge
+	update = auto
+	cmdver = 0.4.1
