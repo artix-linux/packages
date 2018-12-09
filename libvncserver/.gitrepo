@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libvncserver.git
 	branch = master
-	commit = 30b24f3897558a4fb9f458a9c1806234c2ead144
-	parent = 376dcc95e901bbf88ead805c389cf06a4ee0cf0a
+	commit = be6b09df063d2c0bf0d7074fb150d230316ad7d3
+	parent = b554ff9393b62bbf0e773cb2c755760d45956a57
 	method = merge
 	update = auto
 	cmdver = 0.4.1
