@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesC/cdparanoia.git
 	branch = master
-	commit = fb2045aeac77e232ec1d38e31e3dc17a8a2a1130
-	parent = 8a8c817ff18e79446707bf5ea4655156d69b6407
+	commit = 23a2bbeb34f7aceae2d15c74f0cd6eff32ded908
+	parent = d13ef0859700a699ebe29d5ce4a32df8c94646d6
 	method = merge
 	update = auto
 	cmdver = 0.4.1
