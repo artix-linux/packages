@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesP/pylint.git
 	branch = master
-	commit = c8e88dcf5869270da7450eec4483a2701d0e7b8a
-	parent = 697a3debd7c139496e05859d6b1156948e426efb
+	commit = 5e27dc0f5bc5414d6c61446ec621968a67985ad8
+	parent = 0cd1f1c598aabb4179b999246eb4e0d1b669cc5f
 	method = merge
 	update = auto
 	cmdver = 0.4.1
