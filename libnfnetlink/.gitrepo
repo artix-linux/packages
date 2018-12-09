@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libnfnetlink.git
 	branch = master
-	commit = 702c90c59728404a57de55adbbbbb4d7cfaaa6bc
-	parent = bbabdd0acdd6dde832ce8c20b7f9ce22ce054b0f
+	commit = 7281eddbf7f333da6e3e2afc5f4b1080e68d562e
+	parent = 1e84a45d64bef14c0a41321827cee1d59c02c6de
 	method = merge
 	update = auto
 	cmdver = 0.4.1
