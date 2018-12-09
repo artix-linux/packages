@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesF/freeglut.git
 	branch = master
-	commit = 76654e6189289fd45510d2bc8c8cb289606cdf21
-	parent = 92924a8804a4e776078de05e46f474db5bc36a63
+	commit = 817199ff9bb2770e14682a21af7d767fbbb38d43
+	parent = 05eb99dfdd64b789e7b1d087f4e618eecedc20c6
 	method = merge
 	update = auto
 	cmdver = 0.4.1
