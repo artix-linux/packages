@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesX/xf86-input-wacom.git
+	branch = master
+	commit = b33594e05a95020db5e317072aab82baed2284ad
+	parent = d95aa473b12a8d9c4ab8d8c7b2d95522055fb822
+	method = merge
+	update = auto
+	cmdver = 0.4.1
