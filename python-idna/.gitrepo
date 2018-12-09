@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-idna.git
 	branch = master
-	commit = 60d1592ee5acfd86728b93225d5321506a50e34a
-	parent = 68a67d110cf4f0257f98ebe2b3e83f9b970a740a
+	commit = 0323a1ec4bd561d5e5f93d028f2125d81d5eb6f5
+	parent = f5d6401f2876fe835a8037ce3ec87dcf19c6972a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
