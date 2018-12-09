@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/postgresql-runit.git
+	branch = master
+	commit = 2acfd52dd28ebffccafd27d618b15a0ba6d1d86c
+	parent = 9668c4f710e1fd13f786433e59209c5adad4f665
+	method = merge
+	update = auto
+	cmdver = 0.4.1
