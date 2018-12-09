@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xmlto.git
 	branch = master
-	commit = b650500dca130f6847466923e597c8ad65ad2e80
-	parent = 4490264be12fcf52004d91bf298e2941742552d2
+	commit = 17673c0df99d173e62f2c1fb4cb87cd92b4ea5bf
+	parent = e3ece3df1734f66c8bc6d4f62b4de83cfbd1c793
 	method = merge
 	update = auto
 	cmdver = 0.4.1
