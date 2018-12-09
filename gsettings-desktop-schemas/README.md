@@ -1,0 +1,2 @@
+# gsettings-desktop-schemas
+
