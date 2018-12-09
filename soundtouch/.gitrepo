@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/soundtouch.git
+	branch = master
+	commit = 765811679383b5801ddfbda27871402e1005e9ef
+	parent = 7a3b918e4a3d031c8f3320943710ed1540189caf
+	method = merge
+	update = auto
+	cmdver = 0.4.1
