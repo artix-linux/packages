@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libnetfilter_conntrack.git
+	branch = master
+	commit = 651f1b0131fa63109d5f45e935e788e52b72beb7
+	parent = b24a8ec3ee7292d8950d77ca7ed4164df98b836c
+	method = merge
+	update = auto
+	cmdver = 0.4.1
