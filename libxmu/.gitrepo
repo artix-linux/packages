@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxmu.git
 	branch = master
-	commit = 82264a581c574a200680af0a768cc031b233b456
-	parent = cf9d2aa002c8d5c2cdda6382014989ef4578706b
+	commit = 28662f2dbb4b5b6f0fa1e6ba3922337a23a9ebab
+	parent = d55d74fb59785dc9859ea5dfe4951dc4b8bc6620
 	method = merge
 	update = auto
 	cmdver = 0.4.1
