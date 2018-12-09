@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-soappy.git
 	branch = master
-	commit = 07c0ca6ad73c0706f0734644b0ead79f69ffba1d
-	parent = 6be522c0f5babcf70353af7e52e3788a23429703
+	commit = 8f345a2b650f563b0fd5d94702ab97624645adea
+	parent = 0e15ea4d87baaf533092d2740afe17a67bfc9976
 	method = merge
 	update = auto
 	cmdver = 0.4.1
