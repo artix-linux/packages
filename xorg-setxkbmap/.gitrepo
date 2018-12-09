@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xorg-setxkbmap.git
 	branch = master
-	commit = c102bd4f5810b887c182446da826304ac3bde2b5
-	parent = 9ae6487edab21f53043b2e113de01d5ec0935707
+	commit = 0a08220f21061c80ba246114b42cea2a628e6874
+	parent = 43076909a5e68e5b15176563d3093331c2d14158
 	method = merge
 	update = auto
 	cmdver = 0.4.1
