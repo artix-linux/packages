@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesF/freefall.git
 	branch = master
-	commit = 1348781e06bbb153eaa0b7726e2ffe0d93bfe8f9
-	parent = 2b9d133ba748eace4b97d3373efd5bbbbf12f3ab
+	commit = ae5f7f1c20f277fcad3b16c8fef22459337dc557
+	parent = 72ebc0858aa1e46184ea9cd060cc4d29dcdc213a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
