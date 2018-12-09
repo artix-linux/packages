@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesU/udisks2.git
+	branch = master
+	commit = 3516a07ac7258e01540b4c576f9e830b1a792b77
+	parent = e9632daf2f938e5387db2926f05d6dd3c7307b42
+	method = merge
+	update = auto
+	cmdver = 0.4.1
