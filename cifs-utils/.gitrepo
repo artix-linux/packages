@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesC/cifs-utils.git
 	branch = master
-	commit = f7d27f73e39451636a15c9afaca7db76b64d8a03
-	parent = 19fda2c2fa4d8bc2fab63a024fa8c3b93532c4bc
+	commit = 1f20433250a7cf6a4bc3c93b34948a193931d855
+	parent = 367479771367e12c1ab46485cb57631b28492863
 	method = merge
 	update = auto
 	cmdver = 0.4.1
