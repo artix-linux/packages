@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesR/rpcbind-runit.git
 	branch = master
-	commit = f62a5ea809ccc0c7e80532515cdcda8a1107bf8f
-	parent = 26a69d25b7c23b91421888319a58356366556d6d
+	commit = b55f0d249925bdcd6f4e6a84a21aaadcc7b629c8
+	parent = 5dd7ef92314fd98aae7e99cb58e4373a8cbb7778
 	method = merge
 	update = auto
 	cmdver = 0.4.1
