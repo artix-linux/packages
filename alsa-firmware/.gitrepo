@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesA/alsa-firmware.git
 	branch = master
-	commit = 97a31530ed76f15ee859bf1bb844df013f9147a5
-	parent = b7713fc1ab26a861e3589bb7ded717ed4d74d06e
+	commit = 89a8db9b28a33912c91d179449633a6f178e8c7d
+	parent = fbbc4116d32dad44b46a4896773c232085494061
 	method = merge
 	update = auto
 	cmdver = 0.4.1
