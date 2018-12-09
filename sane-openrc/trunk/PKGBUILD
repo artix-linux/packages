@@ -1,0 +1,42 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=sane-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC sane init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'sane')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/saned')
+source=("saned.confd::${_url}/media-gfx/sane-backends/files/saned.confd"
+        "saned.initd::${_url}/media-gfx/sane-backends/files/saned.initd")
+sha256sums=('197e44ba1f438a18f5f7d9f5858feb19c1ece4286d82a5e63caf9be5b964aa76'
+            '80e12e65ec5abf2e57da9fdf58e681845029ccab65206cd56a4bc06e2abefb0a')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|/run/saned/saned.pid|/run/saned.pid|' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'saned'
+    _inst_initd 'saned'
+}
