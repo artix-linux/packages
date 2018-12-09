@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesH/hellhound.git
+	branch = master
+	commit = 93c2ef33b76a1ad9116f5309af94bbbc0f319584
+	parent = b4d58b2f6109208b4f2f8141557c6afad4010c2a
+	method = merge
+	update = auto
+	cmdver = 0.4.1
