@@ -1,0 +1,57 @@
+# Maintainer: Muhammad Herdiansyah <herdiansyah@netc.eu>
+
+_url="https://github.com/voidlinux/void-packages/raw/master/srcpkgs"
+
+_sed_args=(-e 's|/var/service|/run/runit/service|g' -e 's|/var/run|/run|g' -e 's|/usr/sbin|/usr/bin|g' -e 's|/opt/bin|/usr/bin|g' -e 's|/usr/libexec|/usr/lib|g')
+
+pkgname=samba-runit
+pkgver=20180226
+pkgrel=1
+pkgdesc="runit service scripts for samba"
+arch=('any')
+url="https://github.com/artix-linux"
+license=('BSD3')
+# Note: While this PKGBUILD is licensed under BSD-3 terms, all of the
+#       included runscript should follow it's main package's licenses.
+groups=('runit-world')
+depends=('samba')
+provides=('samba-runscripts')
+replaces=('samba-runscripts')
+conflicts=('systemd-sysvcompat')
+source=("smbd.run::${_url}/samba/files/smbd/run"
+        "logsmbd.run::${_url}/samba/files/smbd/log/run"
+        "nmbd.run::${_url}/samba/files/nmbd/run"
+        "lognmbd.run::${_url}/samba/files/nmbd/log/run")
+sha256sums=('610d221e39f81f635a39ec57c86c02ef05d1510e1c0e383dfb617aa78da24743'
+            'dbc8da9e934f3ec99020b10958e2de2cda7174385547b71f51e6d1af05268d02'
+            '5d07e1196904031efd8d7ac840baf638af88edbf883a5fd50c531384fa3f42fb'
+            '3e87cec9a2d9d88982b55cd38e26c09c44e2fd545a2918cba71c7317ef095af4')
+
+_inst_logsv() {
+    for file in run finish check; do
+        if test -f "$srcdir/log$1.$file"; then
+            install -Dm755 "$srcdir/log$1.$file" "$pkgdir/etc/runit/sv/$1/log/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/log/$file"
+        fi
+    done
+}
+
+_inst_sv() {
+    if test -f "$srcdir/$1.conf"; then
+        install -Dm644 "$srcdir/$1.conf" "$pkgdir/etc/runit/sv/$1/conf"
+    fi
+
+    for file in run finish check; do
+        if test -f "$srcdir/$1.$file"; then
+            install -Dm755 "$srcdir/$1.$file" "$pkgdir/etc/runit/sv/$1/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/$file"
+        fi
+    done
+}
+
+package() {
+    _inst_sv 'smbd'
+    _inst_logsv 'smbd'
+    _inst_sv 'nmbd'
+    _inst_logsv 'nmbd'
+}
