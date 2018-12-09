@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/muparser.git
 	branch = master
-	commit = dfb3a0face53a8f3fa1890b1db35e0f4752bad29
-	parent = 08a85d12fc694d1ae454b4e62cc0738c6da68bac
+	commit = a0bf69defef4a786dc56b02a2d0e81fb464f130c
+	parent = b72ac7626974a939e8c159a2cb2b3f59782f4e6f
 	method = merge
 	update = auto
 	cmdver = 0.4.1
