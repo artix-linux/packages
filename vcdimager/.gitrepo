@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesV/vcdimager.git
+	branch = master
+	commit = a2caec24614df7c481564b106b594238e96417ca
+	parent = 91fcbed10bb0633b268697525f7e0f91641e5130
+	method = merge
+	update = auto
+	cmdver = 0.4.1
