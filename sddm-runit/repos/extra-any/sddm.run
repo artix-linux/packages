@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+sv check elogind >/dev/null || exit 1
+sleep 1
+mkdir -p /var/lib/sddm
+chown -R sddm:sddm /var/lib/sddm
+exec sddm 2>&1
