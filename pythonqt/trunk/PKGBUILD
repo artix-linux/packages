@@ -1,0 +1,47 @@
+# Maintainer: Oscar Campos <damnwidget@artixlinux.org>
+
+pkgname=pythonqt
+pkgver=3.2
+pkgrel=2
+pkgdesc="A dynamic Python binding for the Qt framework"
+arch=('x86_64')
+url="http://pythonqt.sourceforge.net/"
+license=('LGPL')
+depends=('python' 'qt5-declarative' 'qt5-multimedia' 'qt5-svg' 'qt5-webkit')
+makedepends=('qt5-tools')
+optdepends=('qt5-xmlpattenrs: For XPath, XQuery, XSLT and XML schema validation support'
+            'qt5-opengl: For OpenGL component support')
+source=("http://downloads.sourceforge.net/project/${pkgname}/${pkgname}/PythonQt-${pkgver}/PythonQt${pkgver}.zip")
+md5sums=('5294193b79137d432d785aab1ec61da7')
+
+prepare() {
+        msg2 "Preparing sources..."
+        cd "${srcdir}/PythonQt${pkgver}"
+        echo $(ls -l)
+        sed -i "/unix:PYTHON_VERSION=/s/2.7/3/" build/python.prf
+}
+
+build() {
+        msg2 "Building libraries..."
+        cd "${srcdir}/PythonQt${pkgver}"
+        qmake-qt5 \
+            QMAKE_CFLAGS="${CFLAGS}" \
+            QMAKE_CXXFLAGS="${CXXFLAGS}" \
+            CONFIG+=release \
+            CONFIG+=c++14
+        make
+}
+
+package() {
+        cd "${srcdir}/PythonQt${pkgver}"
+        mkdir -p "${pkgdir}"/usr/include/PythonQt/{gui,extensions/PythonQt_QtAll}
+        cp src/*.h "${pkgdir}"/usr/include/PythonQt/
+        cp src/gui/*.h "${pkgdir}"/usr/include/PythonQt/gui/
+        cp extensions/PythonQt_QtAll/*.h "${pkgdir}"/usr/include/PythonQt/extensions/PythonQt_QtAll/
+        mkdir -p "${pkgdir}"/usr/lib
+        cp -dR --preserve=all lib/*.so* "${pkgdir}"/usr/lib/
+
+        mkdir -p "${pkgdir}"/usr/share/pythonqt
+        cd "examples" && make clean && cd ..
+        cp -R examples "${pkgdir}"/usr/share/pythonqt/
+}
