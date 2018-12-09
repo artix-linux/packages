@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/ladspa.git
 	branch = master
-	commit = 13e90ea96614157f0523052d1b47579a98da745f
-	parent = d3ade2f9ee70f7e574efe6b7620a4c1a1c2299c4
+	commit = ea38e7f698fed3a8a6b83667bb78aa687ac2973b
+	parent = 235bcd6ec585078510f49a0cda195fe87f094117
 	method = merge
 	update = auto
 	cmdver = 0.4.1
