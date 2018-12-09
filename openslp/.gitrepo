@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesO/openslp.git
 	branch = master
-	commit = 82d38b67c01c88f52698531ee2da8ce64340363a
-	parent = c769872ef5edac2287ba66d710b8575611fc3675
+	commit = a15799c2795593734ce15b47a9fd76f6db321584
+	parent = d95e02802392b5797a752b40a9af257951c9a01d
 	method = merge
 	update = auto
 	cmdver = 0.4.1
