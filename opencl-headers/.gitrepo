@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/opencl-headers.git
+	branch = master
+	commit = 6fe4e6c9d229a83effa92d2b922958520d2be810
+	parent = 85c10bf5944b42ff0e475ba09236e8b95a000e90
+	method = merge
+	update = auto
+	cmdver = 0.4.1
