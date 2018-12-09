@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libmatroska.git
+	branch = master
+	commit = 93309f2585458798d0ad2d461a27592e8267063b
+	parent = 76eb5af9712a8b05cc5148ce1c53edb2ed68a708
+	method = merge
+	update = auto
+	cmdver = 0.4.1
