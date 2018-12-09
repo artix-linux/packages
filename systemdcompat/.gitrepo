@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesS/systemdcompat.git
 	branch = master
-	commit = e510dd360edef27fae686d1a0679c7c72539393d
-	parent = 4042cf2cb9d140e7eaa3f95a568fa9b6102b6cf2
+	commit = 4bcabbdb0bef778d4cb05bf6a64a74dfb7c044ff
+	parent = b064cd1dcdbb69b971741cd944258b265d87ff23
 	method = merge
 	update = auto
 	cmdver = 0.4.1
