@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libblockdev.git
+	branch = master
+	commit = ef0716f184aa200e95afd201c499e0c711077515
+	parent = 4e5e0c310c2e8f1d27b411aa1369dfd954155ce6
+	method = merge
+	update = auto
+	cmdver = 0.4.1
