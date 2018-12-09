@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libdbusmenu-qt.git
+	branch = master
+	commit = cf2731e0b5b9cf59dc2d2c733360cf40a24b14b4
+	parent = 20a1fddf8899d65abfd26d988393fbadb4381c46
+	method = merge
+	update = auto
+	cmdver = 0.4.1
