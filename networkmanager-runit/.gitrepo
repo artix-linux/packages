@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesN/networkmanager-runit.git
+	branch = master
+	commit = 5899fb34ce5d1d374e2d5e7af1c8f590d25b7756
+	parent = 6f0a8e3554954b4aaf05d522e66ad959a227a255
+	method = merge
+	update = auto
+	cmdver = 0.4.1
