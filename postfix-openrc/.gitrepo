@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesP/postfix-openrc.git
 	branch = master
-	commit = 7d1c59498b471bc1c5c417b78fbd2e6bf6e8f405
-	parent = 494b52f439c30a3924bc225c4ebdfcd9d772e152
+	commit = f5f8e1e742f4524c84d02d24b4b7a36bd15b021a
+	parent = 4113e45abcfc567c13188d6ecb78647e4047a0de
 	method = merge
 	update = auto
 	cmdver = 0.4.1
