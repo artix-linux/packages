@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesU/usbmuxd.git
+	branch = master
+	commit = 3e34edd60372724e9eec68343e163740e197adcc
+	parent = 05ecbf92f68fde01c96ab055c85a2cc4f2d99c76
+	method = merge
+	update = auto
+	cmdver = 0.4.1
