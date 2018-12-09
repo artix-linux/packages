@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libgssglue.git
+	branch = master
+	commit = 43319c4bcc24c6ed17cb2ea3e701a78ee5a0f7d9
+	parent = da2cfd1c139161a66b42458bc61b9cdd758be832
+	method = merge
+	update = auto
+	cmdver = 0.4.1
