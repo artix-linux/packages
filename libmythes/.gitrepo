@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libmythes.git
 	branch = master
-	commit = 07237b71fb215591195188590e65d33d792f17d5
-	parent = 2cc26e928c00a2d75d00511595cc095c5ca8cf48
+	commit = a9583164c5190dbea284ad04ce1de777b594bd5c
+	parent = ca09d935b6f146415285d0a7951d1b15b0c235f6
 	method = merge
 	update = auto
 	cmdver = 0.4.1
