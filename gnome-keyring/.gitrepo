@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesG/gnome-keyring.git
+	branch = master
+	commit = 50ddfd82bee57902bca548956d3bf87027f17647
+	parent = baa1786f859c8ca41a0b20d527e4b2ff01e525d3
+	method = merge
+	update = auto
+	cmdver = 0.4.1
