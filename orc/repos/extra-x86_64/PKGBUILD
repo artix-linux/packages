@@ -1,0 +1,43 @@
+# $Id$
+# Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+# Maintainer: Jan de Groot <jgc@archlinux.org>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+
+pkgname=orc
+pkgver=0.4.28
+pkgrel=1
+pkgdesc="Optimized Inner Loop Runtime Compiler"
+url="https://cgit.freedesktop.org/gstreamer/orc"
+arch=(x86_64)
+license=(custom)
+depends=(glibc)
+makedepends=(valgrind git gtk-doc meson)
+_commit=31cb4bfc51de81b5c2569abdcff830b83c74499c  # tags/orc-0.4.28^0
+source=("git+https://anongit.freedesktop.org/git/gstreamer/orc#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/^orc-//;s/-/+/g'
+}
+
+prepare() {
+  mkdir build
+  cd $pkgname
+}
+
+build() {
+  cd build
+  arch-meson ../$pkgname
+  ninja
+}
+
+check() {
+  cd build
+  meson test
+}
+
+package() {
+  DESTDIR="$pkgdir" ninja -C build install
+  install -Dm644 $pkgname/COPYING "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
