@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-gamepad.git
 	branch = master
-	commit = ab6fd0769d3c6dd1c4113131e570cbca907d30da
-	parent = b66d440a8eaf96f026cf037b884efa058b4508af
+	commit = c335c6f075979f27489a2e0cc72ec6dee7e321c6
+	parent = 513de48909149ee777848b4a10f0c2594afbe862
 	method = merge
 	update = auto
 	cmdver = 0.4.1
