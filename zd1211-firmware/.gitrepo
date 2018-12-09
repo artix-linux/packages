@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesZ/zd1211-firmware.git
 	branch = master
-	commit = b56fd360628cc6ffdfc49e88f3210a54f43b2c18
-	parent = decb75fafe8875a129fc21f65efdddff21339900
+	commit = 522b78d83f73bc19ccb6cb4aad650bc0f987ec45
+	parent = dd96908462fd28af96c5b9e4212ed76a5d00a98f
 	method = merge
 	update = auto
 	cmdver = 0.4.1
