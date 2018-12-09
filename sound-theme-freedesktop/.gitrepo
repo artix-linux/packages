@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/sound-theme-freedesktop.git
+	branch = master
+	commit = afe8bb525869637309bc8b895467a09237a0a4cc
+	parent = d715b0367c12f0fd532ee138155bfcdab3ae0678
+	method = merge
+	update = auto
+	cmdver = 0.4.1
