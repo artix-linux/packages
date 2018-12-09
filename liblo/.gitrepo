@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/liblo.git
 	branch = master
-	commit = 87a3bd1a27c32523efe896384119ea903911f953
-	parent = 79528d41ad58322cab596b7ebda908289c920393
+	commit = 46bc4543ae788b30e7d67f9237d9486b21023d12
+	parent = b980e43d74b2adb0ab7f39e6a44f1d2b696fb077
 	method = merge
 	update = auto
 	cmdver = 0.4.1
