@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesY/yelp-tools.git
+	branch = master
+	commit = 0652aef09db520e0d18bcc0f87ca19e9695e7be0
+	parent = f23a840b6383476bb3b94b520481603952b3a9ee
+	method = merge
+	update = auto
+	cmdver = 0.4.1
