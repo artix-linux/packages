@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/mkinitcpio-nfs-utils.git
 	branch = master
-	commit = 3912a56d4fb88572b673fd79086d58fe0bbf3c44
-	parent = 640aed6381b5921737a55ac63920460b7b70626d
+	commit = 7696bff63587473095812e1cf12124337db3bcd7
+	parent = f0c4b15972ea2620e236618683789d3e262ff869
 	method = merge
 	update = auto
 	cmdver = 0.4.1
