@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/pinentry.git
+	branch = master
+	commit = 349ab37d4607504d2917467d2904b44539922cfe
+	parent = 30f1df4552b77278a2f1f3961c6b6630dfaf9e69
+	method = merge
+	update = auto
+	cmdver = 0.4.1
