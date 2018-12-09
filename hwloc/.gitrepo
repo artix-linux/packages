@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesH/hwloc.git
 	branch = master
-	commit = af05d8ca1235deef2946a26f621814beeae02a64
-	parent = f8f0e331c57a2511fb5574ef281f0aa39b3d4a34
+	commit = 2c920f7df6aaf0234a7fefa6e32454242a514c6d
+	parent = 5dc3a4b43f8fefcbb5ba65b17d1f5994f14d1091
 	method = merge
 	update = auto
 	cmdver = 0.4.1
