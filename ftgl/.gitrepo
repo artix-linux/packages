@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesF/ftgl.git
 	branch = master
-	commit = 808ff2ee8a1fe98871d2d2d1ffabe29221c77150
-	parent = a226e7364e2bd3acdfc952356dec328adbcccccb
+	commit = 128bdfbd5f8c56431c390e7712820dc14f8b49e5
+	parent = b1c9efe3e27dac10682bf283569df263e3db3415
 	method = merge
 	update = auto
 	cmdver = 0.4.1
