@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesF/fribidi.git
 	branch = master
-	commit = f4245f20d5e1da3d56c526102d9f692ebc710d13
-	parent = 58bb19ba6d1ee8fd6e37fb755d04a6c473955ff0
+	commit = 8f0f41a807b451db5ff8fffc2770f75eac6308a1
+	parent = 3dbb7aefb000f8f68ae33e1631954010ae7f2323
 	method = merge
 	update = auto
 	cmdver = 0.4.1
