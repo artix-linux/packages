@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesG/gyp.git
+	branch = master
+	commit = 806cf2c5c4171ca72afc2c70b09cb74cb37dcf6e
+	parent = 6b6aea7bdb35c4e34fdd5c7af29ac589b408fc09
+	method = merge
+	update = auto
+	cmdver = 0.4.1
