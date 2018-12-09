@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesS/slang.git
 	branch = master
-	commit = d1aadb162e798dca76f42d029ff9999566225613
-	parent = f215f43008813a483c8665c467c6b65cc47e4902
+	commit = 42a6b5e5254a2bc0757a4b7fa5fe0c4d63e8456f
+	parent = 49d935e5296d01ed000eed2003613e20d69b5a52
 	method = merge
 	update = auto
 	cmdver = 0.4.1
