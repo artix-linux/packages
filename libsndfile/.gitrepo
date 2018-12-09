@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libsndfile.git
 	branch = master
-	commit = f2497dc7b438aa3702741b2b0253c73e04cf90eb
-	parent = 263bc501a34eb2ea9b82adb96f850f66c18e3eca
+	commit = 034ceaac827268ae47e84d378dfd16569fb0383d
+	parent = d46e6d10348cc8b16419525281ad2edb775aa461
 	method = merge
 	update = auto
 	cmdver = 0.4.1
