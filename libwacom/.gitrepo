@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libwacom.git
+	branch = master
+	commit = b56ac4ce058cc0af26176325d6bbd8a72eb6b93c
+	parent = 091ad59a01a80017c335ea7b927719663e00f342
+	method = merge
+	update = auto
+	cmdver = 0.4.1
