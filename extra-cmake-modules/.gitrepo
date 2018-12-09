@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesE/extra-cmake-modules.git
+	branch = master
+	commit = 1832ea4adfbd59d8b242f8f54a7a93c28d1ec629
+	parent = b46f3c532d0f27bab08c8a4dec5236428ba644ab
+	method = merge
+	update = auto
+	cmdver = 0.4.1
