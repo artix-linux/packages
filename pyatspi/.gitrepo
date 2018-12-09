@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesP/pyatspi.git
 	branch = master
-	commit = b1c60d9f49f8b8c1928bceefe6cc381e45474604
-	parent = baaa7f3a7235c22906aa340ba1b984f64918e84b
+	commit = f83561e2e9176e07033079b776370d57037e9516
+	parent = 80e37726fd24874ff6c57aba7ed01e4cd69881c0
 	method = merge
 	update = auto
 	cmdver = 0.4.1
