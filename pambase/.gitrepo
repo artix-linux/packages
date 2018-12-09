@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/pambase.git
+	branch = master
+	commit = c61138090fde6d8c7b86a4a2b92c54812777f051
+	parent = 99da99d652695797a0237d633f24f8a11b7ab3d6
+	method = merge
+	update = auto
+	cmdver = 0.4.1
