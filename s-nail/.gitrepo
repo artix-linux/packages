@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/s-nail.git
+	branch = master
+	commit = ff810f1cbf659ecfdd48c74aa9940539f134e789
+	parent = 8127a8e6dfefd95dafe954367bb3c842a430ce59
+	method = merge
+	update = auto
+	cmdver = 0.4.1
