@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/spandsp.git
+	branch = master
+	commit = 72a308be2f92d379fa2c78894047cdf7cdcae34b
+	parent = 312e4816026151b8ba701382d5899e8db7cb4b78
+	method = merge
+	update = auto
+	cmdver = 0.4.1
