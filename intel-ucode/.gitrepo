@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesI/intel-ucode.git
+	branch = master
+	commit = ce2192d899def091bc3f64bb043fc0033e89d0be
+	parent = b6a619bb6ad7f66cb2e326f07aba2fc38542b60c
+	method = merge
+	update = auto
+	cmdver = 0.4.1
