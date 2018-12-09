@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-webglplugin.git
+	branch = master
+	commit = 69a3ffedd99b65c3456428cc9a23fb6c50f25931
+	parent = 0b00061de7bf0e052d01c2a9647eafd5c005d716
+	method = merge
+	update = auto
+	cmdver = 0.4.1
