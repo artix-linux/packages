@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xf86-input-wacom.git
 	branch = master
-	commit = b33594e05a95020db5e317072aab82baed2284ad
-	parent = d95aa473b12a8d9c4ab8d8c7b2d95522055fb822
+	commit = 4f7c32f06211feb9d71d16eeda92faac7120d774
+	parent = 22571c89967eb462f8e447af7668d17de75e60ce
 	method = merge
 	update = auto
 	cmdver = 0.4.1
