@@ -1,0 +1,56 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+pkgbase=opentmpfiles
+pkgname=(opentmpfiles opentmpfiles-openrc)
+pkgver=0.2
+pkgrel=2
+pkgdesc="A standalone utility for handling systemd-style tmpfiles.d settings"
+arch=('any')
+url="https://github.com/OpenRC/opentmpfiles"
+license=('BSD2')
+source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/${pkgver}.tar.gz"
+        'opentmpfiles.hook'
+        'tmpfiles-hook')
+sha256sums=('4fa6a78600b1d67d34c441919e5e62ad181af358d9353ce380f515d623177ecb'
+            '23c73b3cc20ec38e0a5166f254293c911d20ae3efec8e133f424c1a1d0703fb8'
+            'adbee03530006e8284ea44c5dd7eb99f6cc6c4e383c09fec36d7a22f7d486fc5')
+
+package_opentmpfiles() {
+    depends=('pacman')
+    optdepends=('opentmpfiles-openrc: Opentmpfiles init script')
+
+    cd "${pkgbase}-${pkgver}"
+
+    make bindir="/usr/bin" DESTDIR="${pkgdir}" install
+
+    # pacman hooks
+    install -Dm755 ${srcdir}/tmpfiles-hook "$pkgdir"/usr/share/libalpm/scripts/tmpfiles-hook
+    install -Dm644 -t "$pkgdir"/usr/share/libalpm/hooks ${srcdir}/*.hook
+
+    ln -snf "/usr/bin/tmpfiles" "${pkgdir}/usr/bin/systemd-tmpfiles"
+
+    install -dm755 "${pkgdir}/usr/share/licenses/${pkgname}"
+    install -m644 "license" "${pkgdir}/usr/share/licenses/${pkgname}/"
+}
+
+package_opentmpfiles-openrc(){
+    pkgdesc='OpenRC opentmpfiles init script'
+    depends=('opentmpfiles')
+    provides=('init-opentmpfiles')
+    conflicts=('init-opentmpfiles')
+    backup=('etc/conf.d/opentmpfiles-dev'
+            'etc/conf.d/opentmpfiles-setup')
+
+    cd "${pkgbase}-${pkgver}"
+
+    for f in opentmpfiles-dev opentmpfiles-setup; do
+        install -Dm755 openrc/$f.confd ${pkgdir}/etc/conf.d/$f
+        sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+            -i ${pkgdir}/etc/conf.d/$f
+        install -Dm755 openrc/$f.initd ${pkgdir}/etc/init.d/$f
+    done
+
+    install -dm755 ${pkgdir}/etc/runlevels/{boot,sysinit}
+    ln -snf "/etc/init.d/opentmpfiles-dev" "${pkgdir}/etc/runlevels/sysinit/opentmpfiles-dev"
+    ln -snf "/etc/init.d/opentmpfiles-setup" "${pkgdir}/etc/runlevels/boot/opentmpfiles-setup"
+}
