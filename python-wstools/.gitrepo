@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-wstools.git
+	branch = master
+	commit = e1aac54bca67d215b3ec2159b727da708580e3fb
+	parent = e76a23e3c559f9946c4f4c790f78c038a8cd58a2
+	method = merge
+	update = auto
+	cmdver = 0.4.1
