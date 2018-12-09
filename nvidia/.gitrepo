@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesN/nvidia.git
+	branch = master
+	commit = 1d884446ac4cb2db9dcd721cf8931d365983e01a
+	parent = 9063ba4faba460d252312cc4c0e55b2b42d4b290
+	method = merge
+	update = auto
+	cmdver = 0.4.1
