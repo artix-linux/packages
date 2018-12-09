@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-3d.git
 	branch = master
-	commit = 57044bf5e9dab481d4e9c0cd71de5c2237d1373d
-	parent = 0e34287bf17e28f248b3903f95b409f881d71ea1
+	commit = 1b8ddebd8283f8071f43ea6936a3318d837493df
+	parent = e87c5335db374dac66d819cfae1be39b5ca6ba96
 	method = merge
 	update = auto
 	cmdver = 0.4.1
