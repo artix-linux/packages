@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesR/rpcsvc-proto.git
+	branch = master
+	commit = 582a18014d572c65054d167ac0e79a02e8c00042
+	parent = ac5b966ea82c6aeda8a45f01d2dda7d9a098eece
+	method = merge
+	update = auto
+	cmdver = 0.4.1
