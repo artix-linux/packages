@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-serialport.git
 	branch = master
-	commit = 38a4b014d049a365d98f704be30fca379cc27df8
-	parent = 5065c41643b8417326004673d03930855941403d
+	commit = 451806a33b4832d94e033d2fd9fca3ce3c617e74
+	parent = edc9df3538a97d79c6b3260c9c9df37071868c3a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
