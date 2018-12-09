@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPerl/perl-xml-namespacesupport.git
 	branch = master
-	commit = ac9a2e0b0b4bd6edb1d82c43afa54b236385cfa9
-	parent = 2daf73c8a6112829d5bdd7a27d1994e87742c224
+	commit = d581217bd02c0726f00b52bbc7ba7baaccee7f69
+	parent = 71cda859aa5d8bcc338ed20ce1996eb9fbe9fc37
 	method = merge
 	update = auto
 	cmdver = 0.4.1
