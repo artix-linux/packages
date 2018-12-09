@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesO/ocl-icd.git
 	branch = master
-	commit = 59bec1d71b99a14c662c844d9a9846e6a54a9379
-	parent = 694746e747218044707f8c8beb19d3806e169a07
+	commit = 3b895d5d1b9d88969d15a234971ef2d5ff9c74c5
+	parent = 8cd67436e2988894975d8c9ee30a1ee8f3af2f95
 	method = merge
 	update = auto
 	cmdver = 0.4.1
