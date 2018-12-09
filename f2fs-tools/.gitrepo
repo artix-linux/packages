@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesF/f2fs-tools.git
 	branch = master
-	commit = bfb8d0c5811f968bbbc4cbb795b60e313fdfa690
-	parent = e4597aaf8561aedbd81292251bbee8c2d79849dd
+	commit = 0340cc6ec4dfbf41f478e4c30073ac8f026bb5bc
+	parent = 7887208d02f86f149dc4c74708ba36f3f7bdb01b
 	method = merge
 	update = auto
 	cmdver = 0.4.1
