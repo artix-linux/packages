@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesF/faad2.git
 	branch = master
-	commit = f44e054766f2febe7d625852910631b60de36ed0
-	parent = d1fc4e60c069920b7725f9b081072ec98a1fe123
+	commit = dd5fb8fda9774881aeb1beb45b0a8b17306fb991
+	parent = d446c859958ca27bf66481f81b6a45c76c79b832
 	method = merge
 	update = auto
 	cmdver = 0.4.1
