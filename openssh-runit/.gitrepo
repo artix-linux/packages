@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/openssh-runit.git
+	branch = master
+	commit = 7b03869c83cae39a04edcad5d5a4af9df0443508
+	parent = 6155a6fc4d190ca9a98c0637b7ef76be7e85d424
+	method = merge
+	update = auto
+	cmdver = 0.4.1
