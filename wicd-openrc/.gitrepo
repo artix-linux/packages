@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesW/wicd-openrc.git
 	branch = master
-	commit = 1a04b7c654ba18b100485092c309150cca1b1b04
-	parent = de8c93e076af8946753ca71a3a0dc96e2829847a
+	commit = 8535cd8136d8ab9af436f705e2a7c084d191e225
+	parent = a546a5b32bfb469c1eebc66cd03b4b3b129858b3
 	method = merge
 	update = auto
 	cmdver = 0.4.1
