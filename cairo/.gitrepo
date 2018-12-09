@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesC/cairo.git
+	branch = master
+	commit = 19c130ff270c9f32bcdb968d805ffc3374f97776
+	parent = 6668949e0cc5a2ee10e09b356571d5a35012c5ee
+	method = merge
+	update = auto
+	cmdver = 0.4.1
