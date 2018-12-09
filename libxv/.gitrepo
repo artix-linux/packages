@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxv.git
 	branch = master
-	commit = b32e3e6df51b4d1481708499f0a22aa415cdd9b4
-	parent = 7606f7b31199586207778c277d3e9db278a56e93
+	commit = c9fa9e38f58cf18939e9df6169428ba993213a97
+	parent = 094601b758a9f86feb015f5a4e0a46cdc63f55e0
 	method = merge
 	update = auto
 	cmdver = 0.4.1
