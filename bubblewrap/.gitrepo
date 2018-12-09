@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesB/bubblewrap.git
 	branch = master
-	commit = c78da5fb5adaf7780f2268792e293f66f2b2ee64
-	parent = e1d1195359ac6136a1178bd7c9e2340b5848278f
+	commit = ca8053477512da1adc63090a9f770f955235271e
+	parent = 0a2c06e4c9b07d6f3bcd93beaf6bb7dbaa3f4d31
 	method = merge
 	update = auto
 	cmdver = 0.4.1
