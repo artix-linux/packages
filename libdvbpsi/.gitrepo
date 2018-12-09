@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libdvbpsi.git
+	branch = master
+	commit = 47abfde9884ab909a2a4e2c71ee63b5ef4bdf1c2
+	parent = 8ebbb97ffca6a57f4e2b7582fad497e39fbc3f24
+	method = merge
+	update = auto
+	cmdver = 0.4.1
