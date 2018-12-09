@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-webchannel.git
 	branch = master
-	commit = 2035c5c34d5cace9252ed8d38fa40985ae255a97
-	parent = c40ec290d280d84692a41f507bcd0136083a430e
+	commit = 464e4e8637da9d29e6f2b8c9e40d920d7a95ffb1
+	parent = db12e77e23cddc5812209e7dd1095639398aa40f
 	method = merge
 	update = auto
 	cmdver = 0.4.1
