@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libglade.git
 	branch = master
-	commit = b37febea51c5a682acde2a6ea734c2baa3e563c8
-	parent = 26278f5604a91515fae4229f649ad88ea47fbac9
+	commit = 0fa946518277bb1ac6559b10f02c0155ca961b5e
+	parent = 9e325c0efbef571facfbc69cc8274ad498f42c6a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
