@@ -1,0 +1,39 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=avahi-openrc
+pkgver=20180428
+pkgrel=1
+pkgdesc="OpenRC avahi init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('avahi' 'openrc')
+conflicts=('systemd-sysvcompat')
+source=('avahi-daemon.initd'
+        'avahi-dnsconfd.initd'
+        'autoipd-openrc.sh')
+sha256sums=('876788303553fe773e64917f76f0208f5e8adf7b91d4af24aa9d6a68a147d646'
+            'e128576d72981e402ff106bb481108ab6d5ba941ab1b0f5f53e96a7831fc1d15'
+            '064a4cedc00f67e93a6f2ef99489e2614305a673a75a2135010283e99da6d6bf')
+
+# pkgver() {
+#     date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_initd 'avahi-daemon'
+    _inst_initd 'avahi-dnsconfd'
+
+    install -Dm755 autoipd-openrc.sh ${pkgdir}/usr/lib/netifrc/net/autoipd.sh
+}
