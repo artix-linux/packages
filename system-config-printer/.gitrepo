@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/system-config-printer.git
+	branch = master
+	commit = 00e1e7779cf77de159fa11a470a28dccdedfdba7
+	parent = e1b499b4afc859d4012fa34abcb3e35c2f3abeab
+	method = merge
+	update = auto
+	cmdver = 0.4.1
