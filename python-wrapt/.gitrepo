@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-wrapt.git
 	branch = master
-	commit = e863146dc8085164686ad76064c5b33ef6f0a82d
-	parent = e53711ce5b2d90ba8039c060cf3379ba359c8562
+	commit = e1c2dd6bb405622bcca99d8b8de2d59f7c69f17a
+	parent = f0c89ab21700ec7db5c8486869428228704f5077
 	method = merge
 	update = auto
 	cmdver = 0.4.1
