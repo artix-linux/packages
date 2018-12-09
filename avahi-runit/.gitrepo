@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesA/avahi-runit.git
 	branch = master
-	commit = d32945aa9206faa64014f8a1122a1770d6c2ccbd
-	parent = d18034719e34ec2f93247ee579b8c12103b187f5
+	commit = 0bde00213cb96e1f97411b3d3ab8440ddf2ccced
+	parent = 10ea8ff97d3d3e3bc73522c576698f94874346ec
 	method = merge
 	update = auto
 	cmdver = 0.4.1
