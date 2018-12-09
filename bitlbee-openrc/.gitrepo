@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesB/bitlbee-openrc.git
 	branch = master
-	commit = 79ff9501c72c7f5f22ee34d330fe635e86f8045c
-	parent = 0233be9fc2229c241bfc1d1e0155cc65b732f5bf
+	commit = 53db7f247c5b705d5d1abfff87afea448c60cb28
+	parent = 01c070d3aebf3f7445915d96ffb29eef37e71b0a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
