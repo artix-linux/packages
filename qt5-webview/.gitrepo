@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-webview.git
 	branch = master
-	commit = a00f551366106de687f346902606c303f18a6b10
-	parent = 75f95bce2c3512a916d4af89962054b1ac86b562
+	commit = 84b718db47581ed76bcce8e10b81af627b489a09
+	parent = 5256ba9ca4ed98ca6a25441f803cbf2b5bc5a1e2
 	method = merge
 	update = auto
 	cmdver = 0.4.1
