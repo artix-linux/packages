@@ -1,0 +1,40 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=postgresql-openrc
+pkgver=20180315
+pkgrel=1
+pkgdesc="OpenRC postgresql init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'postgresql')
+conflicts=('systemd-sysvcompat')
+source=("postgresql.confd"
+        "postgresql.initd")
+sha256sums=('42506eaecb1900e33c0bab91f967701944fadecd72cf6eb0109997c3ccb5b1b0'
+            '8f067b6cf08f98d03e402421f1ce3871b7aaf5bbb94da804ac4aafed5eee4cfe')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'postgresql'
+    _inst_initd 'postgresql'
+}
