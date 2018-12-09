@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-virtualkeyboard.git
+	branch = master
+	commit = df01d95dde0591f240e223262004de4390f17998
+	parent = 8b12f6f4910f4a3d73ba95a23a318f8691ef9abd
+	method = merge
+	update = auto
+	cmdver = 0.4.1
