@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xtrans.git
 	branch = master
-	commit = de45323f4b2f782392f969b4d12cf1462645b139
-	parent = 9024d62ca122b6ea7f458b0cde68c76f97883e5a
+	commit = 1e92711ad71270677c32fe2494d3a828a57b320d
+	parent = 99602bffefbe1f0e1b982352d73b94f032aaf643
 	method = merge
 	update = auto
 	cmdver = 0.4.1
