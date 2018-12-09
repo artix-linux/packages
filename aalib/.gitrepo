@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesA/aalib.git
 	branch = master
-	commit = ae2a9b4aa29f20a920a508ac19b76a981bc2bf52
-	parent = f402d10284b6e6a46a6df3cf408826f047f4504c
+	commit = 0fc3b681e829237fccb80bc4bddebcb9cde33bd9
+	parent = 5abd18c6662150ca443286d806c378c4841b1339
 	method = merge
 	update = auto
 	cmdver = 0.4.1
