@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesX/xkeyboard-config.git
+	branch = master
+	commit = 713cd1185d83ad4aa3d15e541656c12182c6b7b3
+	parent = ce93f7b7c534a899c3747ee1ea441131b76a44cc
+	method = merge
+	update = auto
+	cmdver = 0.4.1
