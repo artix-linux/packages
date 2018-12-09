@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/openldap-runit.git
+	branch = master
+	commit = 37bd855f7fa4dfe7ecd960bb59829d9df8d30e6d
+	parent = b2a14371271403dd7d0de6c1ac987105e0c6bdf5
+	method = merge
+	update = auto
+	cmdver = 0.4.1
