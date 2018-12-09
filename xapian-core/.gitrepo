@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xapian-core.git
 	branch = master
-	commit = 0398aa2330471992e2a1f5ec009aecc8524e8806
-	parent = eb73cd54bc2584d4f5e8e66b1c069d60be5e5ce3
+	commit = 3fdbfc866b5c4f7d259976a122e8104ce0f5e723
+	parent = 6090252775473cde385ab8ff41e20db8623011e7
 	method = merge
 	update = auto
 	cmdver = 0.4.1
