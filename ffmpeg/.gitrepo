@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesF/ffmpeg.git
+	branch = master
+	commit = 11277b03808f6c43eadf62c4a89f73b3710a45e2
+	parent = 92a019a25fa5bf779f14679a24480a07f9506d01
+	method = merge
+	update = auto
+	cmdver = 0.4.1
