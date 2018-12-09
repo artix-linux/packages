@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesH/hyphen.git
 	branch = master
-	commit = dfd4e6897e514b56a30632edfeb25f3c6946c21a
-	parent = c38aabda69442fe3a5481b86005f0b90fe1f00fa
+	commit = 6dcec70776d35d6753a922c907639bec2f267ab0
+	parent = 7179d233cdcb9b6302f0090d687c741728bc11cf
 	method = merge
 	update = auto
 	cmdver = 0.4.1
