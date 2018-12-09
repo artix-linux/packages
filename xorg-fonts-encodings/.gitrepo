@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xorg-fonts-encodings.git
 	branch = master
-	commit = b2ff7b3c38548dbfaa40338222d346c9a3916f64
-	parent = 3fdb8d39be49032a911fb6789ab042553ec462bd
+	commit = 4865b3defa44f814b96609db0951504bd823f629
+	parent = 4ef5e3f545c62cd96135aa5a33412262c53e3a09
 	method = merge
 	update = auto
 	cmdver = 0.4.1
