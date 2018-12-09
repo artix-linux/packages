@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/pygtk.git
+	branch = master
+	commit = 9da343877ce14772cd3a02ee5e2f17cf30b854df
+	parent = 889ea8016ad07c9cf6fb023bf5e41f1b35fe3ebf
+	method = merge
+	update = auto
+	cmdver = 0.4.1
