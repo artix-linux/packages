@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesD/dbus-python.git
 	branch = master
-	commit = e3fd00dae91f19dc1bcf2540bd21d0b01b9b9734
-	parent = 0a7a93f873858834534df82ffa04272b87a9f1ee
+	commit = 8a017476123b359573a98774b2897dfcc2f0803f
+	parent = d608113ec7991bfcdf245f6c4a76b0d6cc43a30d
 	method = merge
 	update = auto
 	cmdver = 0.4.1
