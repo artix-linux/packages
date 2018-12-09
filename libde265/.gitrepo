@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libde265.git
 	branch = master
-	commit = de3ed6d1ae28f798e3584589184099299ec0f256
-	parent = ae08f49ab695c8e671654bf0020f750510745fad
+	commit = a20e8a2e65ddcc72f869850201402c0203245025
+	parent = d77efb153705d42d976eb42a29b618075d6fcae9
 	method = merge
 	update = auto
 	cmdver = 0.4.1
