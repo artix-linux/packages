@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-speech.git
+	branch = master
+	commit = 95cbd31b0c0761ed37ce7f2b9e7bba6fb33cddf1
+	parent = 0136e08a7a19eb4a50a1993776c942b48b339696
+	method = merge
+	update = auto
+	cmdver = 0.4.1
