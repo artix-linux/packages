@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/live-media.git
 	branch = master
-	commit = 30a6fabbb2120833bc27266476180e36505ee34f
-	parent = b9d1eb804b67bddae0d073f9d2432dc1962bd18d
+	commit = 8d8ed9d8c5fd0ddd77cfa89721dc2354fe0ebc41
+	parent = 908f7a1a7f9cde5b0862ca62bba3356ca53bc330
 	method = merge
 	update = auto
 	cmdver = 0.4.1
