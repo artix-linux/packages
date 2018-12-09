@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/mkinitcpio-openswap.git
 	branch = master
-	commit = ff91cb8eb11f7ef841e86f4edc93d7b7d07ec03d
-	parent = 54417fa3d0bb2f387c465d2e32edef747d3cccdd
+	commit = 83070efa0d28880561e8ae7908fd3bb153140ee1
+	parent = 89249c333a6dd76d5d6486e8a8523751e76fb877
 	method = merge
 	update = auto
 	cmdver = 0.4.1
