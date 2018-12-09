@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-defusedxml.git
 	branch = master
-	commit = e54db3a8edc977537c8daedfd4b99ec90cc1aef3
-	parent = 7843792a395ae583903d6a977a45bf797b6dca73
+	commit = 7caf77adf378cf410007f94783e93d4ad75a62cd
+	parent = fe27fc1c1608a4603dd3eb36e88c22f0541ad8ce
 	method = merge
 	update = auto
 	cmdver = 0.4.1
