@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesS/sane-runit.git
 	branch = master
-	commit = ae4a5679eec6a44f9eb21d76b45b7affe7e29fa6
-	parent = ea857b298a284a9b4a57bbc17fcd358b035b450f
+	commit = 0a7f4766ac73e38ed29b932f4be0ddccd714917e
+	parent = 99b73bb70d006e850e2c69574cddbe11f01ea777
 	method = merge
 	update = auto
 	cmdver = 0.4.1
