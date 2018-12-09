@@ -1,0 +1,2 @@
+# wicd-openrc
+

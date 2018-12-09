@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesW/wicd-openrc.git
+	branch = master
+	commit = 1a04b7c654ba18b100485092c309150cca1b1b04
+	parent = de8c93e076af8946753ca71a3a0dc96e2829847a
+	method = merge
+	update = auto
+	cmdver = 0.4.1
