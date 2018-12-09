@@ -1,0 +1,33 @@
+# Maintainer: Chris Cromer <chris@cromer.cl>
+# Maintainer: Muhammad Herdiansyah <koni@artixlinux.org>
+# rebuild
+
+_pkgname=runit-artix
+_commit=0106628f96e242d35f429ac17f44af28dc088217
+
+pkgname=runit-rc
+pkgver=20180708
+pkgrel=4
+pkgdesc='Artix Linux system initialization and shutdown for runit'
+arch=('x86_64')
+url='https://gitea.artixlinux.org/artix/runit-rc'
+license=('BSD')
+backup=('etc/rc/rc.conf')
+makedepends=('git')
+depends=('procps-ng' 'bash' 'opentmpfiles' 'bootlogd' 'elogind-runit')
+provides=('init-kmod' 'init-udev' 'init-opentmpfiles' 'init-opensysusers')
+conflicts=('init-kmod' 'init-udev' 'init-opentmpfiles' 'init-opensysusers')
+source=("git+${url}.git#commit=$_commit")
+sha256sums=('SKIP')
+optdepends=('lvm2-runit: LVM support for runit'
+            'cryptsetup-runit: Enable boot support for encrypted partitions')
+
+build() {
+	cd ${pkgname} #-${pkgver}
+	make
+}
+
+package() {
+	cd ${pkgname} #-${pkgver}
+	make DESTDIR="${pkgdir}" install-rc
+}
