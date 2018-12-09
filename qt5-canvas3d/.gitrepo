@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-canvas3d.git
 	branch = master
-	commit = f9cdf6de04f1ebd417d234c84ec024d935671b04
-	parent = 23488a1bd5a032f8e9a50a26a1cf47fb26793bcc
+	commit = c94e45026457c1d8673b1e647794785ad4d65b3d
+	parent = 6c36488e346a404e8a52c3deed6bffb51acf7fcf
 	method = merge
 	update = auto
 	cmdver = 0.4.1
