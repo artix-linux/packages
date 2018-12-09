@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/metalog.git
 	branch = master
-	commit = d3797972cb57966b375eae2d810f5bb90816390b
-	parent = 748e9a3b3047d6ba847aaf8fd2d0cfd7f0e58258
+	commit = 1a60d8da97b7a3080d5ce7500bacff73f32170fc
+	parent = cf8d0f2c23c3ff91d4efd8e1eac2ef9447db2c41
 	method = merge
 	update = auto
 	cmdver = 0.4.1
