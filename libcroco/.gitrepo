@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libcroco.git
+	branch = master
+	commit = 309f78465e509709850157151cd8ad38dd052663
+	parent = fc2245ba2b440caad5bbab6420799054c5b8bcfc
+	method = merge
+	update = auto
+	cmdver = 0.4.1
