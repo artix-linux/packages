@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libsoup.git
+	branch = master
+	commit = 0f369ff77041cc85992916bd62efa4886dbe55d1
+	parent = 688ffa2f6cc62a2f5fa42bf7bd982417f8564fb4
+	method = merge
+	update = auto
+	cmdver = 0.4.1
