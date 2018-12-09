@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesV/vulkan-headers.git
 	branch = master
-	commit = db68a27076284d9336f08200738f6654b400b9e5
-	parent = 70b09bcab1db6180f8dc085a509c0b933c6386a5
+	commit = defb00fcab32a10927cf14679b43170daaf8fa25
+	parent = 4c51900700ab2337a1e1cafd55417c42b341dd61
 	method = merge
 	update = auto
 	cmdver = 0.4.1
