@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesF/fcgi.git
 	branch = master
-	commit = 62258f7f03659bfbe71775a57cfd6403d8b0d4f6
-	parent = a9e0dc0c068d3ace625da94bd7cee083a22610be
+	commit = ab6f7eac893d4d3305473138e664ae4892df7b22
+	parent = 1f68d767dfc5bf29377961a155b2dabe8f71f3ce
 	method = merge
 	update = auto
 	cmdver = 0.4.1
