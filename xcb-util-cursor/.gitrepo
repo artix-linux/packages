@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xcb-util-cursor.git
 	branch = master
-	commit = 8ae573093b29c239ec6062fd47691583db240768
-	parent = 05f49be2ea5b4148f40e5415801275d42e97e706
+	commit = ff1dbbd01c4ad0aa732e3b0bddd1dbafa90bc9ca
+	parent = c07d274bde4ed8289cb51e5d6aac6e7ea4967e0a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
