@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libfontenc.git
+	branch = master
+	commit = f3881fec0eba79cfd4ae00fc4c1763cce0159e2a
+	parent = 43d84e5fe33297afa8edaf4fdc1d35aba6a41611
+	method = merge
+	update = auto
+	cmdver = 0.4.1
