@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesI/iucode-tool.git
 	branch = master
-	commit = ca01df91364a4f6f550a0c1c4f2175f17d61b865
-	parent = ccb1f311df63298238030b57308f8545d52141f1
+	commit = 5031d9c0cf45cee227860a92da455b2fd44995d4
+	parent = 7bd09c682fa01337f337b8dacd1f6e40f3defaa3
 	method = merge
 	update = auto
 	cmdver = 0.4.1
