@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libvorbis.git
 	branch = master
-	commit = 30314ee3fb763f69e991aa01c99f713642cde975
-	parent = 54400a762a66652caab1f9fa402df62a404a240e
+	commit = 862066df465102d37d4cd380bbfe8324075b05f8
+	parent = 31adb983bd83eaa2b6c53ef17270120d7cacbcdc
 	method = merge
 	update = auto
 	cmdver = 0.4.1
