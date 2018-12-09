@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesD/doxygen.git
+	branch = master
+	commit = 487d676822906267e72500e6c4bed4fd458d5b78
+	parent = e9571395529796de461e1aa4c5c5563569584126
+	method = merge
+	update = auto
+	cmdver = 0.4.1
