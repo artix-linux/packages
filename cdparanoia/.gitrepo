@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesC/cdparanoia.git
+	branch = master
+	commit = fb2045aeac77e232ec1d38e31e3dc17a8a2a1130
+	parent = 8a8c817ff18e79446707bf5ea4655156d69b6407
+	method = merge
+	update = auto
+	cmdver = 0.4.1
