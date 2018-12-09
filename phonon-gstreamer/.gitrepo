@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/phonon-gstreamer.git
+	branch = master
+	commit = 884dd6ce7e0e5ad07ec608b3b6ca3d6452561740
+	parent = 7db50a0aa7830dc47e0e16752e560031c325aef2
+	method = merge
+	update = auto
+	cmdver = 0.4.1
