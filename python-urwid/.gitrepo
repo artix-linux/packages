@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-urwid.git
 	branch = master
-	commit = ce2d9769dda0366b50a63f90ccd2b394f7b5c751
-	parent = db024623b90e849f0a8bfcfc95a9839a4285f963
+	commit = 20070efdd83dfca73f600b73f28270127bd45a27
+	parent = efc7d5d0f134fb116dafdbc1418c837990714557
 	method = merge
 	update = auto
 	cmdver = 0.4.1
