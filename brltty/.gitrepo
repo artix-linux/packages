@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesB/brltty.git
 	branch = master
-	commit = ebb705167ce29cf8e2eb90bee18a587759cc9b44
-	parent = 075505b7c704f87388c51783394de3e8ba282e74
+	commit = feaef80533c3fce6550b3673d419b6c18fb96a10
+	parent = 409dbe8dfe3a9cbc222ec6e0aa39d140d76d559a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
