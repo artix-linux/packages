@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libimobiledevice.git
+	branch = master
+	commit = 3d2d0bb07f5be3965b3f8fdf9a90737ea2be101d
+	parent = cac7324265a5de3c67a590b8c47fdb732067f0cb
+	method = merge
+	update = auto
+	cmdver = 0.4.1
