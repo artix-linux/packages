@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/sdl_sound.git
+	branch = master
+	commit = b7860d4c7b686c30fbe5fce73b0b76e50ecd8af9
+	parent = f1153a113810ba6db4e4f5edc55ecb80dfe5063f
+	method = merge
+	update = auto
+	cmdver = 0.4.1
