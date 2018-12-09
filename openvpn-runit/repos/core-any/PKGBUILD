@@ -1,0 +1,39 @@
+# Maintainer: Muhammad Herdiansyah <herdiansyah@netc.eu>
+
+_url="https://github.com/voidlinux/void-packages/raw/master/srcpkgs"
+
+_sed_args=(-e 's|/var/run|/run|g' -e 's|\(/usr\)\?/sbin|/usr/bin|g')
+
+pkgname=openvpn-runit
+pkgver=20180623
+pkgrel=1
+pkgdesc="runit service scripts for openvpn"
+arch=('any')
+url="https://github.com/artix-linux"
+license=('BSD3')
+depends=('openvpn')
+provides=('init-openvpn')
+conflicts=('init-openvpn')
+backup=('etc/runit/sv/openvpn/conf')
+install="openvpn-runit.install"
+source=("openvpn.run"
+        "openvpn.conf")
+sha256sums=('ed0c23d6fed904f6c4e7eb89be60b0502eb55ffb7afe721fd25847f65e230f29'
+            '6a91fe2d1895f92f0402b64c2ec0322b9591ffca21132b7f27bae7664c260f32')
+
+_inst_sv(){
+    if test -f "$srcdir/$1.conf"; then
+            install -Dm644 "$srcdir/$1.conf" "$pkgdir/etc/runit/sv/$1/conf"
+    fi
+
+    for file in run finish check; do
+        if test -f "$srcdir/$1.$file"; then
+            install -Dm755 "$srcdir/$1.$file" "$pkgdir/etc/runit/sv/$1/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/$file"
+        fi
+    done
+}
+
+package() {
+    _inst_sv 'openvpn'
+}

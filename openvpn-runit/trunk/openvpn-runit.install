@@ -1,0 +1,6 @@
+post_install()
+{
+    echo "==> Please note that by default. OpenVPN runit service reads from"
+    echo "    /etc/openvpn/openvpn.conf, you may want to edit this in"
+    echo "    /etc/runit/sv/openvpn/conf"
+}
