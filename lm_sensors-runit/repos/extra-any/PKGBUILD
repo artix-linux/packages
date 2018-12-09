@@ -1,0 +1,53 @@
+# Maintainer: Muhammad Herdiansyah <herdiansyah@netc.eu>
+
+_url="https://lm_sensorshub.com/voidlinux/void-packages/raw/master/srcpkgs"
+
+_sed_args=(-e 's|/var/service|/run/runit/service|g' -e 's|/var/run|/run|g' -e 's|/usr/sbin|/usr/bin|g' -e 's|/opt/bin|/usr/bin|g' -e 's|/usr/libexec|/usr/lib|g')
+
+pkgname=lm_sensors-runit
+pkgver=20180226
+pkgrel=1
+pkgdesc="runit service scripts for lm_sensors"
+arch=('any')
+url="https://lm_sensorshub.com/artix-linux"
+license=('BSD3')
+# Note: While this PKGBUILD is licensed under BSD-3 terms, all of the
+#       included runscript should follow it's main package's licenses.
+groups=('runit-world')
+depends=('lm_sensors')
+provides=('lm_sensors-runscripts')
+replaces=('lm_sensors-runscripts')
+conflicts=('systemd-sysvcompat')
+source=("fancontrol.run"
+        "lm_sensors.run"
+        "lm_sensors.finish")
+sha256sums=('b3f162e08366d61f3c4db33a15d4e96df82e457b8ce98809f99f2f556f345f2e'
+            '81f2ce890417d74db28c69dc8248f44afae0afc4ed2f14f7185287e05c57dcd3'
+            '769d33869f3b87b123c30f3c25fb026c6fe9e5f49b68bf806f5cf980c32c457b')
+
+_inst_logsv() {
+    for file in run finish check; do
+        if test -f "$srcdir/log$1.$file"; then
+            install -Dm755 "$srcdir/log$1.$file" "$pkgdir/etc/runit/sv/$1/log/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/log/$file"
+        fi
+    done
+}
+
+_inst_sv() {
+    if test -f "$srcdir/$1.conf"; then
+        install -Dm644 "$srcdir/$1.conf" "$pkgdir/etc/runit/sv/$1/conf"
+    fi
+
+    for file in run finish check; do
+        if test -f "$srcdir/$1.$file"; then
+            install -Dm755 "$srcdir/$1.$file" "$pkgdir/etc/runit/sv/$1/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/$file"
+        fi
+    done
+}
+
+package() {
+    _inst_sv 'fancontrol'
+    _inst_sv 'lm_sensors'
+}

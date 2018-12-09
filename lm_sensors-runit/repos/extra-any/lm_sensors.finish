@@ -1,0 +1,3 @@
+#!/bin/sh
+[ -r /etc/conf.d/lm_sensors ] && . /etc/conf.d/lm_sensors
+exec modprobe -qabr $BUS_MODULES $HWMON_MODULES

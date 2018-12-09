@@ -1,0 +1,11 @@
+#!/bin/sh
+# Note: Please generate /etc/conf.d/lm_sensors by running sensors-detect
+
+if [ -r /etc/conf.d/lm_sensors ]; then
+    . /etc/conf.d/lm_sensors
+    modprobe -qa $BUS_MODULES $HWMON_MODULES
+else
+    exit 1
+fi
+
+exec chpst -b lm_sensors pause
