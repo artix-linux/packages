@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesD/dejagnu.git
+	branch = master
+	commit = 8905cb29713695356bb346815aeddcbfa5d1edae
+	parent = 44ff5e1f42c465f572be34c75686c8fc94ea53e6
+	method = merge
+	update = auto
+	cmdver = 0.4.1
