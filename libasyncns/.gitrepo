@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libasyncns.git
 	branch = master
-	commit = d135aae7868bfbb8b0bf3aa4f8c9cd4ba5b85585
-	parent = de60e40691e6153eb0f5755a2b7a16e1b1f459cd
+	commit = 6dcb108af2174a86600a0855c2a3267e5bb6bda1
+	parent = 607d0da2e9152d348d59c8b44f5b02337ac4af51
 	method = merge
 	update = auto
 	cmdver = 0.4.1
