@@ -1,0 +1,38 @@
+# Maintainer: Oscar Campos <damnwidget@gmail.com>
+
+pkgname=hellhound
+pkgver=0.0.1
+pkgrel=1
+arch=('any')
+pkgdesc='Unattended password guard for Artix Linux Artools'
+license=('GPL')
+groups=('artools')
+url='http://github.com/artix-linux/hellhound'
+makedepends=('git' 'go')
+source=("https://github.com/artix-linux/$pkgname/archive/v$pkgver.tar.gz")
+md5sums=('de00448afb87a816dc8d9c4dbaf07be0')
+
+prepare() {
+    cd "$srcdir/$pkgname-$pkgver" || exit 1
+    export GOPATH="$srcdir/gopath"
+    mkdir -p "$GOPATH/src/github.com/artix-linux"
+    rm -f "$GOPATH/src/github.com/artix-linux/$pkgname"
+    ln -sr "$srcdir/$pkgname-$pkgver" "$GOPATH/src/github.com/artix-linux/$pkgname"
+}
+
+build() {
+    export GOPATH="$srcdir/gopath"
+    cd "$GOPATH/src/github.com/artix-linux/$pkgname" || exit 1
+    make build
+}
+
+check() {
+    export GOPATH="$srcdir/gopath"
+    cd "$GOPATH/src/github.com/artix-linux/$pkgname" || exit 1
+    make test
+}
+
+package() {
+    install -dm755 "$pkgdir/usr/bin"
+    install -m755 "$srcdir/$pkgname-$pkgver/$pkgname" "$pkgdir/usr/bin"    
+}
