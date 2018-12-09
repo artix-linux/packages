@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesF/ftgl.git
+	branch = master
+	commit = 808ff2ee8a1fe98871d2d2d1ffabe29221c77150
+	parent = a226e7364e2bd3acdfc952356dec328adbcccccb
+	method = merge
+	update = auto
+	cmdver = 0.4.1
