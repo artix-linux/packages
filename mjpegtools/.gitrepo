@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/mjpegtools.git
 	branch = master
-	commit = 938a1dc5378510fab43dfe407ccc4174cafe42e5
-	parent = cd9630e3dd709148d5389a80fb01f5e6070c6c10
+	commit = 8bf4591a2a7958d0fa2ae092012715d246802dd4
+	parent = c7a9b3ff7a48e51c6c7685da3be22fc35f8448a4
 	method = merge
 	update = auto
 	cmdver = 0.4.1
