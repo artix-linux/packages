@@ -13,3 +13,21 @@
 pkg/
 src/
 
+
+# ---> Archives
+*.7z
+*.rar
+*.gz
+*.bzip
+*.bz2
+*.xz
+*.lzma
+*.cab
+
+# ---> systemd
+*.service
+*.socket
+*.timer
+
+# ---> snap
+*.snap
