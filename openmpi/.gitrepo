@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/openmpi.git
+	branch = master
+	commit = 0bd9b1e8fa6d767fcfb9969d39791a4bc3d632da
+	parent = 5e7e87e5891f1189820c1ad8e04f35430a318609
+	method = merge
+	update = auto
+	cmdver = 0.4.1
