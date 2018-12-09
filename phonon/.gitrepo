@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/phonon.git
+	branch = master
+	commit = 84e82314727208f673edd49b7b22c0af84e7b735
+	parent = 698be98bd34c0044e3a1f99358933250a64b89d6
+	method = merge
+	update = auto
+	cmdver = 0.4.1
