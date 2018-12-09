@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesJ/jbig2dec.git
+	branch = master
+	commit = a5098bde5a5a5ff75175f31e3163bc62f26035f5
+	parent = f280a2f7dd4f4e8cd9fe938e69d3b473aa88572e
+	method = merge
+	update = auto
+	cmdver = 0.4.1
