@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/gcab.git
 	branch = master
-	commit = be291e7eb94ffb1e9e6b1955bc91f32587dba387
-	parent = 8ca5f1de8e7811b7daaada6c58c29eab38402d84
+	commit = aff6e04837cbae8330345bf1a13e90af0ea28071
+	parent = 3d6a65f3e9690f666717d71dbcc2ba9832ae73fd
 	method = merge
 	update = auto
 	cmdver = 0.4.1
