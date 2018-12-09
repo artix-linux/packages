@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesY/yelp-xsl.git
 	branch = master
-	commit = a5431b988c1e2d9454f0344f88e7c4e49c05029f
-	parent = a11214cd876e2496eaf7e519ca33bb24b7707500
+	commit = ee5b81485119ea5a03484d49c82d1fc5dd49d81e
+	parent = 7c378a2067dc03a3c84233e266c9c675c2b652f9
 	method = merge
 	update = auto
 	cmdver = 0.4.1
