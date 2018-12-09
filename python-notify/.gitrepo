@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-notify.git
 	branch = master
-	commit = d60fae02e289f1b1ab268c9db2c1580b2c3debfb
-	parent = 671fa68da2c9d103c14c70bda948dbafc2f44928
+	commit = 310f66e36fb0f1926c7dc7e7313c69860de764fa
+	parent = 04e5e1ae0bd18e095d8813b8113b98f5097492ae
 	method = merge
 	update = auto
 	cmdver = 0.4.1
