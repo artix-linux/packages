@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/pylint.git
+	branch = master
+	commit = c8e88dcf5869270da7450eec4483a2701d0e7b8a
+	parent = 697a3debd7c139496e05859d6b1156948e426efb
+	method = merge
+	update = auto
+	cmdver = 0.4.1
