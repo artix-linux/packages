@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libsidplay.git
 	branch = master
-	commit = 3c1016228d941ca7f0a6902c7b3b8074569019df
-	parent = 90108bf56d2d4c134409467257c04d648d45e9fc
+	commit = 59cf2e5970c59308843817ee38b50b82e248c29a
+	parent = 774637a7317320cbbd8b8a30bcba8ffb6718f844
 	method = merge
 	update = auto
 	cmdver = 0.4.1
