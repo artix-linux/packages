@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xorg-xkbcomp.git
 	branch = master
-	commit = 646176b9428fd3cf1f3ec940d51f987ca23fe63a
-	parent = 58b0b0484af9f86de5ff4817f768445753b21c4c
+	commit = 926407ca6b71a3e899b319e2d1956bafe98e681d
+	parent = fb60b0cf521c4f02b763d55258dc4703782cbc2a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
