@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xorg-xmodmap.git
 	branch = master
-	commit = 6d6f5aad7e77f3c3b3204863dcc4a19e83c88257
-	parent = 16f33518260eac9cf39b159b4ebd85106db9ff9f
+	commit = 9a632ee7a5cb476236be43aad694814aaaefddb3
+	parent = 02cbb107d6474b506e0e1d7372889a4e8eef53d1
 	method = merge
 	update = auto
 	cmdver = 0.4.1
