@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/metalog-runit.git
 	branch = master
-	commit = 90b2f61663d9126a882af7e5aeff92eb71e04161
-	parent = 696c548445a9f476439209aeb83e5288ec689781
+	commit = bea8374fc40e222ce56d7f744978301c004d2ccb
+	parent = a42f3089c7ef800f7cc2f3db3a5244d11525d6d0
 	method = merge
 	update = auto
 	cmdver = 0.4.1
