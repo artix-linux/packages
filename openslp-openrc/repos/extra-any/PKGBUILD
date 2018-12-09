@@ -1,0 +1,37 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=openslp-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC openslp init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'openslp')
+conflicts=('systemd-sysvcompat')
+source=("slpd.initd::${_url}/net-libs/openslp/files/slpd-init")
+sha256sums=('903fdfdd8a5b482af011fc12f9050a9afceac09e4eed9e9cd4fa58240ab61349')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_initd 'slpd'
+}
