@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libpwquality.git
+	branch = master
+	commit = 37cd196cbf918590972f5ff9261124f1b42af729
+	parent = 5302bf8aa51d37ba9c1a30275c469a56ee45a998
+	method = merge
+	update = auto
+	cmdver = 0.4.1
