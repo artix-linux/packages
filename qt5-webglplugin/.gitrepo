@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-webglplugin.git
 	branch = master
-	commit = 69a3ffedd99b65c3456428cc9a23fb6c50f25931
-	parent = 0b00061de7bf0e052d01c2a9647eafd5c005d716
+	commit = 55b11f1477add7cceb95b64cf85424b028215877
+	parent = e0e9de47a0018110abc38d37285dab8624a4681e
 	method = merge
 	update = auto
 	cmdver = 0.4.1
