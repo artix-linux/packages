@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesW/woff2.git
 	branch = master
-	commit = 3557c883f2bfd350ca5f3aef4584026bae9e89a2
-	parent = bf77c4a4cde251456ca1bcb02fa184851cd7d472
+	commit = 720de27e6a14d70389f31afb04c67f6001ee816a
+	parent = ca3f83e6c5112a6c1b9608f204814602bc6eb368
 	method = merge
 	update = auto
 	cmdver = 0.4.1
