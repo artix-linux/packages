@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/openal.git
+	branch = master
+	commit = 281207a5c1eb2b7b7febc9c01e64f2ef7e17220a
+	parent = 7c0d18bcb2c004dc2ce748dacc6353afacf49846
+	method = merge
+	update = auto
+	cmdver = 0.4.1
