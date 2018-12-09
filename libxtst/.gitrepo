@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxtst.git
 	branch = master
-	commit = 9757ceef70b3466b8fb0dcb0d7432cd6db97a8fc
-	parent = 035886c5a66e5d045b22a940a25114cda1b8c8fa
+	commit = fbd96714af8f06e373fbbf34f69b5895348962bb
+	parent = ec99213aa1b79d106fde61522bf7185872a67cfc
 	method = merge
 	update = auto
 	cmdver = 0.4.1
