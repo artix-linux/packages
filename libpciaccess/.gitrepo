@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libpciaccess.git
 	branch = master
-	commit = f3eeaec2dd2f96d7dd95b4b36297d2fd0e1a582c
-	parent = c5b348bba6a0d560222aa4b195279545a208b717
+	commit = 3f9f2af13c88db0456e8fd30ce30c62d41afaab9
+	parent = b0971a86e44430302e0494b8e0c572c6601ebe9d
 	method = merge
 	update = auto
 	cmdver = 0.4.1
