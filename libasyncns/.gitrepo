@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libasyncns.git
+	branch = master
+	commit = d135aae7868bfbb8b0bf3aa4f8c9cd4ba5b85585
+	parent = de60e40691e6153eb0f5755a2b7a16e1b1f459cd
+	method = merge
+	update = auto
+	cmdver = 0.4.1
