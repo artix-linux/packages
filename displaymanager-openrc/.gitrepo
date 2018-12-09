@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesD/displaymanager-openrc.git
+	branch = master
+	commit = be4cd53dfb9eaf416d4dcb63484265d986629376
+	parent = daa3cdac3c4b41936fea9893b76705beda069b6c
+	method = merge
+	update = auto
+	cmdver = 0.4.1
