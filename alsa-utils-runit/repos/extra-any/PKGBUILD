@@ -1,0 +1,50 @@
+# Maintainer: Muhammad Herdiansyah <herdiansyah@netc.eu>
+
+_url="https://github.com/void-linux/void-packages/raw/master/srcpkgs"
+
+_sed_args=(-e 's|/var/run|/run|g' -e 's|/usr/sbin|/usr/bin|g' -e 's|/opt/bin|/usr/bin|g' -e 's|/usr/libexec|/usr/lib|g')
+
+pkgname=alsa-utils-runit
+pkgver=20180226
+pkgrel=2
+pkgdesc="runit service scripts for alsa-utils"
+arch=('any')
+url="https://github.com/artix-linux"
+license=('BSD3')
+# Note: While this PKGBUILD is licensed under BSD-3 terms, all of the
+#       included runscript should follow it's main package's licenses.
+groups=('runit-world')
+depends=('alsa-utils' 'runit')
+provides=('alsa-utils-runscripts')
+replaces=('alsa-utils-runscripts')
+conflicts=('systemd-sysvcompat')
+source=("alsa.run::${_url}/alsa-utils/files/alsa/run"
+        "alsa.finish::${_url}/alsa-utils/files/alsa/finish")
+sha256sums=('b9f19c950711c45a8205ea52ca731387038a8b957798b73025f35c0656db7474'
+            'd00e9ef211c9f11b3ef836c5ee7c6b763cacb426fbd3d9697f03048e55c0c21c')
+
+_inst_logsv() {
+    for file in run finish check; do
+        if test -f "$srcdir/log$1.$file"; then
+            install -Dm755 "$srcdir/log$1.$file" "$pkgdir/etc/runit/sv/$1/log/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/log/$file"
+        fi
+    done
+}
+
+_inst_sv() {
+    if test -f "$srcdir/$1.conf"; then
+        install -Dm644 "$srcdir/$1.conf" "$pkgdir/etc/runit/sv/$1/conf"
+    fi
+
+    for file in run finish check; do
+        if test -f "$srcdir/$1.$file"; then
+            install -Dm755 "$srcdir/$1.$file" "$pkgdir/etc/runit/sv/$1/$file"
+            sed "${_sed_args[@]}" -i "$pkgdir/etc/runit/sv/$1/$file"
+        fi
+    done
+}
+
+package() {
+    _inst_sv 'alsa'
+}
