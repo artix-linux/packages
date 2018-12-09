@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libqmi.git
 	branch = master
-	commit = 6847460e4d6dd057d6f4829d872cc8422d034493
-	parent = 8c86cced1ae0e1e24fb69db35a514bf3fcc46560
+	commit = af794936641c61d37d9ab6910e5deb36eec08b70
+	parent = 7b8384d2f30e7e488834464d214b21e9d3f90e2f
 	method = merge
 	update = auto
 	cmdver = 0.4.1
