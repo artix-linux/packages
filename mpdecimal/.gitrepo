@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/mpdecimal.git
 	branch = master
-	commit = 01f5d5f0a8f8ac138a3a2e81b8b2b629b355c638
-	parent = 4234066b839b1f421037a685ee791381f61f3403
+	commit = e37b1f6312bb4bdde1fdf4df6ca3e49a2192de07
+	parent = e589d08e0c7cb027b531ae9c3feab5482a1f6e95
 	method = merge
 	update = auto
 	cmdver = 0.4.1
