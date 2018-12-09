@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libmp4v2.git
 	branch = master
-	commit = a7db2dc076aefcb77365fedc885eabc7c92e8fec
-	parent = ee966fc5cecbba4b7187ac480cf47bd1560d5d7d
+	commit = 17fb60ccfe9a1a439a59c615716d6dd4d28b85ea
+	parent = a5323b5a5effa4e9fc7a296d5787c19f889e7dad
 	method = merge
 	update = auto
 	cmdver = 0.4.1
