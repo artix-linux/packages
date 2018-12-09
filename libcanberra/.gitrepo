@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libcanberra.git
 	branch = master
-	commit = a8f9fdf5e228717c636c20ebbbda74ca996506e3
-	parent = bf6da70a92d176ae0dfd2645d78aa0a20ddc5209
+	commit = 1c0ac179e1e47f20391a0fe2992ec8ec91d10261
+	parent = e7c9f38e7de0d66781d8e642e6529b6c93723ecf
 	method = merge
 	update = auto
 	cmdver = 0.4.1
