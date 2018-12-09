@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/gsettings-desktop-schemas.git
 	branch = master
-	commit = 1328efd767c5a52334a3b169ed8170e80c3cffad
-	parent = 4b6b485d972893fa6c00b4d00252afb92426e026
+	commit = 4ed77e2cd98f9a35649325ced65367b5ab6a8ace
+	parent = 6e3334fb52c21b623a85dc9283b19a98a84250e9
 	method = merge
 	update = auto
 	cmdver = 0.4.1
