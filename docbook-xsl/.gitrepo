@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesD/docbook-xsl.git
 	branch = master
-	commit = b6da6648fe6fba08660ce017781910f3264aa35a
-	parent = 633c9a9ffec8e25e76bae9db2041cdf2ce9961c6
+	commit = c5822ecfd654b717d95ce3a2d004caf6ad864e9c
+	parent = 3cd65bbf6d013491bbbef43522b1ca234e1d6d4f
 	method = merge
 	update = auto
 	cmdver = 0.4.1
