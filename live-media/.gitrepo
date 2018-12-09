@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/live-media.git
+	branch = master
+	commit = 30a6fabbb2120833bc27266476180e36505ee34f
+	parent = b9d1eb804b67bddae0d073f9d2432dc1962bd18d
+	method = merge
+	update = auto
+	cmdver = 0.4.1
