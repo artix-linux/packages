@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesF/freefall-openrc.git
 	branch = master
-	commit = 90a5bab7035fafc42d63cb3d58f060b2e3a94f54
-	parent = 57cc80d3ac3b06c4e05d3922d3f19ca169a1ef06
+	commit = a29000f5a9c45b02884f5ac4345864aeb8d0a86b
+	parent = 60656717520a1a4aa3d4abf71f061a6fd1e60715
 	method = merge
 	update = auto
 	cmdver = 0.4.1
