@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python2-backports.functools_lru_cache.git
 	branch = master
-	commit = 8852f78aaa163315af2ba20c347eb1f71bac4dfb
-	parent = 86b3ff7190be46505ebe68c039930c17ff94caa3
+	commit = 06d1bdc595dadc8196499959328a514a1f9577ba
+	parent = c1ba49d4c9545e22d87696449d9d2c2b91be03a8
 	method = merge
 	update = auto
 	cmdver = 0.4.1
