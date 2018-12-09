@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/lame.git
 	branch = master
-	commit = 12c2df412dc4561f00d3610a94a4abab999c2e98
-	parent = 74c39d8dcb0f1b2dfbb5f202939c32298f3e9dec
+	commit = 055f3315d7d165a55b5c31a2c6eeba1f3b53bb73
+	parent = 9daf29f199c5a4f52c2b3951dddc7710da1f8a43
 	method = merge
 	update = auto
 	cmdver = 0.4.1
