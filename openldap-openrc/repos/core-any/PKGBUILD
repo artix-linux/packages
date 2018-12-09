@@ -1,0 +1,43 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=openldap-openrc
+pkgver=20180429
+pkgrel=1
+pkgdesc="OpenRC openldap init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-system')
+provides=('init-openldap')
+depends=('openrc' 'openldap')
+conflicts=('init-openldap')
+backup=('etc/conf.d/slapd')
+source=("slapd.confd::${_url}/net-nds/openldap/files/slapd-confd-2.4.28-r1"
+        "slapd.initd::${_url}/net-nds/openldap/files/slapd-initd-2.4.40-r2")
+sha256sums=('5bca003ec3b67c7c78519aede1d82002579006ccfecce8f87b559df719f82e92'
+            'bcd84fca8efc1eec3aea489f238b51ce7226ffcdb1562044e48106897bc5a6fc')
+
+pkgver() {
+    date +%Y%m%d
+}
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|/usr/lib/openldap/slapd|/usr/lib/slapd|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'slapd'
+    _inst_initd 'slapd'
+}
