@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-lazy-object-proxy.git
 	branch = master
-	commit = 2d3d043ad4d64b16393c8825ca33cf9d0404d395
-	parent = fa91dc00f25ffa4f62459c1e2b281266c461d224
+	commit = b5be22b43da25199d2a2dcfa75bec3695fbf7973
+	parent = f5a7b30c40b787cfdebc2052d97d7b55eb04568f
 	method = merge
 	update = auto
 	cmdver = 0.4.1
