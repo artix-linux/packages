@@ -1,0 +1,44 @@
+# Maintainer: Jan de Groot <jgc@archlinux.org>
+
+pkgname=librsvg
+pkgver=2.44.9
+pkgrel=1
+epoch=2
+pkgdesc="SVG rendering library"
+url="https://wiki.gnome.org/Projects/LibRsvg"
+arch=(x86_64)
+license=(LGPL)
+depends=(gdk-pixbuf2 pango libcroco)
+makedepends=(intltool gobject-introspection vala python2 gtk-doc git rust)
+_commit=bcabfb6124ef52d334bcbe1ade64caf4921eeb92  # tags/2.44.9^0
+source=("git+https://gitlab.gnome.org/GNOME/librsvg.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+  NOCONFIGURE=1 ./autogen.sh
+}
+
+build() {
+  cd $pkgname
+  ./configure --prefix=/usr --disable-static --enable-vala --enable-gtk-doc
+  sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0 /g' libtool
+  make
+}
+
+check() {
+  cd $pkgname
+  make check
+}
+
+package() {
+  cd $pkgname
+  make DESTDIR="$pkgdir" install
+}
+
+# vim: ts=2 sw=2 et:
