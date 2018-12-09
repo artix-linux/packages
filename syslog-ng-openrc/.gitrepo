@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesS/syslog-ng-openrc.git
 	branch = master
-	commit = 70327688cd081ac1a1547e23b54cffa4dafd588f
-	parent = c91b140a15dff0486d4275df69a79ace177e320f
+	commit = f251c13f6106e073f6ed92fe1604a88e6d6a8e67
+	parent = d68c5e32f3666a45c4333beab87c24d3e5e8f030
 	method = merge
 	update = auto
 	cmdver = 0.4.1
