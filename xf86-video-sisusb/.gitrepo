@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesX/xf86-video-sisusb.git
+	branch = master
+	commit = 7893c0b52b2fe3f0f5bfcc8cd23a6b192476454b
+	parent = 9d9bb4dead17dab25472db18732660e6758948c9
+	method = merge
+	update = auto
+	cmdver = 0.4.1
