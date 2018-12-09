@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesC/conky.git
+	branch = master
+	commit = a5781f33147b55b94698abf665c84a3c82463644
+	parent = 99fd16cc0b77d89da6e6e50f51b17d0a52388f0d
+	method = merge
+	update = auto
+	cmdver = 0.4.1
