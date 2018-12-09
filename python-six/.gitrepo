@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-six.git
+	branch = master
+	commit = 1371081331b53cecc868e15b82b50fd8b381ec01
+	parent = a265b6a3450bab2a65aa2b7d8ea29031b61c4fb4
+	method = merge
+	update = auto
+	cmdver = 0.4.1
