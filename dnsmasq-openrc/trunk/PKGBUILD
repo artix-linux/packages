@@ -1,0 +1,45 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=dnsmasq-openrc
+pkgver=20180316
+pkgrel=1
+pkgdesc="OpenRC dnsmasq init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'dnsmasq')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/dnsmasq')
+source=("dnsmasq.confd::${_url}/net-dns/dnsmasq/files/dnsmasq.confd-r1"
+        "dnsmasq.initd::${_url}/net-dns/dnsmasq/files/dnsmasq-init-r2")
+sha256sums=('51c0672a70d5d6793d295d82db666d372fb081e8627318f67c88e48d08d254b5'
+            '8b184410ebc510841f6a4f6f2b622e97cb7d5d697ece8e1f30e34dbcafad21fe')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|/var/run|/run|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'dnsmasq'
+    _inst_initd 'dnsmasq'
+
+    sed -e 's/--user/--enable-dbus --user/' \
+        -i "${pkgdir}/etc/conf.d/dnsmasq"
+}
