@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/syslog-ng-runit.git
+	branch = master
+	commit = e6ab83ab9e55059581c8b87b4da9e1d688a22c85
+	parent = ff563861684abacdf5c6c1edaf320a706179f47c
+	method = merge
+	update = auto
+	cmdver = 0.4.1
