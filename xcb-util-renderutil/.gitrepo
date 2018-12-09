@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xcb-util-renderutil.git
 	branch = master
-	commit = d35cdc491eb2a2bb58580d9ad3d145ab4e6750d3
-	parent = a0eec65280a87c0833ba38c674101407d8aef24f
+	commit = 4b309ad652b705bfa78aeaa1cea35e2ede9f8b94
+	parent = 35291912c353058a07aa534d709b311884b3adca
 	method = merge
 	update = auto
 	cmdver = 0.4.1
