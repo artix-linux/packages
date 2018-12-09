@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/x265.git
 	branch = master
-	commit = 1d2f146c5558e799492d84b12de9090e8342dc49
-	parent = 87372aa0a81ca4a6c28418d558f8ffe1fd9ae8e2
+	commit = fea74141a30e33297b318489cb74ffb530145698
+	parent = 840161a0af2aaaaeedcb9e8e8faae6ad08201fb6
 	method = merge
 	update = auto
 	cmdver = 0.4.1
