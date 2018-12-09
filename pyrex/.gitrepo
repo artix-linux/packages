@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/pyrex.git
+	branch = master
+	commit = 7f704990140e22b8c621ad052c6ab3b8a7145abc
+	parent = d55fdb05929346a6cc26a3f5dfc8a0d0ef664e4e
+	method = merge
+	update = auto
+	cmdver = 0.4.1
