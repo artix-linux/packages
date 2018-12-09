@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/gobject-introspection.git
 	branch = master
-	commit = 887a9500ba67eb741ba140ff58cba03509e3e074
-	parent = f1724e0476a9db41bdb3a92506353e6e2a0706a2
+	commit = 352c9f3918995bcb87f8adbeebe181ba742f869a
+	parent = 35926c58acb649ae0b46f287657a8ec2f43625e2
 	method = merge
 	update = auto
 	cmdver = 0.4.1
