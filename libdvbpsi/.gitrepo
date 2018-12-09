@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libdvbpsi.git
 	branch = master
-	commit = 47abfde9884ab909a2a4e2c71ee63b5ef4bdf1c2
-	parent = 8ebbb97ffca6a57f4e2b7582fad497e39fbc3f24
+	commit = bd114b93d40b512dff667b6c6b4767cbaf459d1e
+	parent = 398f4e1a76c19ba14ea89ce22ccaab120e892c83
 	method = merge
 	update = auto
 	cmdver = 0.4.1
