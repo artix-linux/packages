@@ -1,0 +1,53 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="http://dev.gentoo.org/~polynomial-c/dist/apache"
+
+_aprel="20160303"
+_apver="2.4.18-r1"
+
+pkgname=apache-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC apache init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('apache' 'openrc')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/httpd')
+source=("${_url}/gentoo-apache-${_apver}-${_aprel}.tar.bz2")
+sha256sums=('d81e32d876594b48a7ff6d9123bf776c5bea5453eddd2fe40f4a9b79c11537aa')
+
+# pkgver() {
+#     date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 "${srcdir}/gentoo-apache-${_apver}/init/apache2.initd" "${pkgdir}/etc/init.d/httpd"
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|' \
+        -e 's|/var/run|/run|' \
+        -e 's|/usr/sbin/apache2|/usr/bin/apachectl|' \
+        -e 's|/etc/apache2/httpd.conf|/etc/httpd/conf/httpd.conf|' \
+        -e 's/! test -f/test -f/' \
+        -e 's|/usr/lib/apache2|/usr/lib/httpd|' \
+        -e 's|apache2.pid|httpd/httpd.pid|' \
+        -e 's|apache2 >/dev/null|httpd >/dev/null|' \
+        -e 's|/run/apache_ssl_mutex|/run/httpd|' \
+        -i "${pkgdir}/etc/init.d/httpd"
+}
+
+_inst_confd(){
+    install -Dm644 "${srcdir}/gentoo-apache-${_apver}/init/apache2.confd" "${pkgdir}/etc/conf.d/httpd"
+    sed -e 's|/etc/apache2/httpd.conf|/etc/httpd/conf/httpd.conf|' \
+        -e 's|/usr/lib/apache2|/usr/lib/httpd|' \
+        -e 's|apache2.pid|httpd/httpd.pid|' \
+        -e 's|apache2|httpd|g' \
+        -e 's|/var/run|/run|' \
+        -i "${pkgdir}/etc/conf.d/httpd"
+}
+
+package() {
+    _inst_initd
+    _inst_confd
+}
