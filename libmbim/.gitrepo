@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libmbim.git
 	branch = master
-	commit = 9fc5dd9b73fcb65c59391ac2e7a2238453335294
-	parent = 01f6eb8efcad58b6f6869cd6818914546f459cb9
+	commit = 9f03675fa7964a43d048689e367ca15060663195
+	parent = 55ac279a7ee846e0cc6d53cc36b3676667529741
 	method = merge
 	update = auto
 	cmdver = 0.4.1
