@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/mkinitcpio-openswap.git
+	branch = master
+	commit = ff91cb8eb11f7ef841e86f4edc93d7b7d07ec03d
+	parent = 54417fa3d0bb2f387c465d2e32edef747d3cccdd
+	method = merge
+	update = auto
+	cmdver = 0.4.1
