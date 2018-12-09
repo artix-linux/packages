@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesA/avahi-openrc.git
 	branch = master
-	commit = 618328fc3ac8349a78ac36f9f8741003636b8a66
-	parent = e72ae5219eb46bc67e3262922a1b6c93b8c37cce
+	commit = 5d7d8e336b42474eac5837dfdd99d2e02e708ea1
+	parent = 0b76d91b137115005b9fa3944d1ceb2021a65732
 	method = merge
 	update = auto
 	cmdver = 0.4.1
