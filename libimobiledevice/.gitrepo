@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libimobiledevice.git
 	branch = master
-	commit = 3d2d0bb07f5be3965b3f8fdf9a90737ea2be101d
-	parent = cac7324265a5de3c67a590b8c47fdb732067f0cb
+	commit = 72c86707d00f4f3ae28534ac35639789514e2ea6
+	parent = 5501c984bcce3cd55f2ed2d8dae11d22501d8ea8
 	method = merge
 	update = auto
 	cmdver = 0.4.1
