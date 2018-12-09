@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesT/ttf-dejavu.git
+	branch = master
+	commit = 6577e73cb2fba6a065b52cf3a18b3cf74814c52b
+	parent = 8c7a41c062eacd78a2bc6f56f4b165293439219d
+	method = merge
+	update = auto
+	cmdver = 0.4.1
