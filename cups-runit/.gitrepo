@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesC/cups-runit.git
 	branch = master
-	commit = 198d393fa8e24266e0723be33a33c297f26d4e31
-	parent = 363ff95d52791692c930df1030e7bc83bbc29a93
+	commit = ba965be98c8462f771b877b29248de9bd7022cf6
+	parent = b77487e062e176d8b689f07f85289bd31aaeb752
 	method = merge
 	update = auto
 	cmdver = 0.4.1
