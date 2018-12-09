@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesX/xf86-input-vmmouse.git
+	branch = master
+	commit = 0ffd34b9d5ad1cd3f6a258936581d0a035aa25d9
+	parent = 4181dd52bce7ec372e6e5462df316a200436d7be
+	method = merge
+	update = auto
+	cmdver = 0.4.1
