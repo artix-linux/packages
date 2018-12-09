@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesO/openssh-openrc.git
 	branch = master
-	commit = 443741103abb2a3d79ae9b70c1ca0838b083446e
-	parent = c171fe15bb0e653b1a65be4efb7914f18d7ff286
+	commit = 68cd1896547c79bb876494d5d4b16066f64d9cc2
+	parent = 5d51c88aceea4a64ed80b5b07102658f8e60f374
 	method = merge
 	update = auto
 	cmdver = 0.4.1
