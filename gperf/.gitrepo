@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/gperf.git
 	branch = master
-	commit = b0a211dc3c3dc5d0371630250fafc76aac91122f
-	parent = 5b2c59a452e66acca169d59ca0c2c14be5ba3f81
+	commit = 72bb7e7379f011e01bfee25d1bb8acad7925dad9
+	parent = 9a0082e99119a516b95ac4a9c7e464a83d186955
 	method = merge
 	update = auto
 	cmdver = 0.4.1
