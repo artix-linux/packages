@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesG/go-tools.git
+	branch = master
+	commit = 9a1baf378536c1d57ffd4c99cf0b2b3e0b018ff6
+	parent = 757f1b3e8190abdc822c3cc251112cadb45e1f08
+	method = merge
+	update = auto
+	cmdver = 0.4.1
