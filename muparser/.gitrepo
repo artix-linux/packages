@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/muparser.git
+	branch = master
+	commit = dfb3a0face53a8f3fa1890b1db35e0f4752bad29
+	parent = 08a85d12fc694d1ae454b4e62cc0738c6da68bac
+	method = merge
+	update = auto
+	cmdver = 0.4.1
