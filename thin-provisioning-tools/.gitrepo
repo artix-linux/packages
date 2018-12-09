@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesT/thin-provisioning-tools.git
 	branch = master
-	commit = b5dc542850049ef57f43f14cc4f9c2e64b531fb0
-	parent = fcf344e377df4bf28297fca83834e51ac7882093
+	commit = 6e72a8386f74a71665a24ebd5cb56676c3025e90
+	parent = 84ed44de2325df14351798c849575ec0f17f924a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
