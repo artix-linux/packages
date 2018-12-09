@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xorg-mkfontscale.git
 	branch = master
-	commit = 5ae270e64d4dde55727abcd27a282dd46374bfd3
-	parent = 5de6c8a90c34d93e2b9f17e86f620a7f40ef4a0d
+	commit = 8ac80ea859496e8f64be843843fbfa2c03639663
+	parent = d641f3220783c0a341649d589d25120bda178425
 	method = merge
 	update = auto
 	cmdver = 0.4.1
