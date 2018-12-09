@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesO/orc.git
 	branch = master
-	commit = c75cab64fa62403198f830a78a253404f4aa5be5
-	parent = 4fa0e4b9875793f36a536fe888269091566b04f7
+	commit = 2a1964a1a7ad0ba698943b7614454faace7b9ce3
+	parent = a21909a43672ff202e17399c84255290e57b0564
 	method = merge
 	update = auto
 	cmdver = 0.4.1
