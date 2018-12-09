@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesA/at-spi2-atk.git
+	branch = master
+	commit = 8f9262e9499808b14702774f14030ad97e46d59a
+	parent = a1bbf393b6a6a25c9ca09d044d18a3a3cd90297d
+	method = merge
+	update = auto
+	cmdver = 0.4.1
