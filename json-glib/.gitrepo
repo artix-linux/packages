@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesJ/json-glib.git
+	branch = master
+	commit = c074930ea26203179e646b526dfc26639e3f5d0a
+	parent = ca657896e4816508c1414e0e5a1c3fd381ef6e5e
+	method = merge
+	update = auto
+	cmdver = 0.4.1
