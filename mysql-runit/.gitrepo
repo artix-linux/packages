@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/mysql-runit.git
+	branch = master
+	commit = 36880f1e67aebc0bf87ab93e8ecea08fcc1c1c50
+	parent = e3b18d4d5953ac69adbfdd45a2bfc769f2452a29
+	method = merge
+	update = auto
+	cmdver = 0.4.1
