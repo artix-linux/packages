@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libthai.git
 	branch = master
-	commit = 3168277050d823d8a90bc019cb83e89d42770d13
-	parent = 60075c56223a3c7c04b00e9a4bfdd36b99d0b264
+	commit = 2a9eec07198b41a9b4269e0b516b8a247ae33e3e
+	parent = d5cba9ea84c799161773e3cf027656c6ee5f4e2c
 	method = merge
 	update = auto
 	cmdver = 0.4.1
