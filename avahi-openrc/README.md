@@ -1,0 +1,2 @@
+# avahi-openrc
+
