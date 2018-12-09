@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesG/gdk-pixbuf2.git
+	branch = master
+	commit = f3d5f6d23e9106c161bb84e033020d4b294f11bf
+	parent = 158d774e35855d1518ed2709c8a67fc5bc2975aa
+	method = merge
+	update = auto
+	cmdver = 0.4.1
