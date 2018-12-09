@@ -1,0 +1,41 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=freefall-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC freefall init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'freefall')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/freefall')
+source=("freefall.confd::${_url}/sys-apps/linux-misc-apps/files/freefall.confd"
+        "freefall.initd::${_url}/sys-apps/linux-misc-apps/files/freefall.initd")
+sha256sums=('3ed6f497dbb8f6b8a65f369b74d04a826a1b0463b344ce5d1b2000d97f4d5471'
+            '9959046202c21ca157aa542071925683d4b0836e9c5b29b92416eb513b1c44d2')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'freefall'
+    _inst_initd 'freefall'
+}
