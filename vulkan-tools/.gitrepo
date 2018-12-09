@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesV/vulkan-tools.git
+	branch = master
+	commit = 3e7662236d2cda4f9b423bdd257266d71f9c9892
+	parent = 31274df73628a89e153d790e2e0ce5505e574cea
+	method = merge
+	update = auto
+	cmdver = 0.4.1
