@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libkate.git
 	branch = master
-	commit = de9bfbe6b92ced9d839ed2a85c62cef96e0e56f3
-	parent = 450ca3745cf5a41ed2867bcd839200df3217b27e
+	commit = 20ae89746d2a0916f20b4e193d7076e82aa8b1e4
+	parent = 162dfa2cd6adb55142d8fa760f6516e9d83b12c3
 	method = merge
 	update = auto
 	cmdver = 0.4.1
