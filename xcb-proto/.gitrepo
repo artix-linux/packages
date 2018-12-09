@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xcb-proto.git
 	branch = master
-	commit = c36b778ada87ad2e146d057cc810b18fe2bb6c6c
-	parent = 307d6fb13883ead6cd8672c635022226c5ae5d2e
+	commit = d0f191ff7d0f5f596d9bde141f43fe8bf3b58177
+	parent = 8d8df81eda54f1a8f37980afd8b9ef3955dd4102
 	method = merge
 	update = auto
 	cmdver = 0.4.1
