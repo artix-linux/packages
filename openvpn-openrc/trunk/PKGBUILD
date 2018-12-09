@@ -1,0 +1,41 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=openvpn-openrc
+pkgver=20180216
+pkgrel=1
+pkgdesc="OpenRC openvpn init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-system')
+depends=('openrc' 'openvpn')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/openvpn')
+source=("openvpn.confd::${_url}/net-vpn/openvpn/files/openvpn-2.1.conf"
+        "openvpn.initd::${_url}/net-vpn/openvpn/files/openvpn-2.1.init")
+sha256sums=('330149a83684ddabe413d134d4c8efad4c88b18c2ab67165014deff5f7fffad2'
+            '89f69bcd627868830c421bc6270f08a1c3edf1a1e5fbdedf33c7a7d530bdfccf')
+
+pkgver() {
+    date +%Y%m%d
+}
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'openvpn'
+    _inst_initd 'openvpn'
+}
