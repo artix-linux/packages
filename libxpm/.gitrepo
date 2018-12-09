@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxpm.git
 	branch = master
-	commit = d107667f59ad4ad4e5e5a46daf5ca1c6ddf56fc0
-	parent = e500bfbde7abe7acf92372714f1470ab6370d924
+	commit = 96481fed23f9224162d3aaa6acd0e00d89beafde
+	parent = 61d782cf926a02fc64858a5cc457b6e5a814aec0
 	method = merge
 	update = auto
 	cmdver = 0.4.1
