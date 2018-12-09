@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/pygobject2.git
+	branch = master
+	commit = 94cb44ca0675ad4730d9894b386157a8cdfe2ece
+	parent = 79b74a491c413b10519205e2cb06a43ab2b94cfd
+	method = merge
+	update = auto
+	cmdver = 0.4.1
