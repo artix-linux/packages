@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libndp.git
 	branch = master
-	commit = 59f06968ff191b59cb960864f469965816bee8d2
-	parent = c6db18116db96a0c334d25ec690610926c4bb301
+	commit = 11e63feab31e78017f758a1fd33e62d3d31714ff
+	parent = 0dbb190a77a3084253bc468f9aa8cdab70daa8b7
 	method = merge
 	update = auto
 	cmdver = 0.4.1
