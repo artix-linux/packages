@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libdbusmenu-qt.git
 	branch = master
-	commit = cf2731e0b5b9cf59dc2d2c733360cf40a24b14b4
-	parent = 20a1fddf8899d65abfd26d988393fbadb4381c46
+	commit = 0f3680de2fa8cfa152b7a44712b5e55d605ad4ec
+	parent = 9b5ec6b0e6a6009131da61cc8d52e0a6bba67c96
 	method = merge
 	update = auto
 	cmdver = 0.4.1
