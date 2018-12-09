@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/snowball.git
+	branch = master
+	commit = 3bc904fd7c5d2316b14fe637092c5e6576f99adb
+	parent = 902dad9621e3e05c88b6d5f0daea9b44953c84f8
+	method = merge
+	update = auto
+	cmdver = 0.4.1
