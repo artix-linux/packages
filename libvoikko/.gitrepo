@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libvoikko.git
 	branch = master
-	commit = 313672ba1d4f39b8f79b8982c4d26754d349f7d5
-	parent = a38bbc2097abd4233afd07a9de3e8a798e6c8830
+	commit = 29e6dfdf70c84c652b84a7882bab70743630e79e
+	parent = cc01d498c0086e525893f14488cef21afd1ff2cd
 	method = merge
 	update = auto
 	cmdver = 0.4.1
