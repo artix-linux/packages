@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libraqm.git
+	branch = master
+	commit = 2e4c8648952bba94f13d916a333c89764ad29ba8
+	parent = 9244d5d704cc1254291002ee401b53e41f7d8e30
+	method = merge
+	update = auto
+	cmdver = 0.4.1
