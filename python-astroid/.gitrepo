@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-astroid.git
 	branch = master
-	commit = 199092303583be963f043c391321a88645e177f9
-	parent = 35af046bd8d14f71351310ab742b40f18094cb9b
+	commit = b5eca0f41bca2d2e4e5d6451d29e02614cd026d6
+	parent = 1730d76739613d1cd2d73d1b9f9ee26cdecf5d16
 	method = merge
 	update = auto
 	cmdver = 0.4.1
