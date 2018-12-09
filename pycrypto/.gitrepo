@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesP/pycrypto.git
 	branch = master
-	commit = 46b4ec0b0db61fb88526a55ab04c125f6350cadc
-	parent = 332c4ba8bec92b43d26df127778871c18361c299
+	commit = 14650ff092cccbf5b25af0f0cacf4f0868389c67
+	parent = 8699ee88851d6e1b489960a2329cb032b4079f00
 	method = merge
 	update = auto
 	cmdver = 0.4.1
