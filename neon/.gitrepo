@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesN/neon.git
 	branch = master
-	commit = 319349c4b5ba82782958ad15a61e852b891dd45d
-	parent = 5758206f5b97ff5f1a00b74f388af7c7646551f4
+	commit = ff08f92c4c4a162d893f08bc61163062ffccc980
+	parent = d22b2ac7385abcd1dde209dfe09327e24ae51fa8
 	method = merge
 	update = auto
 	cmdver = 0.4.1
