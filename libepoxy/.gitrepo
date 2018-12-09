@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libepoxy.git
+	branch = master
+	commit = c4e8eabf5c51a2c28fcd8e1d47b986190c646c12
+	parent = 14aec863390a530e5aa66e12efa8798385fb3211
+	method = merge
+	update = auto
+	cmdver = 0.4.1
