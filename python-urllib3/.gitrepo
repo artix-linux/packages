@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-urllib3.git
 	branch = master
-	commit = 5b5732cf3d85cfdb1cb468cdb40071fc2fdaf6ec
-	parent = 0512c44f1e29d1d078c9ea6b4400d5d18bf75c8d
+	commit = d95501858560979423ee77a09ebb1e8602063fbd
+	parent = 1a09720c4a94e0a57001d481ae0ae5aa57fbb294
 	method = merge
 	update = auto
 	cmdver = 0.4.1
