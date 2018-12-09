@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libtommath.git
+	branch = master
+	commit = c7b091c2f7cad62b90c07a47d541312ee9636a1c
+	parent = 7d363504837570f944ee3005052991dbc644e64b
+	method = merge
+	update = auto
+	cmdver = 0.4.1
