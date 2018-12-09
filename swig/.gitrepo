@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/swig.git
+	branch = master
+	commit = 2b720fa8dd041b47d360476d06eea1858196653a
+	parent = 1ea245c0db699741ca6d586615409492a430cbbc
+	method = merge
+	update = auto
+	cmdver = 0.4.1
