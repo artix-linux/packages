@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesE/egl-wayland.git
+	branch = master
+	commit = 50bd8033a5edf6c3e2e84bfe0854203eb92748bf
+	parent = 60b1e6896b0acafa584709eb17151444be4a4bdb
+	method = merge
+	update = auto
+	cmdver = 0.4.1
