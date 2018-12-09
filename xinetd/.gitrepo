@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xinetd.git
 	branch = master
-	commit = 8169930acf7098b0b35a577dc1e0cbdcfe66c8a6
-	parent = d9d65bfeea2e8c88557dca646335525335842c9f
+	commit = 0beec90539a9691546f37fb28d9652a247570269
+	parent = ae0e1a2c1ad208fa3c85d810f13af8dba111ecc1
 	method = merge
 	update = auto
 	cmdver = 0.4.1
