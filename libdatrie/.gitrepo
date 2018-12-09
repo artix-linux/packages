@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libdatrie.git
 	branch = master
-	commit = de5295da7f352ebaf4573c1653dcc04b92515e5b
-	parent = 3edf1a05bbd04ae7a7325ef6166180d8f9a75924
+	commit = 17abbf3c995135bfe4de463a4db6096c922e1f8a
+	parent = 98c914e2cf1ca3a807902aa322c11617c6e244c8
 	method = merge
 	update = auto
 	cmdver = 0.4.1
