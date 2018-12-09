@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo $$ > /var/run/syslog-ng.pid
+exec 2>&1
+exec syslog-ng -F
