@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-gamepad.git
+	branch = master
+	commit = ab6fd0769d3c6dd1c4113131e570cbca907d30da
+	parent = b66d440a8eaf96f026cf037b884efa058b4508af
+	method = merge
+	update = auto
+	cmdver = 0.4.1
