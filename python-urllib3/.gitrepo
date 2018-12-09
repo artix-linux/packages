@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-urllib3.git
+	branch = master
+	commit = 5b5732cf3d85cfdb1cb468cdb40071fc2fdaf6ec
+	parent = 0512c44f1e29d1d078c9ea6b4400d5d18bf75c8d
+	method = merge
+	update = auto
+	cmdver = 0.4.1
