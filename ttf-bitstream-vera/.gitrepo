@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesT/ttf-bitstream-vera.git
 	branch = master
-	commit = 495886809195fb609da4f224e190893fa86429b4
-	parent = 865c9382aa1e45ee3a72ec31e9038d48d2d4b7ed
+	commit = 7cb6a5e8abf07c78fafbf35cc8041f220aff7ad9
+	parent = b17563c199796a71520cb9fa1e0e6ab501024ed2
 	method = merge
 	update = auto
 	cmdver = 0.4.1
