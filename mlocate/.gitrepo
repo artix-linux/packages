@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/mlocate.git
 	branch = master
-	commit = f0e7b416e465f9a5d401932158f1ca520b39d032
-	parent = 3a20ce5c39ada30c3458d7d57efe1884deb82781
+	commit = d672fc6653b62b1c90c414e6825ad68e1bf93be9
+	parent = 1772e3a19831571fdbf95617346db1e644e4a086
 	method = merge
 	update = auto
 	cmdver = 0.4.1
