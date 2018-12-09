@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xcb-util-keysyms.git
 	branch = master
-	commit = 6e481a2ec164f586f404c23fb2ca196661bcc3ef
-	parent = 0df10c0f26c280e88c2c6938176bbd57125d6492
+	commit = 891455b85a243cb5670089e0725c60df2d58a2fc
+	parent = ce7008156bdf3cb77193093c1aaeadb9cd04da34
 	method = merge
 	update = auto
 	cmdver = 0.4.1
