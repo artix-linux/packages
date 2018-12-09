@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/lightdm-runit.git
+	branch = master
+	commit = 39dffd654c83b4e2fdeba8ec31d7e73c3c32cf2d
+	parent = 88dc502591fdd36d74f3f52158ea47ed21646a71
+	method = merge
+	update = auto
+	cmdver = 0.4.1
