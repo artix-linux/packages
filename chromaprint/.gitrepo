@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesC/chromaprint.git
+	branch = master
+	commit = 15b27b70f79a9038191353f87e93dae3dd60b277
+	parent = c300613c48e0b8329ad50635877fcbbc07563dcf
+	method = merge
+	update = auto
+	cmdver = 0.4.1
