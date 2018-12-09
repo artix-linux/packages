@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesC/clamav-runit.git
+	branch = master
+	commit = 4c660334c130f6fc99e851effd786ebf1382e6b8
+	parent = 1b465449555efd8f210a39cc9cff12ad70a2f9c0
+	method = merge
+	update = auto
+	cmdver = 0.4.1
