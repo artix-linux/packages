@@ -1,0 +1,44 @@
+# Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+
+pkgname=egl-wayland
+pkgver=1.1.1
+pkgrel=1
+pkgdesc="EGLStream-based Wayland external platform"
+arch=(x86_64)
+url=https://github.com/NVIDIA/egl-wayland
+license=(MIT)
+depends=(wayland eglexternalplatform)
+makedepends=(meson git)
+_commit=59ff78fcf874c28a11361acc9d07a3d5e17e1664  # tags/1.1.1
+source=("git+$url#commit=$_commit"
+        10_nvidia_wayland.json)
+sha256sums=('SKIP'
+            '5cccf1905a266e8e34d5ad4aad4be85390e60b1a0850a29dd9d64adc641de412')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+  git tag -f 1.1.0 1676d1d2bfe646fb3ecbba29a85db529dd399493  # Fixup missing tag
+}
+
+build() {
+  arch-meson $pkgname build
+  ninja -C build
+}
+
+check() {
+  cd build
+  meson test
+}
+
+package() {
+  DESTDIR="$pkgdir" meson install -C build
+  install -Dt "$pkgdir/usr/share/egl/egl_external_platform.d" -m644 10_nvidia_wayland.json
+  install -Dt "$pkgdir/usr/share/licenses/$pkgname" -m644 $pkgname/COPYING
+}
+
+# vim:set sw=2 et:
