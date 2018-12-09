@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesG/geoclue2.git
+	branch = master
+	commit = b444e8fe161bd97231a9405968444491f54a2eb5
+	parent = 87a37dff718dca4e5f2cb73fb9b97d2f156d1c53
+	method = merge
+	update = auto
+	cmdver = 0.4.1
