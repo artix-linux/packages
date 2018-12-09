@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-canvas3d.git
+	branch = master
+	commit = f9cdf6de04f1ebd417d234c84ec024d935671b04
+	parent = 23488a1bd5a032f8e9a50a26a1cf47fb26793bcc
+	method = merge
+	update = auto
+	cmdver = 0.4.1
