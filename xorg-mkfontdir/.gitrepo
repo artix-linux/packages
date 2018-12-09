@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xorg-mkfontdir.git
 	branch = master
-	commit = fc03e6164075c8820fa4dd6c418464a457e946d2
-	parent = 10aea9b541ab0262d347d6698ff63e4fd836d061
+	commit = 30cb3eef734c29ca85985027afdd8e0b70905a89
+	parent = 697b23cd3ff8b4b93b4205fe4bedcd1509f16ec3
 	method = merge
 	update = auto
 	cmdver = 0.4.1
