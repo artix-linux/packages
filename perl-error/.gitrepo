@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPerl/perl-error.git
+	branch = master
+	commit = 4b295f675db11357b621bf50c4afcac8eafd332d
+	parent = 0722c106ef92f2f11906bd70372e7991ab1846c4
+	method = merge
+	update = auto
+	cmdver = 0.4.1
