@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/lirc-runit.git
 	branch = master
-	commit = 4c4d4aaa95a4aced40e468fa7ef0bc76d5f200f6
-	parent = 979355b0ce80a8e9d1a7423051b3b8b05068e901
+	commit = 3a2725b77ca0f5938f9a136d365e816f8effb59e
+	parent = 03434b6cb621596377f9ddbc7442953ec57b9450
 	method = merge
 	update = auto
 	cmdver = 0.4.1
