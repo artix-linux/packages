@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/liboauth.git
 	branch = master
-	commit = 749ed44e2c180fd0a86fb2ca2d0c5bdee2a1d0ee
-	parent = 783e862e5b90c8cdf83cb35a9ee916d3a48d0b40
+	commit = 32c89fd5d28e68b26a113ca64b9c12d8ebfa1c7d
+	parent = 9991ba0d89a8c57aff7ad54083177b28862a1ace
 	method = merge
 	update = auto
 	cmdver = 0.4.1
