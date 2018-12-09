@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libgphoto2.git
 	branch = master
-	commit = dc12f0c5e62326e7be6ac38c2df576108d8d6c34
-	parent = 7789fe2a1638ddab1a74af715e33c55c6002f679
+	commit = 2cf7500141bec43a781359300a2ef5ea9787eaa8
+	parent = 97bc02969a6489e06d998e8272a0a7793ddca966
 	method = merge
 	update = auto
 	cmdver = 0.4.1
