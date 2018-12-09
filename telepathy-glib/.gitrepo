@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesT/telepathy-glib.git
+	branch = master
+	commit = 2a7141af833f2ca2aad87f98f832efe359cac823
+	parent = 2037677dbb4cfb3cd7346d94cf379d7c99517d6a
+	method = merge
+	update = auto
+	cmdver = 0.4.1
