@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libofa.git
 	branch = master
-	commit = 54556559e5ae2e9a8e9b0b97befb46f77df2fe2a
-	parent = 946a3eebe9fc46b7a01506283d056b569e7456bb
+	commit = baa74bfb188179c9a9e86ba1f9b1677877987517
+	parent = 9df6d72711495d988238c24573ac37bb94c2e77f
 	method = merge
 	update = auto
 	cmdver = 0.4.1
