@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesB/bdf-unifont.git
+	branch = master
+	commit = 121474d100a5d4a99f74e73c7bf0cee400443dde
+	parent = dfd2b92ec4a9b70a6bd212fa1b4e6834c39af8dc
+	method = merge
+	update = auto
+	cmdver = 0.4.1
