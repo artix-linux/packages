@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libspiro.git
+	branch = master
+	commit = 534e4e297ee55c7de3fd885b09764eb0e34ef2ad
+	parent = 458d796fe5f933af177a35792e7ad0589748efdc
+	method = merge
+	update = auto
+	cmdver = 0.4.1
