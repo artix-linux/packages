@@ -1,0 +1,42 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=git-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC git-daemon init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('git' 'openrc')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/git-daemon')
+source=("git-daemon.confd::${_url}/dev-vcs/git/files/git-daemon.confd"
+        "git-daemon.initd::${_url}/dev-vcs/git/files/git-daemon-r1.initd")
+sha256sums=('4703ba2372c661fb674a29fea7f64983f8b1b3136d971663509249655bca6e21'
+            '39e257bb7794a47de012b4d465a1980113d99dd2103c5c13d4df9f2e5a7fc27d')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|/var/git|/srv/git|' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'git-daemon'
+    _inst_initd 'git-daemon'
+}
