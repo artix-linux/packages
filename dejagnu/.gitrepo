@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesD/dejagnu.git
 	branch = master
-	commit = 8905cb29713695356bb346815aeddcbfa5d1edae
-	parent = 44ff5e1f42c465f572be34c75686c8fc94ea53e6
+	commit = f5516a2716ae7166d055a4b90e39c992c99caa47
+	parent = 790fd882bd1db764ddf1ddf7a92c8bd66ddfe940
 	method = merge
 	update = auto
 	cmdver = 0.4.1
