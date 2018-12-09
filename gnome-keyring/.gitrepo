@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/gnome-keyring.git
 	branch = master
-	commit = 50ddfd82bee57902bca548956d3bf87027f17647
-	parent = baa1786f859c8ca41a0b20d527e4b2ff01e525d3
+	commit = 2e60dea30a276158aebb70f0f57f9e8e6a332a51
+	parent = 019df48259dbf55fee18b63bf4574d01127c3dd2
 	method = merge
 	update = auto
 	cmdver = 0.4.1
