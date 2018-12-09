@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libcanberra.git
+	branch = master
+	commit = a8f9fdf5e228717c636c20ebbbda74ca996506e3
+	parent = bf6da70a92d176ae0dfd2645d78aa0a20ddc5209
+	method = merge
+	update = auto
+	cmdver = 0.4.1
