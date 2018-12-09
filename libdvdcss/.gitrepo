@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libdvdcss.git
 	branch = master
-	commit = aca894d700b8d0a37d04f7644524cba1c0e055dd
-	parent = 17035877c6913190fa5bdd840995970052b2cdab
+	commit = 69c93294428f9e2c5dae49f3c96b5ac135242ccc
+	parent = c6bb2724e37123563af2bb77624e0546a23143cc
 	method = merge
 	update = auto
 	cmdver = 0.4.1
