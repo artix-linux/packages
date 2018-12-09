@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/openvpn-runit.git
+	branch = master
+	commit = bb5ce0dface749d8851cf0e768a89d103b2dd31d
+	parent = 7c40c27aa52120344207f85db39f9553dd819465
+	method = merge
+	update = auto
+	cmdver = 0.4.1
