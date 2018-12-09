@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesO/opensp.git
 	branch = master
-	commit = f8817616d6cdf6b0426e34c1c866c4bc71e18330
-	parent = 6d0d641651f76440a2ac3f7c93cca76e0da7c291
+	commit = abf69838cab56beb01286e91c06fa02a6a4f52e2
+	parent = 6ac6d0930686e6214ad5992b014738dbe431900c
 	method = merge
 	update = auto
 	cmdver = 0.4.1
