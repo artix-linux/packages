@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesH/harfbuzz.git
+	branch = master
+	commit = ffd2bb4bfa8bf4c2666646bed16602da8917d3c0
+	parent = 383fa1a13090df1e707d26188606d771411c4897
+	method = merge
+	update = auto
+	cmdver = 0.4.1
