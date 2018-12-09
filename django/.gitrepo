@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesD/django.git
+	branch = master
+	commit = c42b8408cebeed9357e808102569f4791bdbf7bb
+	parent = 180537d4409cec874b07409596f85f51e5b7d6a0
+	method = merge
+	update = auto
+	cmdver = 0.4.1
