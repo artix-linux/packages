@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesN/nginx-runit.git
+	branch = master
+	commit = 44414a451c7d237a5a4c9eaac23c2fd7b9bc2b16
+	parent = 12328af4c1bc1a402a40dbd23461c10850a58c3f
+	method = merge
+	update = auto
+	cmdver = 0.4.1
