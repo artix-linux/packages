@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesT/tinycdb.git
+	branch = master
+	commit = c78eb4627c36317d156c9cded957e7186730ffd6
+	parent = 4be6f3af2a9da2a434165dad944446e44ad8eaec
+	method = merge
+	update = auto
+	cmdver = 0.4.1
