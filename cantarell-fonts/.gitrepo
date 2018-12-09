@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesC/cantarell-fonts.git
 	branch = master
-	commit = f7fecc06956c7f93eab3ba2384f6d4caeed9325b
-	parent = c32bf441f1d4b78776a4de9b860f8b7eea738330
+	commit = 09c1be340422e79e12e94034914667dc1b6d95bb
+	parent = d38d2c1d3ca75ace57cb0c3606b472023ebf7242
 	method = merge
 	update = auto
 	cmdver = 0.4.1
