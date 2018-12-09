@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-cairo.git
+	branch = master
+	commit = b4856ce9c895bf34ef235076f6ba94466fccf00d
+	parent = faa6ae239b2a8a691058c98592229e6e72c4bc2d
+	method = merge
+	update = auto
+	cmdver = 0.4.1
