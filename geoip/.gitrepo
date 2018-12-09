@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesG/geoip.git
+	branch = master
+	commit = 059dea846521dc657dad1a35dedd1206c77ac7b7
+	parent = ef541e8a2b365d8488f8c011e49d1a6613eb8040
+	method = merge
+	update = auto
+	cmdver = 0.4.1
