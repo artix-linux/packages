@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesJ/jfsutils.git
+	branch = master
+	commit = 6243feb13f19a7bc1d8581136ec407d00ce69587
+	parent = d010c4dfc04a98f8b4fb31da57dbec031a7908ee
+	method = merge
+	update = auto
+	cmdver = 0.4.1
