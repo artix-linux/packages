@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libepoxy.git
 	branch = master
-	commit = c4e8eabf5c51a2c28fcd8e1d47b986190c646c12
-	parent = 14aec863390a530e5aa66e12efa8798385fb3211
+	commit = 23a8a79fee59e31f996423c51e626b74cf4672b5
+	parent = 513f5e1072d6e35fbdf10f27a62a2a3040e483e2
 	method = merge
 	update = auto
 	cmdver = 0.4.1
