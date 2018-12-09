@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesA/avahi.git
+	branch = master
+	commit = eb2ec03c96a52cf358289cf30709d718c9c455bb
+	parent = ce74340743211f5b1ba971250dec1a5edaac2ba2
+	method = merge
+	update = auto
+	cmdver = 0.4.1
