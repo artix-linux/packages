@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxinerama.git
 	branch = master
-	commit = 7938a1162433da4c281509340dd988a139d709c5
-	parent = 3a786dbc4a93090190e947ea4d50d4de9c70c7bc
+	commit = f342f66e127f9a95febad414f8871bd845cbfa7d
+	parent = 5449c7a5e0be83d0a24be21d40927f2c52337732
 	method = merge
 	update = auto
 	cmdver = 0.4.1
