@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-asn1crypto.git
 	branch = master
-	commit = c2520e19f5016c840d247f32972372db3ba15310
-	parent = 40ce78b6fc4194532b4a7a6156d370a9c3ff378d
+	commit = 20407c8514c5fdbd82487f48dae771b77d5e51fb
+	parent = 32747ea6fb6be4b6d621129d105b4cf73b17d179
 	method = merge
 	update = auto
 	cmdver = 0.4.1
