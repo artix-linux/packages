@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/php.git
+	branch = master
+	commit = ee19df1be42e91c5c94afe1baa78d9bc3825edc4
+	parent = 83fc6636dc4a5dee298ef214aae734f1dd871136
+	method = merge
+	update = auto
+	cmdver = 0.4.1
