@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/pyopengl.git
+	branch = master
+	commit = e7ab67476e5adc1b629daabd822b748e6ab8dc36
+	parent = e83ebc310d2ab1312a89e579410477650fde3fee
+	method = merge
+	update = auto
+	cmdver = 0.4.1
