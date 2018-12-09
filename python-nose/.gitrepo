@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-nose.git
+	branch = master
+	commit = d0f1c331f9e7fec2cffaf1199bf13bb1957e62a8
+	parent = fb897ee866ce18cb64c17f7387718563dde96a1d
+	method = merge
+	update = auto
+	cmdver = 0.4.1
