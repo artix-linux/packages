@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libaccounts-qt.git
 	branch = master
-	commit = 5912ad06704ec14f48deb0c623aa215f1b30a92e
-	parent = 5acaeb67fd52e3da0e1b835fc43585e6286da44e
+	commit = f5b83f0e35a578f17e9bcc9aaba057603dede376
+	parent = af7b14c5be7db552c0b99d067a5db178c587b836
 	method = merge
 	update = auto
 	cmdver = 0.4.1
