@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxfont2.git
 	branch = master
-	commit = 172c776381fb98a898362c6b540141832016e77e
-	parent = b14f3fddc428b7cccc32328a9265c07cd329fc77
+	commit = 4bafee1e53530b5488a611579dffde2afb4110fc
+	parent = 99a3bb21cf97be75fb96edeaff4ece901163ebad
 	method = merge
 	update = auto
 	cmdver = 0.4.1
