@@ -1,0 +1,41 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=metalog-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC metalog init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'metalog')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/metalog')
+source=("metalog.confd::${_url}/app-admin/metalog/files/metalog.confd"
+        "metalog.initd::${_url}/app-admin/metalog/files/metalog.initd")
+sha256sums=('dd9d30a6c22dca6d072a9c63e1494d3d0a26709a5f045ce5985642933fe24efc'
+            '78e372a0c04c36e590a66d0750083fcb6302159eaae06a81c19a379e6115087e')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'metalog'
+    _inst_initd 'metalog'
+}
