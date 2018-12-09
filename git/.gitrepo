@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/git.git
 	branch = master
-	commit = e8e09b41a05f5e2d06517cb6ff5bebfe421bc530
-	parent = 6ee2877776b950ae7966a27758a793af96469d7a
+	commit = 6cc92febed110a39839c6a39f72e22cfbeb59d59
+	parent = e1530fa2bccd2801aa609cfc00e6f2cec74f6a49
 	method = merge
 	update = auto
 	cmdver = 0.4.1
