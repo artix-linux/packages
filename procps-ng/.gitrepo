@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/procps-ng.git
+	branch = master
+	commit = cdd43c6c40f5eb1eed565b5e4a36ffb450e7a96a
+	parent = aecb50bd277a0fcaa7f524e244a58935711911b2
+	method = merge
+	update = auto
+	cmdver = 0.4.1
