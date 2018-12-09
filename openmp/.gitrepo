@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/openmp.git
+	branch = master
+	commit = bcb1979b9b03a37384db5eecb388ae3a79984732
+	parent = 41fbdd199bb5ff567fcb32a1b4f616fc48f28787
+	method = merge
+	update = auto
+	cmdver = 0.4.1
