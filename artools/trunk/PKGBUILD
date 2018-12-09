@@ -1,0 +1,54 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+pkgbase=artools
+pkgname=('artools-base' 'artools-pkg' 'artools-iso')
+pkgver=0.10.2
+pkgrel=1
+arch=('any')
+pkgdesc='Development tools for Artix'
+license=('GPL')
+groups=('artools')
+url='https://gitea.artixlinux.org/artix/artools'
+source=("${pkgbase}-${pkgver}.tar.gz::$url/archive/${pkgver}.tar.gz")
+sha256sums=('aac32715b529aee81d5e637b610b8309af6e4278292ab758a8bc18ae6c8e3a11')
+
+prepare() {
+    cd ${pkgbase}
+    sed -e "s/^VERSION=.*/VERSION=${pkgver}/" -i Makefile
+}
+
+build() {
+    cd ${pkgbase}
+    make PREFIX=/usr
+}
+
+package_artools-base() {
+    pkgdesc='Development tools for Artix (base tools)'
+    depends=('openssh' 'rsync' 'haveged' 'os-prober' 'gnupg' 'pacman')
+    optdepends=('artools-pkg: Artix package tools'
+                'artools-iso: Artix iso tools')
+    backup=('etc/artools/artools.conf')
+    install=artools.install
+
+    cd ${pkgbase}
+    make PREFIX=/usr DESTDIR=${pkgdir} install_base
+}
+
+package_artools-pkg() {
+    pkgdesc='Development tools for Artix (packaging tools)'
+    depends=('artools-base' 'namcap' 'git-subrepo')
+    conflicts=('devtools')
+
+    cd ${pkgbase}
+    make PREFIX=/usr DESTDIR=${pkgdir} install_pkg
+}
+
+package_artools-iso() {
+    pkgdesc='Development tools for Artix (ISO tools)'
+    depends=('dosfstools' 'libisoburn' 'squashfs-tools' 'mkinitcpio'
+            'grub' 'artools-base' 'iso-profiles')
+
+    cd ${pkgbase}
+    make PREFIX=/usr DESTDIR=${pkgdir} install_iso
+}
+
