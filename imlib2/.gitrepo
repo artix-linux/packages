@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesI/imlib2.git
 	branch = master
-	commit = a876a751d67141c26665b80f5b9f625cf3028550
-	parent = f3f767e3a51d5163fd3f464e8e601bed80472ea8
+	commit = 06621d22477b2be5c06d8333ffb06f7c2ae66624
+	parent = 09645c2f011672c4b0e12c3dcc03eb9a0e22d9ca
 	method = merge
 	update = auto
 	cmdver = 0.4.1
