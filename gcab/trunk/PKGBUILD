@@ -1,0 +1,38 @@
+# $Id$
+# Maintainer: Jan de Groot <jgc@archlinux.org>
+
+pkgname=gcab
+pkgver=1.0+2+gc0947f6
+pkgrel=1
+pkgdesc="A GObject library to create cabinet files"
+url="https://wiki.gnome.org/msitools"
+arch=(x86_64)
+license=(LGPL)
+depends=(glib2)
+makedepends=(gobject-introspection vala zlib git gtk-doc meson)
+_commit=c0947f61051866efd256c6e4573c01fb944406b2  # master
+source=("git+https://git.gnome.org/browse/gcab#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/^v//;s/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build
+  ninja -C build
+}
+
+check() {
+  cd build
+  meson test
+}
+
+package() {
+  DESTDIR="$pkgdir" ninja -C build install
+}
