@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/mysql-openrc.git
+	branch = master
+	commit = 7c2ad50c3181a4154b644c8e434ea3c7526a0100
+	parent = 11b72d5028c77717d7a946f1e1b4220186107482
+	method = merge
+	update = auto
+	cmdver = 0.4.1
