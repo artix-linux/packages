@@ -1,0 +1,54 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=ntp-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC ntp init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+provides=('openrc-timed')
+depends=('openrc' 'ntp')
+conflicts=('openntpd' 'openntpd-openrc' 'systemd-sysvcompat')
+backup=('etc/conf.d/ntpd'
+            'etc/conf.d/ntp-client'
+            'etc/init.d/sntp')
+source=("ntpd.confd::${_url}/net-misc/ntp/files/ntpd.confd"
+        "ntp-client.confd::${_url}/net-misc/ntp/files/ntp-client.confd"
+        "sntp.confd::${_url}/net-misc/ntp/files/sntp.confd"
+        "ntpd.initd::${_url}/net-misc/ntp/files/ntpd.rc-r1"
+        "ntp-client.initd::${_url}/net-misc/ntp/files/ntp-client.rc"
+        "sntp.initd::${_url}/net-misc/ntp/files/sntp.rc")
+sha256sums=('40803821f498267f6567436eedc18201b5ae4b5390d6872fb15a94200c2ac06f'
+            'c7dc517cdb5ee10e2a07ccea15ec47ba0b7aff8ac1469204c8d7faf71bcae2c5'
+            '97282007801cb9c0e3b431e2930dec3bb8ce8869f63f7e02d903846e96734684'
+            'cdccb5f0009d1498be90a3f423158d7a3c603a1398f8993ae6fb828224a7cdaa'
+            '49f6634a258d4a91dc12c3b6bf9014b05a39cfe121ad52f826721ab791a28aa3'
+            'd1ba585272e6158a942d536d508a2979a1ca17316d4b97766d78bad4e9a6a7b8')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    for f in ntpd ntp-client sntp;do
+        _inst_confd $f
+        _inst_initd $f
+    done
+}
