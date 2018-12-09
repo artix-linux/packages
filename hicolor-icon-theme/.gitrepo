@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesH/hicolor-icon-theme.git
+	branch = master
+	commit = b2e21feba55cc41415633a4871ef5b1bcbdef070
+	parent = cb7195809b676ecde675b9ef8117d6566f379424
+	method = merge
+	update = auto
+	cmdver = 0.4.1
