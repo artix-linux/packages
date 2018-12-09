@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/geoclue2.git
 	branch = master
-	commit = b444e8fe161bd97231a9405968444491f54a2eb5
-	parent = 87a37dff718dca4e5f2cb73fb9b97d2f156d1c53
+	commit = e090b4daa55bd9e8eca3723618135b078a3da7f4
+	parent = 188371d4d37b807e0c2dc7820e26d21cabe8f954
 	method = merge
 	update = auto
 	cmdver = 0.4.1
