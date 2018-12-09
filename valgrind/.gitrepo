@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesV/valgrind.git
 	branch = master
-	commit = 5bdd743f827398925141118a41bd9f64d605cc82
-	parent = b2ed3f8803035f5ae9edd9725489e3e76c3bf77c
+	commit = 5fabb955112d8968f8c7c637778733514c6a71da
+	parent = 81712173d09eb74007587be333195b5b17385f76
 	method = merge
 	update = auto
 	cmdver = 0.4.1
