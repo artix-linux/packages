@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/mjpegtools.git
+	branch = master
+	commit = 938a1dc5378510fab43dfe407ccc4174cafe42e5
+	parent = cd9630e3dd709148d5389a80fb01f5e6070c6c10
+	method = merge
+	update = auto
+	cmdver = 0.4.1
