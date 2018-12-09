@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libfbclient.git
+	branch = master
+	commit = a5a3186a044b0feaae1c55bdbd8f02bc7a6a97a8
+	parent = 621240698075998fd17c2ca2989d9f36722486c2
+	method = merge
+	update = auto
+	cmdver = 0.4.1
