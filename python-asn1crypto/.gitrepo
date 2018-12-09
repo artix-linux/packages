@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-asn1crypto.git
+	branch = master
+	commit = c2520e19f5016c840d247f32972372db3ba15310
+	parent = 40ce78b6fc4194532b4a7a6156d370a9c3ff378d
+	method = merge
+	update = auto
+	cmdver = 0.4.1
