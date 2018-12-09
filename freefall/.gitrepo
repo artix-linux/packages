@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesF/freefall.git
+	branch = master
+	commit = 1348781e06bbb153eaa0b7726e2ffe0d93bfe8f9
+	parent = 2b9d133ba748eace4b97d3373efd5bbbbf12f3ab
+	method = merge
+	update = auto
+	cmdver = 0.4.1
