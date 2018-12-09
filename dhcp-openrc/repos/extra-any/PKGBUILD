@@ -1,0 +1,58 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=dhcp-openrc
+pkgver=20180305
+pkgrel=1
+pkgdesc="OpenRC dhcp init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'dhcp')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/dhcpd'
+            'etc/conf.d/dhcrelay'
+            'etc/conf.d/dhcrelay6')
+source=("dhcpd.confd::${_url}/net-misc/dhcp/files/dhcpd.conf2"
+        "dhcrelay.confd::${_url}/net-misc/dhcp/files/dhcrelay.conf"
+        "dhcrelay6.confd::${_url}/net-misc/dhcp/files/dhcrelay6.conf"
+        "dhcpd.initd::${_url}/net-misc/dhcp/files/dhcpd.init5"
+        "dhcrelay.initd::${_url}/net-misc/dhcp/files/dhcrelay.init3")
+sha256sums=('e8a413e9102948b336f60041fc3cade33125faf56d8319ee65d9f3c63199a8e7'
+            'a157630c3bdc9565cca8240ee1e6539fc9cbc1e4642c40e0965e3609d1021bac'
+            '099f668e1ad42ed9446b15675032a1186715d1fe9e4a1b24dfb787e68495d2b6'
+            '974fcd6c3c7d49cf350a53df56c0f73fc64fa14d1516d50dee1316e577ab6450'
+            '87082ebc37a969d2b7e658f155f96990c57ecb60c5fc23edee25afa9d247bd68')
+
+# pkgver() {
+#     date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|#@slapd@|ldap slapd|' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    for f in dhcpd dhcrelay;do
+        _inst_confd $f
+        _inst_initd $f
+    done
+
+    _inst_confd 'dhcrelay6'
+#     _inst_initd 'dhcrelay6'
+
+    install -Dm755 "${srcdir}/dhcrelay.initd" "${pkgdir}/etc/init.d/dhcrelay6"
+}
+
