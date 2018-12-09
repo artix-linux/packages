@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-markupsafe.git
+	branch = master
+	commit = 2903341a9fff3c2ff56bf9e162286d52cd67fe2f
+	parent = 1bebe208b5e6afe5b23478040073f4bb8696f868
+	method = merge
+	update = auto
+	cmdver = 0.4.1
