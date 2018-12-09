@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xorgproto.git
 	branch = master
-	commit = d39de094db283c5f527ffcb60646e8c160385da1
-	parent = a41ab9849c9ffd51b193f44c95a453a79b20b5b7
+	commit = 1e3c2de6fda79f50448229b09edda1a3f7dc70c7
+	parent = a0b8c3f42042459f7c809926a49758eb56b1a26c
 	method = merge
 	update = auto
 	cmdver = 0.4.1
