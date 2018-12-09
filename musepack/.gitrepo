@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/musepack.git
 	branch = master
-	commit = fb5d06017d8425c1a28de775ed496b5f39df36e3
-	parent = f79ee4ae4f19cb89254bdc030dea8631aa5e4537
+	commit = 22621ca0cf380e8f45276266f6f17d135a7f8389
+	parent = 864565a42166e9ce6da01bf02ed2323aad0646af
 	method = merge
 	update = auto
 	cmdver = 0.4.1
