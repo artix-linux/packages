@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-constantly.git
 	branch = master
-	commit = 95011ed5d2ad9eb6ec5b795a860b3f78a1828f81
-	parent = 14ac5aa75ec0c9d37fc2746a915e9a9aa5ce4cfd
+	commit = 9fdf5af4a7b5fd855b7d43b623486e345a2e709f
+	parent = 7d6086f918aa4fa8f35baa0f434ee977e34f5986
 	method = merge
 	update = auto
 	cmdver = 0.4.1
