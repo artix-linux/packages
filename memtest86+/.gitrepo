@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/memtest86plus.git
 	branch = master
-	commit = 0c64a450dc26a27d1bede0a3f14646b36e8e157c
-	parent = 3241ef0c89fa74e388b427d21940b511b643ea2a
+	commit = a0328e43e9b3808af3cf62398facbd11f44e4047
+	parent = 411d0b6cf481eee075d9def3908d3b87b8547474
 	method = merge
 	update = auto
 	cmdver = 0.4.1
