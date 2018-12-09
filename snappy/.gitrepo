@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/snappy.git
+	branch = master
+	commit = 3b6af455a999fc3b40b614050feaaeb780cabd4b
+	parent = 94bcbf9e5ab069ab20e60ee85a808ff023f9b59d
+	method = merge
+	update = auto
+	cmdver = 0.4.1
