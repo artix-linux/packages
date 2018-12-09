@@ -1,0 +1,41 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=rsync-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC rsync init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'rsync')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/rsyncd')
+source=("rsyncd.confd::${_url}/net-misc/rsync/files/rsyncd.conf.d"
+        "rsyncd.initd::${_url}/net-misc/rsync/files/rsyncd.init.d-r1")
+sha256sums=('de758791b16b89a648c01867af7f51bc9bd44e40cbe868e439b753ff5d9572e5'
+            'fc6240c77448d36cf3255e6c264737a6ce69424b5b62d0986eb322c4d8a1a85b')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'rsyncd'
+    _inst_initd 'rsyncd'
+}
