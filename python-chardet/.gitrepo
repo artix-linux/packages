@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-chardet.git
+	branch = master
+	commit = 263e2dea54ed06bb5be5e3791e455c1351b0ceb5
+	parent = 9216feaeb4441a4822c69cac9a70331278170701
+	method = merge
+	update = auto
+	cmdver = 0.4.1
