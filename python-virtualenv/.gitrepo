@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-virtualenv.git
 	branch = master
-	commit = 93bbb9e2ad44c55959858c520392854e0fc58ab2
-	parent = d050d87687d1da5cf0b4c41b74acadd757fc194f
+	commit = ce3708a7f04aaf1fe96ed051e7cdd8390e8a45ca
+	parent = 0a542d81d650224e9b3355abb975d0a802db1faf
 	method = merge
 	update = auto
 	cmdver = 0.4.1
