@@ -1,0 +1,11 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Target = etc/init.d/*
+
+[Action]
+Description = Displaying openrc service help ...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/openrc-hook add
+NeedsTargets

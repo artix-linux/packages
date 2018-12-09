@@ -1,0 +1,40 @@
+#!/bin/sh -e
+
+openrc_live() {
+  if [ ! -f /run/openrc/softlevel ]; then
+    echo >&2 "  Skipped: Current root is not booted."
+    exit 0
+  fi
+}
+
+svc_help(){
+    echo "	==> Start/stop/restart a service:"
+    echo "	rc-service <service> <start/stop/restart>"
+}
+
+svc_add_help(){
+    echo "	==> Add a service to runlevel:"
+    echo "	rc-update add <service> <runlevel>"
+    svc_help
+}
+
+svc_del_help(){
+    echo "	==> Remove a service from runlevel:"
+    echo "	rc-update del <service> <runlevel>"
+    svc_help
+}
+
+each_conf() {
+  while read -r f; do
+    "$@" "/$f"
+  done
+}
+
+case $1 in
+  sysctl)   openrc_live; each_conf /usr/bin/sysctl -q -p ;;
+  add) svc_add_help ;;
+  del) svc_del_help ;;
+  *) echo >&2 "  Invalid operation '$1'"; exit 1 ;;
+esac
+
+exit 0

@@ -1,0 +1,10 @@
+[Trigger]
+Type = File
+Operation = Remove
+Target = etc/init.d/*
+
+[Action]
+Description = Displaying openrc service help ...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/openrc-hook del
+NeedsTargets
