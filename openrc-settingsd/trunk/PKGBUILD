@@ -1,0 +1,44 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+# Contributor: williamh <williamh@gentoo.org>
+
+_url=https://dev.gentoo.org/~tetromino/distfiles/openrc-settingsd/
+
+pkgname=openrc-settingsd
+pkgver=1.0.1
+pkgrel=4
+pkgdesc="System settings D-Bus service for OpenRC"
+arch=('i686' 'x86_64')
+url="http://www.gentoo.org/proj/en/base/openrc/"
+license=('GPL')
+groups=('openrc-world')
+depends=('libdaemon' 'openrc' 'polkit' 'nss-myhostname')
+makedepends=('python')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/openrc-settingsd')
+source=("${_url}/${pkgname}-${pkgver}.tar.xz")
+sha256sums=('2047267982c716cbc113d76d826f9b694706dbf737273eaaab239f6839d9ade2')
+
+build(){
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    ./configure \
+        --sysconfdir=/etc \
+        --prefix=/usr \
+        --libdir=/usr/lib \
+        --libexecdir=/usr/lib \
+        --datarootdir=/usr/share \
+        --localstatedir=/var \
+        --sbindir=/usr/bin \
+        --with-pidfile=/run/openrc-settingsd.pid
+    make
+}
+
+package() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+
+    make DESTDIR="${pkgdir}" install
+
+    sed -e 's|#!/sbin/runscript|#!/usr/bin/openrc-run|g' \
+        -i ${pkgdir}/etc/init.d/openrc-settingsd
+
+    install -Dm644 ${srcdir}/${pkgname}-${pkgver}/COPYING "$pkgdir/usr/share/licenses/${pkgname}/COPYING"
+}
