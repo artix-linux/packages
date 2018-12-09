@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxcomposite.git
 	branch = master
-	commit = 74390192011f0c2457cc9b1d13ab7800589dbb6a
-	parent = f523dccdd527b9a37ad50895791f62bfb70b7142
+	commit = 4f29384a07ea000ff74cb37f7443e70284b52ff5
+	parent = 9273435a0f867f79f23618c6f24b96434c8502d3
 	method = merge
 	update = auto
 	cmdver = 0.4.1
