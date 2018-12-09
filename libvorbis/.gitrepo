@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libvorbis.git
+	branch = master
+	commit = 30314ee3fb763f69e991aa01c99f713642cde975
+	parent = 54400a762a66652caab1f9fa402df62a404a240e
+	method = merge
+	update = auto
+	cmdver = 0.4.1
