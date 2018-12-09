@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/pulseaudio.git
+	branch = master
+	commit = c672e17b2d005201e80711b84b723931317148ec
+	parent = 126c5b78d173f7eec352a9463ac68e13de2ed537
+	method = merge
+	update = auto
+	cmdver = 0.4.1
