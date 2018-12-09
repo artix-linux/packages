@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesF/fuse-openrc.git
+	branch = master
+	commit = cf7bc17d823dd21c6ce386d4bf16d8174a3af551
+	parent = 486eb176f9326bc2d6bfaadb404dfaa7dd5483e6
+	method = merge
+	update = auto
+	cmdver = 0.4.1
