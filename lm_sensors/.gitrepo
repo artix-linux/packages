@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/lm_sensors.git
+	branch = master
+	commit = a9a090f927d7bb183ebe3170ed51672068925681
+	parent = ca264431818f31e5ed9627982284814ced8adaec
+	method = merge
+	update = auto
+	cmdver = 0.4.1
