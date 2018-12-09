@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesZ/zita-alsa-pcmi.git
 	branch = master
-	commit = 53fdb4407a77ab051a81af9c9c9fc67be9fbb79f
-	parent = b526fb7ba188926f82a62844c31a4feeb5e2065a
+	commit = 2864e216aa14b736f5cc48fdfc261acb474c2d6c
+	parent = e944d0effbc8b044131d2069e227ef70ab2bf4fc
 	method = merge
 	update = auto
 	cmdver = 0.4.1
