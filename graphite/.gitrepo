@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesG/graphite.git
 	branch = master
-	commit = 333b749aa74fd0a8f7899f0a93b9de61337eb539
-	parent = ae6f2b04c900cb63faba48c6d6d8426bdfbb3bff
+	commit = 37f761b372ad9f4da7aecddf212a2f10f60860bf
+	parent = 90315cf016403a90a15a5246faf6c8de31975978
 	method = merge
 	update = auto
 	cmdver = 0.4.1
