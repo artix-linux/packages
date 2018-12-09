@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPerl/perl-file-which.git
 	branch = master
-	commit = 0cc1d083bf6ebca53c01c83e4effbf09ec8c27ed
-	parent = 73c9c79780b2e7faf5932abb4aec24116ee55942
+	commit = e5798ac4760027d3b133f7a481d6956e5892bc4d
+	parent = 303d9b526b77aab44861d6afc80d4f0ed84d1063
 	method = merge
 	update = auto
 	cmdver = 0.4.1
