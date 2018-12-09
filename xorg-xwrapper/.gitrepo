@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xorg-xwrapper.git
 	branch = master
-	commit = 7c20e3b7ac4b6caa6dcc62ea1eb23c1de0b93701
-	parent = 45e3abe33b300491ef1089a5e1d2c63105ea1571
+	commit = b1ae72355b4db13a67b3513041be633010cd4a97
+	parent = 9b7e0b0267df9ff2cc348a6b00839c273c346179
 	method = merge
 	update = auto
 	cmdver = 0.4.1
