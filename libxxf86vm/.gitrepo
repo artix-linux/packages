@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxxf86vm.git
 	branch = master
-	commit = 429ea24474ad4d9155bc50d55db4c79cedc49442
-	parent = cf5b81f9a34f1e744238838123c5932138221158
+	commit = 0753303ac3e6594ec16babf677fa1ff7e955d843
+	parent = 9affc835fc972e9941fb108990b38d75a0a6ce67
 	method = merge
 	update = auto
 	cmdver = 0.4.1
