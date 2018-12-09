@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/sqlite.git
+	branch = master
+	commit = b127efb0fc8e198bdb1a01cf7360901a22dc031e
+	parent = c308ab9f8f41d3f3484fde9172011c4456e8f1a5
+	method = merge
+	update = auto
+	cmdver = 0.4.1
