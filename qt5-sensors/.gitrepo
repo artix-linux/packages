@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-sensors.git
 	branch = master
-	commit = 45dce2a839140f1bae2b4aeb60761507d7021553
-	parent = c4cd86341c0702c1a2fd18591f56959281412875
+	commit = 424f49f6bc53643238ad3c73494747009986a208
+	parent = fe6b82d1b392ec2fc9b57af7c28d8eb27da0827d
 	method = merge
 	update = auto
 	cmdver = 0.4.1
