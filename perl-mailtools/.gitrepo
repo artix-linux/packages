@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPerl/perl-mailtools.git
 	branch = master
-	commit = eb209834ed649ede7360000dda3301547facfa6b
-	parent = f45d43dbecccd696c5cc447e2cd85dcb69d5e21f
+	commit = 07c245e14557b135cff07a8c0f282d9499f1bfe0
+	parent = 335460fab12e7aee931e5e61a211bf0d7afdc71b
 	method = merge
 	update = auto
 	cmdver = 0.4.1
