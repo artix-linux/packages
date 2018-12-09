@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPerl/perl-http-daemon.git
 	branch = master
-	commit = b0545fdb048545e86c2482242f12a4c029614e70
-	parent = 701fa97b91e5319c1fd54aadcbb0649662f3791c
+	commit = ea6a7f067eb9a0a4b3f30d67b7666b297e6665fa
+	parent = 4e1b23151a7362d0b309b2bfaec4bb4b0c0655e6
 	method = merge
 	update = auto
 	cmdver = 0.4.1
