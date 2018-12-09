@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesT/tinycdb.git
 	branch = master
-	commit = c78eb4627c36317d156c9cded957e7186730ffd6
-	parent = 4be6f3af2a9da2a434165dad944446e44ad8eaec
+	commit = 0221a3bf2b3617ecd60ac5eb4d5bce525ecc8e3a
+	parent = 02e5b49c9132c8246fc5983742a374414a77744a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
