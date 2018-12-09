@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xbitmaps.git
 	branch = master
-	commit = f05708816c40911b5114fc53110ba0a167c1147e
-	parent = 2243a4d5d48a5ea59bdecddc20c10c1d92b5a5f5
+	commit = e852fc3b4240f1f5db4642988ba41d10171ac761
+	parent = 16963b6bf694a3b4b785358d321dc6577f6fb2bd
 	method = merge
 	update = auto
 	cmdver = 0.4.1
