@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesA/aspell.git
 	branch = master
-	commit = 4a1c613f0df6d2b8479cea5f8d0fd65354bff130
-	parent = b032871a5bc6f9a3eaee112f252943339090f00e
+	commit = 7453cd004b8ef8a344466ab914e5bb42f8abb008
+	parent = fbaf67e6ea8e69519da765a87882a11a47506363
 	method = merge
 	update = auto
 	cmdver = 0.4.1
