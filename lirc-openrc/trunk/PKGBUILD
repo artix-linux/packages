@@ -1,0 +1,52 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=lirc-openrc
+pkgver=20180316
+pkgrel=1
+pkgdesc="OpenRC lirc init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'lirc')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/lircd'
+            'etc/conf.d/irexec')
+source=("lircd.confd::${_url}/app-misc/lirc/files/lircd.conf.4"
+        "irexec.confd::${_url}/app-misc/lirc/files/irexec-confd"
+        "lircd.initd::${_url}/app-misc/lirc/files/lircd-0.8.6-r2"
+        "irexec.initd::${_url}/app-misc/lirc/files/irexec-initd-0.8.6-r2"
+        "lircmd.initd::${_url}/app-misc/lirc/files/lircmd")
+sha256sums=('d36ff77fa193a065d25e373723e03f1a9471205151b82c73a6574cce4f095962'
+            'c404ad3b624004cab25bd3a89593cdeb0abbc25771d6e52caf2f37cb4f7b2b79'
+            'ec592af12a7b7bbe1be1b9a4ff72fcf1fda6cf0e4511120e5a85e2a4ef08b213'
+            '1eb5123f9876dff17367e78940a7442de6b5cae55e0eb4969f5985cc78261a03'
+            '47a9b3500c51c147ac64a8c0cc0dda3945522269e26c513399d89efbbb3c7098')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    for f in lircd irexec;do
+        _inst_confd $f
+        _inst_initd $f
+    done
+
+    _inst_initd 'lircmd'
+}
