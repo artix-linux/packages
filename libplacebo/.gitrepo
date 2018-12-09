@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libplacebo.git
 	branch = master
-	commit = a8353c59998d615773bc2d54d8c0d3a3d6050568
-	parent = cb32ff80542d085554d7d152289e81f394141977
+	commit = aa902855aa8cc4943d5eb860fe412a11fa7d5348
+	parent = b86572cd964f92fe38056652de38767292d1c4df
 	method = merge
 	update = auto
 	cmdver = 0.4.1
