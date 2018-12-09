@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/live-services.git
 	branch = master
-	commit = 64c9d518e326d4e6cc4a3aec39dcbd7255284a1e
-	parent = e7dbb54bfc76d797b27fd21fd4d53692718fe549
+	commit = eee7d6478585253af6f81f08dc393892d1c09355
+	parent = 1077007b093a03d5c152a141e9388e9b795b5ccc
 	method = merge
 	update = auto
 	cmdver = 0.4.1
