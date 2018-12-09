@@ -1,0 +1,47 @@
+# Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+
+pkgname=accountsservice
+pkgver=0.6.54+2+g204a4ab
+pkgrel=1
+pkgdesc="D-Bus interface for user account query and manipulation"
+url="https://gitlab.freedesktop.org/accountsservice/accountsservice"
+arch=(x86_64)
+license=(GPL3)
+depends=(glib2 polkit elogind)
+makedepends=(gtk-doc gobject-introspection git meson docbook-xsl xmlto)
+_commit=204a4abe68eefac52ca05dda2096db0e0fde0bb7  # master
+source=("git+https://gitlab.freedesktop.org/accountsservice/accountsservice.git#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/-/+/g'
+}
+
+
+prepare() {
+  cd $pkgname
+}
+
+build() {
+  arch-meson $pkgname build \
+    -D admin_group=wheel \
+    -D systemd=false \
+    -D docbook=true \
+    -D gtk_doc=true \
+    -D systemdsystemunitdir=no \
+    -D elogind=true \
+    -D user_heuristics=false
+  ninja -C build
+}
+
+check() {
+  meson test -C build
+}
+
+package() {
+  DESTDIR="$pkgdir" meson install -C build
+}
+
+# vim:set ts=2 sw=2 et:
