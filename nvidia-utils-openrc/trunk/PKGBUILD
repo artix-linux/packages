@@ -1,0 +1,42 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=nvidia-utils-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC nvidia persistence daemon init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'nvidia-utils')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/nvidia-persistenced')
+source=("nvidia-persistenced.confd::${_url}/x11-drivers/nvidia-drivers/files/nvidia-persistenced.conf"
+        "nvidia-persistenced.initd::${_url}/x11-drivers/nvidia-drivers/files/nvidia-persistenced.init")
+sha256sums=('347437868119e8ae12852a574597936e855f534a9ad290fef3f62b4083a38516'
+            '17664ed958b1d7706e5151201f784d755c60e66239229d2988e186b649756465')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|/opt/bin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'nvidia-persistenced'
+    _inst_initd 'nvidia-persistenced'
+}
