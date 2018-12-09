@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesT/telepathy-glib.git
 	branch = master
-	commit = 2a7141af833f2ca2aad87f98f832efe359cac823
-	parent = 2037677dbb4cfb3cd7346d94cf379d7c99517d6a
+	commit = 993d2f9a08a9ea9ef593d0968772a7e8a88cc985
+	parent = beb092baa25c5672af9ce5f8616ca56ac4f45bdd
 	method = merge
 	update = auto
 	cmdver = 0.4.1
