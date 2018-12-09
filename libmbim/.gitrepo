@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libmbim.git
+	branch = master
+	commit = 9fc5dd9b73fcb65c59391ac2e7a2238453335294
+	parent = 01f6eb8efcad58b6f6869cd6818914546f459cb9
+	method = merge
+	update = auto
+	cmdver = 0.4.1
