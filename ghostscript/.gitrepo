@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesG/ghostscript.git
+	branch = master
+	commit = 88e00c1ee27e690056978597395e282383d3c87a
+	parent = c17cd9f7f4c006c35fa340e21d4c1e8807d5f1aa
+	method = merge
+	update = auto
+	cmdver = 0.4.1
