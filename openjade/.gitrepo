@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/openjade.git
+	branch = master
+	commit = 35503e14161c0f776de302340e201dbbfd7ca5ad
+	parent = 6316b5e2087f97ece708dcf46af5d504b4e0e628
+	method = merge
+	update = auto
+	cmdver = 0.4.1
