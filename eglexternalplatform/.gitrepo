@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesE/eglexternalplatform.git
 	branch = master
-	commit = be7acbd24ff6178da6549065e47e61c61239e382
-	parent = 2e7448e5ab9bd86ef64062b482d8ca66219b5df0
+	commit = 7104b8507b5c958202ff8ca6382629b6ad5197d0
+	parent = c4b3591594f1be83763d94dce55d3cfc8584b72a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
