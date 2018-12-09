@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesR/rpcsvc-proto.git
 	branch = master
-	commit = 582a18014d572c65054d167ac0e79a02e8c00042
-	parent = ac5b966ea82c6aeda8a45f01d2dda7d9a098eece
+	commit = 642fd5698203b7831c8d73362e0be5504ed57f74
+	parent = 53ee2dd0cbce636e47b624c8b3fd41764ec78b93
 	method = merge
 	update = auto
 	cmdver = 0.4.1
