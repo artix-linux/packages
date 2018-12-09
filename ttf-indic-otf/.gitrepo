@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesT/ttf-indic-otf.git
+	branch = master
+	commit = 34a24fef5c8130586787e900b3a5fde299a15675
+	parent = 2240b1fb9de9620e709c136e7a950a675671afd3
+	method = merge
+	update = auto
+	cmdver = 0.4.1
