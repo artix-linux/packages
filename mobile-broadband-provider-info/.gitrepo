@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/mobile-broadband-provider-info.git
+	branch = master
+	commit = 2ddc24c81a38f3bf0cc7d279dee5f9c40b3ddd93
+	parent = 740a64b7ac8ad6dd386367ef775ec13361fa6623
+	method = merge
+	update = auto
+	cmdver = 0.4.1
