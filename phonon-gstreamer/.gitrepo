@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesP/phonon-gstreamer.git
 	branch = master
-	commit = 884dd6ce7e0e5ad07ec608b3b6ca3d6452561740
-	parent = 7db50a0aa7830dc47e0e16752e560031c325aef2
+	commit = 443151120ffb4e3775a9af410f2c3365c74ff7c6
+	parent = 29736ab71397cf59df291222b6637a1d71489bb8
 	method = merge
 	update = auto
 	cmdver = 0.4.1
