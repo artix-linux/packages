@@ -1,0 +1,19 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+pkgname=iso-profiles
+pkgver=0.9
+pkgrel=1
+pkgdesc='Artix iso profiles'
+arch=('any')
+license=('GPL')
+url='https://gitea.artixlinux.org/artix/iso-profiles'
+makedepends=('git')
+conflicts=('artix-iso-profiles')
+source=("${pkgname}-${pkgver}.tar.gz::$url/archive/${pkgver}.tar.gz")
+sha256sums=('45f99d57dbe5eae7dba3f8259871daf6349fdcdf161ae85068ed3d60f98009a3')
+
+package() {
+    cd ${pkgname}
+    install -d ${pkgdir}/usr/share/artools/iso-profiles
+    cp -a {base,lxqt} ${pkgdir}/usr/share/artools/iso-profiles
+}
