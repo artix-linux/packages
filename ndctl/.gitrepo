@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesN/ndctl.git
+	branch = master
+	commit = 89b337a267448b2edba468439d83849a77783a64
+	parent = 0adc12d31fbf29c43f34261bd159f80221dffe4e
+	method = merge
+	update = auto
+	cmdver = 0.4.1
