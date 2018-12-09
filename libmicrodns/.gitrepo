@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libmicrodns.git
+	branch = master
+	commit = 735d6e55d18c39f5787ba325fd9fa74496dbf2bd
+	parent = e0bb87ccc3653aa5df4cca6ee2252c7c18ec8c13
+	method = merge
+	update = auto
+	cmdver = 0.4.1
