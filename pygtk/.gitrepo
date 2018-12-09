@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesP/pygtk.git
 	branch = master
-	commit = 9da343877ce14772cd3a02ee5e2f17cf30b854df
-	parent = 889ea8016ad07c9cf6fb023bf5e41f1b35fe3ebf
+	commit = 69739063520b3a31fba030de4dc548dbebd593f5
+	parent = 2f1539ac6d0a214a148117fea9edea4c1b22e1a1
 	method = merge
 	update = auto
 	cmdver = 0.4.1
