@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libisoburn.git
+	branch = master
+	commit = 225225d2786c47f04e4afc3c375c1fe0db3f5802
+	parent = 17150da60a861970773b3ed0c9ffef981aaf5295
+	method = merge
+	update = auto
+	cmdver = 0.4.1
