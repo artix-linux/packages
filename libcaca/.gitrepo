@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libcaca.git
+	branch = master
+	commit = d2640b6038b00d22a5c676335a0dba386550c165
+	parent = 8cb8ef9dbcad29b76a939bed314c82d3c204749f
+	method = merge
+	update = auto
+	cmdver = 0.4.1
