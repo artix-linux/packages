@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/pacman.git
+	branch = master
+	commit = 3df3319bd26a64ef7b491293228858bcf25c39a9
+	parent = 3bfaa345ee982f4b9817450cf26220918ba36d94
+	method = merge
+	update = auto
+	cmdver = 0.4.1
