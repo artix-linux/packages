@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesC/conky.git
 	branch = master
-	commit = a5781f33147b55b94698abf665c84a3c82463644
-	parent = 99fd16cc0b77d89da6e6e50f51b17d0a52388f0d
+	commit = cb31f87e6076f8a5911151aa0d81155e1920d840
+	parent = 98eb258cfe28cba3962e7d704500561cf4be7f6c
 	method = merge
 	update = auto
 	cmdver = 0.4.1
