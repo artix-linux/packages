@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libcloudproviders.git
+	branch = master
+	commit = 6cc82a83cc408c6ce24c683b8e2d9393fd69c691
+	parent = 2d51e6e087560b846ffd59bebc08a3cfc59bb5cc
+	method = merge
+	update = auto
+	cmdver = 0.4.1
