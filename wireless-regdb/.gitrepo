@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesW/wireless-regdb.git
+	branch = master
+	commit = 96c9841e2bc95268412e52173cc2260a10374a71
+	parent = e883cac7392c3b0f2c1b8c6a249c9ef355eb388b
+	method = merge
+	update = auto
+	cmdver = 0.4.1
