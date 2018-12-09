@@ -1,0 +1,79 @@
+# Maintainer: Chris Cromer <chris@cromer.cl>
+# Maintainer: Muhammad Herdiansyah <koni@artixlinux.org>
+
+_url=https://gitea.artixlinux.org/artix/runit-artix
+_pkgname=runit-artix
+_pkgver=20180730
+
+# set default service path to /run/runit/service
+_servicedir=/run/runit/service
+
+pkgname=runit
+pkgver=2.1.2
+pkgrel=12.2
+pkgdesc='a cross-platform Unix init scheme with service supervision'
+arch=('x86_64')
+url='http://smarden.org/runit/'
+license=('BSD')
+makedepends=('git')
+backup=('etc/rc/rc.local')
+depends=('runit-rc')
+provides=('svc-manager')
+conflicts=('svc-manager')
+source=("http://smarden.org/${pkgname}/${pkgname}-${pkgver}.tar.gz"
+        "${_pkgname}-${_pkgver}.tar.gz::${_url}/archive/20180730.tar.gz"
+        "clearmem.patch"
+        "svlogd.patch"
+        "utmpset-time_t.patch")
+sha256sums=('6fd0160cb0cf1207de4e66754b6d39750cff14bb0aa66ab49490992c0c47ba18'
+            '4970c066b4737df415a5a0bafea00a2d6b79718890512d3a0dbbf40af7dad159'
+            '19b5e99135f153d07052f2dff707430af9faeabc717a5740ea58a8a783f609de'
+            '9cf269264c0713975be1b3bc9dd3b5b3bb1e2078ac596527370a902d8d025a5a'
+            '527f68f501cc9eb4bbab33f8ad374822624342c7d74b5c795efe4aac6b3f170a')
+
+prepare() {
+	# set default service path to /run/runit/service
+	cd "${srcdir}/admin/${pkgname}-${pkgver}"
+	sed -i "s|/service/|${_servicedir}/|" src/sv.c
+
+	# apply patches
+	patch -p1 -i "${srcdir}/clearmem.patch"
+	patch -p1 -i "${srcdir}/svlogd.patch"
+	patch -p1 -i "${srcdir}/utmpset-time_t.patch"
+}
+
+build() {
+	cd ${_pkgname}
+	make SERVICEDIR="${_servicedir}"
+
+	cd "${srcdir}/admin/${pkgname}-${pkgver}"
+
+	CFLAGS="${CFLAGS} -static"
+	LDFLAGS="${LDFLAGS} -static"
+
+	package/compile
+
+}
+
+check() {
+	cd "${srcdir}/admin/${pkgname}-${pkgver}"
+	package/check
+}
+
+package() {
+	# commands
+	install -dm755 "${pkgdir}/usr/bin"
+	install -Dm755 ${srcdir}/admin/${pkgname}-${pkgver}/command/* "${pkgdir}/usr/bin"
+
+	cd ${_pkgname}
+	make DESTDIR="${pkgdir}" PREFIX="/usr" SERVICEDIR="${_servicedir}" install-runit
+
+	# man pages
+	install -dm755 "${pkgdir}/usr/share/man/man8"
+	install -Dm644 ${srcdir}/admin/${pkgname}-${pkgver}/man/* "${pkgdir}/usr/share/man/man8"
+
+	# license
+	install -dm755 ${pkgdir}/usr/share/licenses/${pkgname}
+	install -Dm644 "${srcdir}/admin/${pkgname}-${pkgver}/package/COPYING" ${pkgdir}/usr/share/licenses/${pkgname}/COPYING
+	sed -n '/To the extent/,/0/p' README.md > "${pkgdir}"/usr/share/licenses/${pkgname}/LICENSE
+}
