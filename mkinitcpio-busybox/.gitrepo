@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/mkinitcpio-busybox.git
+	branch = master
+	commit = 14a23a438b4b1f1b6d6e8d1c685b2af750089801
+	parent = 8bd1711f3596369eedea34c96e7b84aa5cf7654c
+	method = merge
+	update = auto
+	cmdver = 0.4.1
