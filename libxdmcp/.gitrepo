@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libxdmcp.git
 	branch = master
-	commit = 4ecaa17d0dbb5a88aecff333d675761de2d936c1
-	parent = 3048d66c2ff465e02953eac367e7465cc3fbc3aa
+	commit = 0503e0b4f96fcaabff8d8f9900a67d03f81cb434
+	parent = 8f4c361df891dece32cb57bb6ca3350e78909b52
 	method = merge
 	update = auto
 	cmdver = 0.4.1
