@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/metalog-openrc.git
+	branch = master
+	commit = 484b43fd1c9cb0a5ba91f887af078e11d701dfab
+	parent = 3aae6aa422dbec678a9926d4deaf0869cea91d48
+	method = merge
+	update = auto
+	cmdver = 0.4.1
