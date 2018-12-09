@@ -1,0 +1,42 @@
+# $Id$
+# Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+
+pkgname=libmbim
+pkgver=1.16.2
+pkgrel=1
+pkgdesc="MBIM modem protocol helper library"
+arch=(x86_64)
+url="https://www.freedesktop.org/wiki/Software/libmbim/"
+license=(GPL2)
+depends=(glib2 bash eudev libgudev)
+makedepends=(gtk-doc python git help2man)
+_commit=8f885e389c8cd50264c6a93792327565b26d2934  # tags/1.16.2
+source=("git+https://anongit.freedesktop.org/git/libmbim/libmbim#commit=$_commit")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgname
+  git describe --tags | sed 's/-/+/g'
+}
+
+prepare() {
+  cd $pkgname
+  NOCONFIGURE=1 ./autogen.sh
+}
+
+build() {
+  cd $pkgname
+  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+    --libexecdir=/usr/lib --disable-static --enable-gtk-doc
+  make
+}
+
+check() {
+  cd $pkgname
+  make check
+}
+
+package() {
+  cd $pkgname
+  make DESTDIR="$pkgdir" install
+}
