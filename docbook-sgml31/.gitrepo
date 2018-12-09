@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesD/docbook-sgml31.git
 	branch = master
-	commit = 495d2acedecba1341512cd47571ba20bfd5bef0f
-	parent = bf890942815ca4faa37eaf2f4b02e8e15d3ce577
+	commit = 26aec52295c8ec461f260035d4c2dfc571f0a5a0
+	parent = dc12e5fcc3a96da92b734cb0a6d7336965383a21
 	method = merge
 	update = auto
 	cmdver = 0.4.1
