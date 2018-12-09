@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-cffi.git
 	branch = master
-	commit = 901aa60b6cb275600d5918dabb7702b1ead06251
-	parent = 47345d85f8f03f4e0085563febe0739fbd618163
+	commit = e65de3c0d56e00c44ec90c50d80436fb40549360
+	parent = f09757db6d8526e7fa595fc3eef8c74519bcd8ef
 	method = merge
 	update = auto
 	cmdver = 0.4.1
