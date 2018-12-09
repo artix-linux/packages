@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesW/wayland-protocols.git
+	branch = master
+	commit = 3b03a21d8980b263e7a1f685c5d3fa4daa1078bb
+	parent = 0a2086c44a5f28fad963d57cd2df14dfe4009f4b
+	method = merge
+	update = auto
+	cmdver = 0.4.1
