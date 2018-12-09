@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesP/pyalpm.git
+	branch = master
+	commit = ae309fe184860f3bfce79b092710301a2bb699f1
+	parent = 48f03493a3340c421a783e5d55d32bd09b24e02a
+	method = merge
+	update = auto
+	cmdver = 0.4.1
