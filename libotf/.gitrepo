@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/libotf.git
 	branch = master
-	commit = 8599b15b85af497b77ef0d3bacf29ad685be0be1
-	parent = 0a653df9b753259028a14baad6798a5170ecf5ba
+	commit = c0e004acb64508b82d8a6359be7c94144a71eb5e
+	parent = 0b561bf06c45ce9c84723bfc46ba39215974cc26
 	method = merge
 	update = auto
 	cmdver = 0.4.1
