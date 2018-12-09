@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/memcached.git
+	branch = master
+	commit = 34ac0a50d9d6b15ec3e7879f75b283f9ca66c740
+	parent = e71ab6db0b1e6f9f1528fe5afd85621005d81974
+	method = merge
+	update = auto
+	cmdver = 0.4.1
