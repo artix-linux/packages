@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesX/xcb-util-wm.git
+	branch = master
+	commit = c2c6fedc8bd9bac76dba68978e86f905c5f0af86
+	parent = 40747d0e4e37b9801ee0a6ca0ab27c02be733b83
+	method = merge
+	update = auto
+	cmdver = 0.4.1
