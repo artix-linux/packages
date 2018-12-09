@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesB/bluez-utils-compat.git
+	branch = master
+	commit = 637094faa822cf14b9cb6c05476f882f38984a2d
+	parent = 98f27aac8cccbfb00cb3ca6ff21873933142cb9b
+	method = merge
+	update = auto
+	cmdver = 0.4.1
