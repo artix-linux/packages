@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libvncserver.git
+	branch = master
+	commit = 30b24f3897558a4fb9f458a9c1806234c2ead144
+	parent = 376dcc95e901bbf88ead805c389cf06a4ee0cf0a
+	method = merge
+	update = auto
+	cmdver = 0.4.1
