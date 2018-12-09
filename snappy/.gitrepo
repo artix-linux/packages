@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesS/snappy.git
 	branch = master
-	commit = 3b6af455a999fc3b40b614050feaaeb780cabd4b
-	parent = 94bcbf9e5ab069ab20e60ee85a808ff023f9b59d
+	commit = 7e210f66429a4911a87d977d8246737d1f6734ac
+	parent = fd0218d0403d1e5a29224bd396ea65b0217837ca
 	method = merge
 	update = auto
 	cmdver = 0.4.1
