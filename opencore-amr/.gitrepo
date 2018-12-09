@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesO/opencore-amr.git
 	branch = master
-	commit = 6469db9b2eb030c4a88701274558fca2d9962bc9
-	parent = e451f776ab1888bfce9969ac39056f2fd845cc90
+	commit = f4aa93ed8f8f181b46bc83d48717f8eb0191b5e5
+	parent = e39dd9c32778f7bcafef3a61ddf717b0d3c21488
 	method = merge
 	update = auto
 	cmdver = 0.4.1
