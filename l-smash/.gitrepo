@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/l-smash.git
+	branch = master
+	commit = 13affab8c8e85868b12f01ad4565c58258fdcab8
+	parent = b640f246c80a853eefd75fdf085eadfd078d9d1f
+	method = merge
+	update = auto
+	cmdver = 0.4.1
