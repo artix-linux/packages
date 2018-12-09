@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xf86-video-sisusb.git
 	branch = master
-	commit = 7893c0b52b2fe3f0f5bfcc8cd23a6b192476454b
-	parent = 9d9bb4dead17dab25472db18732660e6758948c9
+	commit = 001598a223bea050b24eaa652e8fc4d52b7ec09f
+	parent = b35b754e038c678489a27813e8882b3597cf0350
 	method = merge
 	update = auto
 	cmdver = 0.4.1
