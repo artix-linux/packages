@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/memtest86plus.git
+	branch = master
+	commit = 0c64a450dc26a27d1bede0a3f14646b36e8e157c
+	parent = 3241ef0c89fa74e388b427d21940b511b643ea2a
+	method = merge
+	update = auto
+	cmdver = 0.4.1
