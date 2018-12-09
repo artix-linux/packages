@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-wstools.git
 	branch = master
-	commit = e1aac54bca67d215b3ec2159b727da708580e3fb
-	parent = e76a23e3c559f9946c4f4c790f78c038a8cd58a2
+	commit = 68104f5d2fa3b868b9ca4eac045cf893cf66100d
+	parent = cb39392994953ea52553f87992646798f8df78ac
 	method = merge
 	update = auto
 	cmdver = 0.4.1
