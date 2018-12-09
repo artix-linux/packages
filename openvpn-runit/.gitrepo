@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesO/openvpn-runit.git
 	branch = master
-	commit = bb5ce0dface749d8851cf0e768a89d103b2dd31d
-	parent = 7c40c27aa52120344207f85db39f9553dd819465
+	commit = bdee22e8060e28b4b51b89d190b334f931ef68d9
+	parent = c8fd619c1928bf7c0baffa0ffeed43c088cdb0d0
 	method = merge
 	update = auto
 	cmdver = 0.4.1
