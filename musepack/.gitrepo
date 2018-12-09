@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/musepack.git
+	branch = master
+	commit = fb5d06017d8425c1a28de775ed496b5f39df36e3
+	parent = f79ee4ae4f19cb89254bdc030dea8631aa5e4537
+	method = merge
+	update = auto
+	cmdver = 0.4.1
