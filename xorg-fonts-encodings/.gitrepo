@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesX/xorg-fonts-encodings.git
+	branch = master
+	commit = b2ff7b3c38548dbfaa40338222d346c9a3916f64
+	parent = 3fdb8d39be49032a911fb6789ab042553ec462bd
+	method = merge
+	update = auto
+	cmdver = 0.4.1
