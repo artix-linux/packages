@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-lazy-object-proxy.git
+	branch = master
+	commit = 2d3d043ad4d64b16393c8825ca33cf9d0404d395
+	parent = fa91dc00f25ffa4f62459c1e2b281266c461d224
+	method = merge
+	update = auto
+	cmdver = 0.4.1
