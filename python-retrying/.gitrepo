@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesPython/python-retrying.git
+	branch = master
+	commit = 665f053652bb571df571f63a826458c5fb07c69b
+	parent = fd7f5e02491d5fde4c72bc021fc7bce73eaed40d
+	method = merge
+	update = auto
+	cmdver = 0.4.1
