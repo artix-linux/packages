@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xf86-video-vesa.git
 	branch = master
-	commit = d9307029cc95556cc4b2c10cbcb1fd136998aadb
-	parent = 65c3df84a70a88ddeeaa02566c390260dc52879f
+	commit = 59ec690f93b6363418ad364369116f9abdfd22a9
+	parent = b0047752212e30c92877ec620023fee86bd253d0
 	method = merge
 	update = auto
 	cmdver = 0.4.1
