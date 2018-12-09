@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesM/mplayer.git
+	branch = master
+	commit = 8f0478f6da2b46f497e9f9d6fc5896c291234aa7
+	parent = ea7d3193a68e509dc3018d76567a4a2bc6532673
+	method = merge
+	update = auto
+	cmdver = 0.4.1
