@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesS/spirv-tools.git
+	branch = master
+	commit = 681351fcbaddaba0fee5aaf0754eb633869d51e6
+	parent = 4e32cd67b4d688931b5350bfe786d5041a205eeb
+	method = merge
+	update = auto
+	cmdver = 0.4.1
