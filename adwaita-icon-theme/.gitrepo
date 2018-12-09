@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesA/adwaita-icon-theme.git
+	branch = master
+	commit = 04e4f1006e1316554fc3af2ab110a4eb778bacd6
+	parent = 7f9a531fed34197713187b92bc2c4f4239ec37f4
+	method = merge
+	update = auto
+	cmdver = 0.4.1
