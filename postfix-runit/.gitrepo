@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesP/postfix-runit.git
 	branch = master
-	commit = 3e295aba443b6e2d18e624bc7f67964ae96c22f1
-	parent = 6f701643bf13034c9c232eaf9f6cc354f08203f4
+	commit = f3acec30fc1f9c8913d20bcb12953296b846d21a
+	parent = bb976e9f7fe3cf4973383c9c71aff5bed2cbec44
 	method = merge
 	update = auto
 	cmdver = 0.4.1
