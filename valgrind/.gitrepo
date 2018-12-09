@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesV/valgrind.git
+	branch = master
+	commit = 5bdd743f827398925141118a41bd9f64d605cc82
+	parent = b2ed3f8803035f5ae9edd9725489e3e76c3bf77c
+	method = merge
+	update = auto
+	cmdver = 0.4.1
