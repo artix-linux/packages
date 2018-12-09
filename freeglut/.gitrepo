@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesF/freeglut.git
+	branch = master
+	commit = 76654e6189289fd45510d2bc8c8cb289606cdf21
+	parent = 92924a8804a4e776078de05e46f474db5bc36a63
+	method = merge
+	update = auto
+	cmdver = 0.4.1
