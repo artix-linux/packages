@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesN/netifrc.git
+	branch = master
+	commit = e64341b920a4154362ac73656e7b3160190ada99
+	parent = 3761363318c75618e72234773de6f8bb83cbad3b
+	method = merge
+	update = auto
+	cmdver = 0.4.1
