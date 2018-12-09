@@ -1,0 +1,41 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=syslog-ng-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC syslog-ng init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('openrc' 'syslog-ng')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/syslog-ng')
+source=("syslog-ng.confd::${_url}/app-admin/syslog-ng/files/3.7/syslog-ng.confd"
+        "syslog-ng.initd::${_url}/app-admin/syslog-ng/files/3.7/syslog-ng.rc6")
+sha256sums=('b29325498ee3b1f3d63672efcd1e93f0745eecdb9f4bb05fed82a2f085399484'
+            '5c4ad3406fc885555883de0537614034de181d783bcb1e864bff6299ac6c1356')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'syslog-ng'
+    _inst_initd 'syslog-ng'
+}
