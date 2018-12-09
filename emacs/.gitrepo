@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesE/emacs.git
 	branch = master
-	commit = c06d5147393f8accfa4847b833fdd61b608da2d4
-	parent = 7fb65bb054f4c687570d24c3169a6bd5ca542e91
+	commit = 0a1ade3ecaa39d1f1395ab01af3f4715ec997eef
+	parent = 0ccc55e0687f6fdf70104d48ca811158029b117a
 	method = merge
 	update = auto
 	cmdver = 0.4.1
