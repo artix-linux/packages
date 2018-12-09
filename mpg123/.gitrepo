@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/mpg123.git
 	branch = master
-	commit = ca2a782c6172db8df245952763ac3013a1da5936
-	parent = e060da34d735d3219b9e2c6485c6532957b7f713
+	commit = 7b07320a2703cafe047b01d276b9fd395fb61c15
+	parent = d59d7cb75b3278491ba7adc67982281fdbcd2b32
 	method = merge
 	update = auto
 	cmdver = 0.4.1
