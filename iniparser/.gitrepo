@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesI/iniparser.git
 	branch = master
-	commit = 20835b1a2d0c414b4798253486d98cffbeebc1b0
-	parent = 34ad2863f3540fab4afb53cd788d229c0f421fbd
+	commit = 88d7b6bceef97e088c2ddcdaa9a01a7a7f52cba0
+	parent = eb4985081315fe3ed4c4c6ee9ebd79b9dff74188
 	method = merge
 	update = auto
 	cmdver = 0.4.1
