@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesX/xorg-sessreg.git
+	branch = master
+	commit = 329d018648ad152d4a32087745db64afcf2907c4
+	parent = 033a6c318ae5d5a6b6020e0bd05a89d672048a76
+	method = merge
+	update = auto
+	cmdver = 0.4.1
