@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-graphicaleffects.git
 	branch = master
-	commit = 51c0ca76d4316ad26351bd5fe49216282153490e
-	parent = b13b5b98938a5f4e33855976078647d714f19ab6
+	commit = e82b0eea01012efccd11164ad83d15b6a54439d7
+	parent = 5e731603005d77966f016e7d997a3747f044f077
 	method = merge
 	update = auto
 	cmdver = 0.4.1
