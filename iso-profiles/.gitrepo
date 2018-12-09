@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesI/iso-profiles.git
+	branch = master
+	commit = 7ff89eee290da386b9424b5b0cdd64cd3370354b
+	parent = 0b2ed33e0e10cbfda32100007508981e5fc82548
+	method = merge
+	update = auto
+	cmdver = 0.4.1
