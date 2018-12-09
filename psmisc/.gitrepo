@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesP/psmisc.git
 	branch = master
-	commit = 1b7a2ed5cf3956f8bead0fa6b5187502adfc4538
-	parent = b2a813e097e61eafb6fd6c69734090ff32c6f5a4
+	commit = 89d89727ea595ff2a754af6a939393a553263ba8
+	parent = 75d739409c560da57be4772b37b362c3c58172f3
 	method = merge
 	update = auto
 	cmdver = 0.4.1
