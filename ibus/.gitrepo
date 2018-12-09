@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesI/ibus.git
 	branch = master
-	commit = 25e2b14ed8ff3b7d70fd13f8f7ded9081c12efb7
-	parent = cede2c2e199d763df9748d5d8e670fa548709932
+	commit = 7e9614f89eeb049938ad0ad3be39e82ea68a04f7
+	parent = c7d9ae5f0348bfa42ecd8bad8fdfbdc341bacf4b
 	method = merge
 	update = auto
 	cmdver = 0.4.1
