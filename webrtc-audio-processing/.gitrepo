@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesW/webrtc-audio-processing.git
+	branch = master
+	commit = 75b7b6c8d2a909c1bb221289c3545de0a76bd98d
+	parent = 24acb9ee7627c0688a279b211be02fe6661ea92e
+	method = merge
+	update = auto
+	cmdver = 0.4.1
