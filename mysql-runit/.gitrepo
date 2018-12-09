@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesM/mysql-runit.git
 	branch = master
-	commit = 36880f1e67aebc0bf87ab93e8ecea08fcc1c1c50
-	parent = e3b18d4d5953ac69adbfdd45a2bfc769f2452a29
+	commit = 6cbce359b727bb8ebe7e0a9f2249275b48b1660f
+	parent = 63599e987add3da39ba91412e65a7318081757b6
 	method = merge
 	update = auto
 	cmdver = 0.4.1
