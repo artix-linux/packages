@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesV/volume_key.git
+	branch = master
+	commit = a08621844da01b5062fe5b500ff976ceee118bed
+	parent = 4d3036f42c3b38dc5c4698ca674376ed53448fb1
+	method = merge
+	update = auto
+	cmdver = 0.4.1
