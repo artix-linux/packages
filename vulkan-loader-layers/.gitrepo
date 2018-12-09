@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesV/vulkan-loader-layers.git
+	branch = master
+	commit = e0db2ee535aa72d23cf8cfaf8aa2ed4425339215
+	parent = d3dbce99986a3730bb2b831e27fc2bcca74e6ed3
+	method = merge
+	update = auto
+	cmdver = 0.4.1
