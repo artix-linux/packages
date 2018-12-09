@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libxdamage.git
+	branch = master
+	commit = e1c06bc0d8a585b2e8f54ce5557bc07c33302b9d
+	parent = ef66e0287833a359e2f6a517fbb6277285800652
+	method = merge
+	update = auto
+	cmdver = 0.4.1
