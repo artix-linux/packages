@@ -1,0 +1,46 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=subversion-openrc
+pkgver=20180221
+pkgrel=1
+pkgdesc="OpenRC svnserve init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-world')
+depends=('subversion' 'openrc')
+conflicts=('systemd-sysvcompat')
+backup=('etc/conf.d/svnserve')
+source=("svnserve.confd::${_url}/dev-vcs/subversion/files/svnserve.confd"
+        "svnserve.initd::${_url}/dev-vcs/subversion/files/svnserve.initd3")
+sha256sums=('45f2dc1a718aed885559e71d98112e670c92bd6b4f19c5cf593eced6cd2bbd97'
+            '3cba218e648f7722e6e5541deb9e8ca0f53188195e33b17ca19efb8a300651cb')
+
+# pkgver() {
+# 	date +%Y%m%d
+# }
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -e 's|/usr/sbin|/usr/bin|g' \
+        -e 's|/var/svn|/srv/svn|g' \
+        -e 's|-apache|-http|g' \
+        -e 's|/run/svnserve.pid|/run/svnserve/svnserve.pid|g' \
+        -e 's/--make-pidfile//' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+    sed -e 's|/var/svn|/srv/svn|g' -i ${pkgdir}/etc/conf.d/svnserve
+}
+
+package() {
+    _inst_confd 'svnserve'
+    _inst_initd 'svnserve'
+}
