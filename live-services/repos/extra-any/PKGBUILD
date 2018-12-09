@@ -1,0 +1,56 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+pkgbase=live-services
+pkgname=('artix-live-base'
+	'artix-live-openrc'
+	'artix-live-portable-efi'
+	'artix-live-runit')
+pkgver=0.7
+pkgrel=1
+pkgdesc='Artix live session'
+arch=('any')
+url="https://gitea.artixlinux.org/artix/live-services"
+license=('GPL')
+source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/${pkgver}.tar.gz")
+sha256sums=('d8f2833272f4859a6dec1352eb8afc6f8a0888903f91a9204b662c6777c28e5e')
+
+prepare(){
+    cd ${pkgbase}
+}
+
+build() {
+    cd ${pkgbase} #-${pkgver}
+    make PREFIX=/usr SYSCONFDIR=/etc
+}
+
+package_artix-live-base() {
+    pkgdesc='Artix live base scripts'
+    depends=("artools-base>=${pkgver}")
+
+    cd ${pkgbase} #-${pkgver}
+    make PREFIX=/usr SYSCONFDIR=/etc DESTDIR=${pkgdir} install_base install_xdg
+}
+
+package_artix-live-openrc() {
+    pkgdesc='Artix live openrc init scripts'
+    depends=('openrc' 'artix-live-base')
+
+    cd ${pkgbase} #-${pkgver}
+    make PREFIX=/usr SYSCONFDIR=/etc DESTDIR=${pkgdir} install_rc
+}
+
+package_artix-live-portable-efi() {
+    pkgdesc='Artix live session portable efi settings'
+    depends=('artix-grub-theme')
+
+    cd ${pkgbase} #-${pkgver}
+    make PREFIX=/usr SYSCONFDIR=/etc DESTDIR=${pkgdir} install_portable_efi
+}
+
+package_artix-live-runit() {
+    pkgdesc='Artix live runit init scripts'
+    depends=('runit' 'artix-live-base')
+
+    cd ${pkgbase} #-${pkgver}
+    make PREFIX=/usr SYSCONFDIR=/etc DESTDIR=${pkgdir} install_runit
+}
