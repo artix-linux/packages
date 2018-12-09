@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libnotify.git
+	branch = master
+	commit = c82f264216bf43e51958ef67ce9c35052d1877b9
+	parent = ea8ed128700c0a2b43c5a437252fe105d0f85a60
+	method = merge
+	update = auto
+	cmdver = 0.4.1
