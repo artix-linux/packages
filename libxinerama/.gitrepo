@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesL/libxinerama.git
+	branch = master
+	commit = 7938a1162433da4c281509340dd988a139d709c5
+	parent = 3a786dbc4a93090190e947ea4d50d4de9c70c7bc
+	method = merge
+	update = auto
+	cmdver = 0.4.1
