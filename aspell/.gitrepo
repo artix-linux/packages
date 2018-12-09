@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesA/aspell.git
+	branch = master
+	commit = 4a1c613f0df6d2b8479cea5f8d0fd65354bff130
+	parent = b032871a5bc6f9a3eaee112f252943339090f00e
+	method = merge
+	update = auto
+	cmdver = 0.4.1
