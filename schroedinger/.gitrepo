@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesS/schroedinger.git
 	branch = master
-	commit = 59f8d0db6ab24fe0cb4d59e2f2f1f08bc605290e
-	parent = 7125028f98706f4b471860c75a2dc87973736377
+	commit = d1be94410cd7553643181e90558b9586f6d63c48
+	parent = 85779b6ad6a958501a6480f2212f7a058906917b
 	method = merge
 	update = auto
 	cmdver = 0.4.1
