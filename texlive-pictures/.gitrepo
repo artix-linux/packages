@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesT/texlive-pictures.git
 	branch = master
-	commit = 7a4a4ae547883d5589c87b1c9c1d50ba71f2b20a
-	parent = 692baaff46d751eaa000f13f39e6008e5f69e05f
+	commit = bb2e750ea766467a3e85d44c61b72cf0be7eaf3c
+	parent = 3764be760e12a96dcdd76cba8c33a843e56b7e88
 	method = merge
 	update = auto
 	cmdver = 0.4.1
