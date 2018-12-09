@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesO/openjpeg2.git
+	branch = master
+	commit = bf019fcda9d1d8c7aed0ae1c2cc263d2e6f55f21
+	parent = 3e7f48dcb1749675fe489f3f17c70dd9ccdb458f
+	method = merge
+	update = auto
+	cmdver = 0.4.1
