@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesX/xf86-input-vmmouse.git
 	branch = master
-	commit = 0ffd34b9d5ad1cd3f6a258936581d0a035aa25d9
-	parent = 4181dd52bce7ec372e6e5462df316a200436d7be
+	commit = 1dea8fe4c8cf6b1a5689fda74669525a13f5146b
+	parent = abd8e5763159fdac893f825c662e794a3ba52b11
 	method = merge
 	update = auto
 	cmdver = 0.4.1
