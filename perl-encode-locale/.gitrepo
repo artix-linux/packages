@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPerl/perl-encode-locale.git
 	branch = master
-	commit = 06433679ce729e8ecf6abc73368e2545a01ef22f
-	parent = 3e04b6e3b046fd47b8ee765a7fabdc6e8c8e70e4
+	commit = d3ba1959b572cf5462b5f52a21eb44a7e9be53eb
+	parent = 1fb390aa49f82d86a1f938908bdb91455d77d199
 	method = merge
 	update = auto
 	cmdver = 0.4.1
