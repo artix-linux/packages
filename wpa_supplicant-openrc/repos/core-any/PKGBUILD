@@ -1,0 +1,56 @@
+# Maintainer: artoo <artoo@artixlinux.org>
+
+_url="https://raw.githubusercontent.com/gentoo/gentoo/master"
+
+pkgname=wpa_supplicant-openrc
+pkgver=20180429
+pkgrel=1
+pkgdesc="OpenRC wpa_supplicant init script"
+arch=('any')
+url="https://github.com/artix-linux/packages"
+license=('GPL2')
+groups=('openrc-system')
+depends=('openrc' 'wpa_supplicant')
+provides=('init-wpa_supplicant')
+conflicts=('init-wpa_supplicant')
+backup=('etc/conf.d/wpa_supplicant')
+source=("wpa_supplicant.confd::${_url}/net-wireless/wpa_supplicant/files/wpa_supplicant-conf.d"
+        "wpa_supplicant.initd::${_url}/net-wireless/wpa_supplicant/files/wpa_supplicant-init.d"
+        "${_url}/net-wireless/wpa_supplicant/files/wpa_cli.sh"
+        "xinetd.confd::${_url}/sys-apps/xinetd/files/xinetd.confd")
+sha256sums=('27833f60a091464612e74e6171cc98c3e3f994e2fde0ccc4535dd0d84ed041fa'
+            '98985142371d39ea6294d757e85a3d3fc9fc21718063afbf81869e1d2ca648a7'
+            'f3aa34b99a90213c53496f8ea014c487266338791f3526043a7fd97adc651fc6'
+            'e401e2cf7c0180a170d3dc3e91d7e98002bae7b013df72813b7bcf89b864fb3a')
+
+pkgver() {
+    date +%Y%m%d
+}
+
+_inst_initd(){
+    install -Dm755 ${srcdir}/$1.initd ${pkgdir}/etc/init.d/$1
+
+    sed -e 's|#!/sbin/openrc-run|#!/usr/bin/openrc-run|g' \
+        -e 's|/var/run|/run|g' \
+        -i ${pkgdir}/etc/init.d/$1
+}
+
+_inst_confd(){
+    install -Dm755 ${srcdir}/$1.confd ${pkgdir}/etc/conf.d/$1
+}
+
+package() {
+    _inst_confd 'wpa_supplicant'
+    _inst_initd 'wpa_supplicant'
+
+    install -Dm755 "${srcdir}/wpa_cli.sh" "${pkgdir}/etc/wpa_supplicant/wpa_cli.sh"
+
+    if [[ -f /etc/os-release ]];then
+        . /etc/os-release
+        sed -e "s|gentoo-release|${ID}-release|" -i "${pkgdir}/etc/wpa_supplicant/wpa_cli.sh"
+    else
+        sed -e 's|gentoo-release|arch-release|' -i "${pkgdir}/etc/wpa_supplicant/wpa_cli.sh"
+    fi
+}
+
+
