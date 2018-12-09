@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPerl/perl-digest-sha1.git
 	branch = master
-	commit = 7127e0af5736ff4ba4d92732ef071a5f868182ea
-	parent = 1ff94fdd96f4e35630e3d80c3715c9df63aeff17
+	commit = 3aaf53ddb84c2bee8aebff902109d107599e8e03
+	parent = 2f5781238ac1aa7d248b1b943f1b6e696aace54c
 	method = merge
 	update = auto
 	cmdver = 0.4.1
