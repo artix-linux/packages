@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesY/yasm.git
 	branch = master
-	commit = 32551ab20ece005c764d669fe1c6f00614452bc5
-	parent = 3ec91624eba0f2380ecc301c078a9fdafac91e83
+	commit = f4f3c2c535f69de58d79ce424f60606922411993
+	parent = afd4ecde75121ebaffdd4270e0ab2fb7bd8b5581
 	method = merge
 	update = auto
 	cmdver = 0.4.1
