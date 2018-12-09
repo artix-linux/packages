@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = gitea@gitea.artixlinux.org:packagesF/freetds.git
+	branch = master
+	commit = e602c9778878e6e25b834ef8c26df70cddef5190
+	parent = a94e09fa6d5e5f43adf0ac0fa3590ba8e48ece20
+	method = merge
+	update = auto
+	cmdver = 0.4.1
