@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-translations.git
 	branch = master
-	commit = 92c331c69488c28158402c136ee7495d49e27431
-	parent = 28f7b26d0685554a346e099ccb2a595a83122f38
+	commit = 10d1d9aeaee58924253464ace78126fe4110262f
+	parent = f4cf3caea8617a165a06e2d2499fb7375f008db7
 	method = merge
 	update = auto
 	cmdver = 0.4.1
