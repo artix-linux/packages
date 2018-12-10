@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-websockets.git
 	branch = master
-	commit = 7fa4a9004adf67fd55a349c409c4a7016fec92a2
-	parent = 0a76c7cbe3a82fd6c35c7b30eb1bb635e161877f
+	commit = 2f7c6bc63c88f457dc913729147d80579a97c074
+	parent = 7f158122c12e0549863761e8ada177d79091cb11
 	method = merge
 	update = auto
 	cmdver = 0.4.1
