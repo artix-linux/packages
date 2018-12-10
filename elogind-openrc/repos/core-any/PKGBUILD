@@ -3,7 +3,7 @@
 _url="https://raw.githubusercontent.com/gentoo/gentoo/master"
 
 pkgname=elogind-openrc
-pkgver=20180429
+pkgver=20181210
 pkgrel=1
 pkgdesc="OpenRC elogind init script"
 arch=('any')
