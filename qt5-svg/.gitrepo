@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-svg.git
 	branch = master
-	commit = 21ade5307faea22d731fca1c303be34c10d04b53
-	parent = 7875cae5c721579b09ac9256d1a997517f927d72
+	commit = 75b4fd34a46da44c69854e13b3792723a8fbc0d8
+	parent = 05be0cdf49c48507b557e469577ade96e701bb27
 	method = merge
 	update = auto
 	cmdver = 0.4.1
