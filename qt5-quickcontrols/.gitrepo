@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-quickcontrols.git
 	branch = master
-	commit = 7a92efcf0005518d30002beae86f2d52bafff930
-	parent = 5d0e149aeff53b7f7b9b09871a3989ac642e9a34
+	commit = 86bda4d5b191a776c15b014b77a6f1879215f422
+	parent = 21dedb5601f466f09b7214a61f02105bd92cd7e0
 	method = merge
 	update = auto
 	cmdver = 0.4.1
