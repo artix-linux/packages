@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-networkauth.git
 	branch = master
-	commit = f6247dfd8922987ca89a69c8cdbdb395394fc672
-	parent = c4f9aba5fe5f1c2e4b6f2bb6ee4fe649909f4619
+	commit = cd413eb708776ed605ab7a0fd30464b23a935c49
+	parent = 75cd804560b2257e3c60e6c7a6c764b5d5b87103
 	method = merge
 	update = auto
 	cmdver = 0.4.1
