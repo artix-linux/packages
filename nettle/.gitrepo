@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesN/nettle.git
 	branch = master
-	commit = 4c4904ea9e6a215e4cf666605cd6324d53e2dd1d
-	parent = 59f1ef4c15e345c58ef6312dc44890bf4c511a25
+	commit = c6595abd765aec4813b7a762a1a37e55514e0087
+	parent = 5ba98e5b092cf883568ee3c74bb00eebfe1fe239
 	method = merge
 	update = auto
 	cmdver = 0.4.1
