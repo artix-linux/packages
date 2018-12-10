@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-speech.git
 	branch = master
-	commit = 5ece91fb9f48342149410419b956e1201ceff339
-	parent = b88b25e20af7a3be556407129159c2c075ac7054
+	commit = 816bd74f862c4125900cbe9e1329ae66e1a30027
+	parent = 4916c91d4cb18ffe1f438f49263c84e609d5d139
 	method = merge
 	update = auto
 	cmdver = 0.4.1
