@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-multimedia.git
 	branch = master
-	commit = 85a293d93c53bb510e5a47cf95a818387a7a1b6e
-	parent = ccc18c9ec08923b6f28fb266925a4ea13400dea7
+	commit = 1d918da3a34127f7e0b71e9942336eef038246f3
+	parent = 3025322c861eb5a39b80438c06480b8b17d69e59
 	method = merge
 	update = auto
 	cmdver = 0.4.1
