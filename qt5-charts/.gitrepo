@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-charts.git
 	branch = master
-	commit = 8fcaabac0f5b188a2dee14bfbcb94b3e9988c9c6
-	parent = 2fffe5c60080e0ed0dde99e9e1612b304cc11cf8
+	commit = 867180d4fd00481d151d969929f49547944f8ffd
+	parent = 4b8bfd60202271c789698026847f9b6ab6618878
 	method = merge
 	update = auto
 	cmdver = 0.4.1
