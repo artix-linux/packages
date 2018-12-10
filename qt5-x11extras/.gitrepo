@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-x11extras.git
 	branch = master
-	commit = aa3211f528f622f7ab5a1a55eb01a6327e806285
-	parent = 0e24bf8935ac747bf4acee5c35f8ad43a0d8722a
+	commit = 801df4d2a01f09293d130ded589e345e16681e29
+	parent = 021627f53f52b5ee99cf51d83a3792e34c5afbd5
 	method = merge
 	update = auto
 	cmdver = 0.4.1
