@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesB/bdf-unifont.git
 	branch = master
-	commit = c2e13048a106db13fb7d514543a78a539ee44928
-	parent = b96f7e6863355a78ea3e1d71ed517004c0d7779c
+	commit = 472f47649c094453620361145b731bef5f5a39aa
+	parent = 4476f6bcbf4c47eee372964433ac3e44d247ae8e
 	method = merge
 	update = auto
 	cmdver = 0.4.1
