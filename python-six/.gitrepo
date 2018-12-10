@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesPython/python-six.git
 	branch = master
-	commit = ee18a3dab76ce0acef8a26808c5dce745649cfbd
-	parent = c1706a335d4ae12694d0e694e56a6905a4a27c98
+	commit = ac7843c16be64c838ad7fb092683271d28788348
+	parent = 889c74618d1053169cad23380dbf5f771ed22c74
 	method = merge
 	update = auto
 	cmdver = 0.4.1
