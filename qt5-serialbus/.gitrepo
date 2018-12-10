@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesQ/qt5-serialbus.git
 	branch = master
-	commit = 981d3b15dde83fd5caaad5f3ef99205ec6d26b9b
-	parent = ed1a8851c268655fec2324028af4701a6b8a2f94
+	commit = 07a656b951eb416fc3deb8faf47ee5c9d3f28848
+	parent = dc1c7fb17ca7f7d513915b70f3da1e71ae9c7fe3
 	method = merge
 	update = auto
 	cmdver = 0.4.1
