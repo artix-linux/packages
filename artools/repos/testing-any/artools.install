@@ -1,9 +1,0 @@
-post_upgrade() {
-  if [[ $(vercmp 0.9.7-1 $2) < 1 ]]; then
-    echo "  artools.conf has changed!"
-    echo "  Please update or merge changes"
-    echo "  /etc/artools/artools.conf and possbibly existing"
-    echo "  ~.config/artools/artools.conf"
-    echo "  accordingly."
-  fi
-}
