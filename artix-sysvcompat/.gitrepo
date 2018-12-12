@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesA/artix-sysvcompat.git
 	branch = master
-	commit = 2cc90a3bcecfdd5c07360fef07ac14c520f7628e
-	parent = 65783a3438b01dae8916c52fa062d8b5df31e163
+	commit = c9201e7d94815434581c475926ea28dbf23cbaea
+	parent = 9c8081bebf2874ef1114b40853fd15ab27d012e7
 	method = merge
 	update = auto
 	cmdver = 0.4.1
