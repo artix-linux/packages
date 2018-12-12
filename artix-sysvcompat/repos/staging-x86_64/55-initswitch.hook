@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = File
+Target = usr/bin/openrc-init
+Target = usr/bin/runit-init
+
+[Action]
+Description = Setting init symlink ...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/initswitch-hook update
+NeedsTargets

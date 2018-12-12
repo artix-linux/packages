@@ -1,0 +1,27 @@
+#!/bin/sh -e
+
+init_conf(){
+    while read -r f; do
+        ln -sf "$(basename "$f")" "/usr/bin/init"
+        echo "	==> Activated $(basename "$f")"
+    done
+}
+
+init_detect(){
+    local init
+    if [[ -f /usr/bin/openrc-init ]];then
+        init=openrc-init
+    elif [[ -f /usr/bin/runit-init ]];then
+        init=runit-init
+    fi
+    if [[ -n "$init" ]];then
+        echo "	==> Found $init"
+        ln -sf "$init" "/usr/bin/init"
+    fi
+}
+
+case $1 in
+    update) init_conf ;;
+    detect) init_detect ;;
+    *) echo >&2 "  Invalid operation '$1'"; exit 1 ;;
+esac
