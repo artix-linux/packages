@@ -6,8 +6,8 @@
 [subrepo]
 	remote = gitea@gitea.artixlinux.org:packagesL/librsvg.git
 	branch = master
-	commit = e058958f2d20a6428bdd6173f6b3af15f7041921
-	parent = e873aa2308f3d69013e063a69ce413bbda99c43c
+	commit = bf17f91174390d80fee0c402984393b44b727f94
+	parent = 2878c503de4004a91b57a66c985e37e7be48afb7
 	method = merge
 	update = auto
 	cmdver = 0.4.1
